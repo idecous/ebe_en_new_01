@@ -410,7 +410,7 @@ $(function(){
 			arr.push({
 				id:"g_" + countID,
 				url:"#",
-				imgUrl:"public_en/source/show/left_list/" + imgs[ countID%2 ],
+				imgUrl:"public_en/source/show/life_list/" + imgs[ countID%2 ],
 				sizes:["X","M","L"],
 				enName:"eve by eve`s" + countID,
 				cnName:"绿野仙踪组连体泳衣" + countID,
