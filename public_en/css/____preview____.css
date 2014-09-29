@@ -1,0 +1,168 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body {
+	font-size: 14px;
+	color:#fff;
+}
+html, button, input, select, textarea {
+    font-family: "Microsoft YaHei",Arial,Helvetica,Verdana,sans-serif;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+	outline:none;
+}
+ul, ol, li {
+	list-style: none outside;
+}
+header{
+	position:relative;
+	border-bottom: 5px solid #4fbfa8;
+    background-color: #000;
+    height: 52px;
+    margin: auto;
+    z-index: 100;
+}
+
+header .urlBlock{
+	float: left;
+	width: 700px;
+}
+header .urlBlock a{
+	display:inline-block;
+	color: #fff;
+	margin-right: 2px;
+	line-height: 16px;
+	height: 16px;
+	padding: 0 4px;
+}
+header .urlBlock a.current{
+	color: #49cdb3;
+}
+header ul{
+	position:absolute;
+	width: 150px;
+	top: 12px;
+	right: 10px;
+}
+header ul li{
+	float:left;
+	width: 28px;
+	height: 28px;
+	background: url(../img/____preview____/sprite.png);
+	overflow: hidden;
+}
+header ul a{
+	display: block;
+	width: 28px;
+	height: 28px;
+}
+header ul li.desktop{
+	background-position:  -6px -6px;
+}
+header ul li.tablet-landscape{
+	background-position: -37px -6px;
+}
+header ul li.tablet-portrait{
+	background-position: -70px -6px;
+}
+header ul li.smartphone-landscape{
+	background-position: -103px -6px;
+}
+header ul li.smartphone-portrait{
+	background-position: -129px -6px;
+}
+
+header ul .current.desktop{
+	background-position:  -6px -43px;
+}
+header ul .current.tablet-landscape{
+	background-position: -37px -43px;
+}
+header ul .current.tablet-portrait{
+	background-position: -70px -43px;
+}
+header ul .current.smartphone-landscape{
+	background-position: -103px -43px;
+}
+header ul .current.smartphone-portrait{
+	background-position: -129px -43px;
+}
+
+#iFrameBlock{
+	background-color: #fff;
+	width: 100%;
+	display: none;
+}
+iframe {
+	background-color: #ffffff;
+    height: 100%;
+    position: relative;
+}
+#iFrameBlock.desktop iframe {
+    margin: 0;
+    width: 100%;
+}
+#iFrameBlock.desktop .frameWrapper {
+    background: none repeat scroll 0 0 #fff;
+    height: 100%;
+    margin: 0;
+}
+
+#iFrameBlock.desktop .frameWrapper {
+    background: none repeat scroll 0 0 #fff;
+    height: 100%;
+    margin: 0;
+}
+
+#iFrameBlock.tablet-landscape iframe {
+    height: 690px !important;
+    margin: 51px 0 0 80px;
+    width: 1039px;
+}
+#iFrameBlock.tablet-landscape .frameWrapper {
+    background: url("../img/____preview____/pad-land.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 798px;
+    margin: 20px auto;
+    overflow: auto;
+    width: 1242px;
+}
+#iFrameBlock.tablet-landscape .frameWrapper iframe {
+    overflow-x: hidden;
+}
+#iFrameBlock.tablet-portrait iframe {
+    height: 1038px !important;
+    margin: 65px 0 0 58px;
+    width: 785px;
+}
+#iFrameBlock.tablet-portrait .frameWrapper {
+    background: url("../img/____preview____/pad-port.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 1213px;
+    margin: 20px auto;
+    width: 901px;
+}
+#iFrameBlock.smartphone-landscape iframe {
+    height: 335px !important;
+    margin: 28px 0 0 133px;
+    width: 495px;
+}
+#iFrameBlock.smartphone-landscape .frameWrapper {
+    background: url("../img/____preview____/phone-land.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 395px;
+    margin: 150px auto 20px;
+    width: 759px;
+}
+#iFrameBlock.smartphone-portrait iframe {
+    height: 495px !important;
+    margin: 133px 0 0 30px;
+    width: 337px;
+}
+#iFrameBlock.smartphone-portrait .frameWrapper {
+    background: url("../img/____preview____/phone-port.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 762px;
+    margin: 20px auto;
+    width: 395px;
+}
+
