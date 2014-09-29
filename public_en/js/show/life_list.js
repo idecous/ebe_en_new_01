@@ -305,12 +305,22 @@ var EVE_ShoppingCarItem = function(deleteHandler){
 var EVE_ShoppingCar = function(deleteHandler){
 	var el = $("header .shoppingcar");
 	var popWinEl = el.find(".popWin");
-	el.children("div:eq(0)").click(function(){
-		popWinEl.addClass("open");
-	});
+
 	el.find(".topInfoPanel a").click(function(){
 		popWinEl.removeClass("open");
 	});
+	el.mouseenter(function(){
+		popWinEl.addClass("open");
+	}).mouseleave(function(){
+		popWinEl.removeClass("open");
+	});
+	var scrollTopEl = $(".mobileSide .scrollTop");
+	var html7BodyEl = $("html, body");
+	scrollTopEl.click(function(){
+		html7BodyEl.animate({ scrollTop: 0 }, "slow");
+	});
+	var sideInfoPointEl = $(".mobileSide .toShoppingcarPage i");
+
 	var count01El = el.find(">div>span");
 	var count02El = el.find(".popWin .topInfoPanel>span>b");
 	var emptyInfoEl =  el.find(".popWin .borderContent .empty");
@@ -334,7 +344,8 @@ var EVE_ShoppingCar = function(deleteHandler){
 		if(index==-1){return;}
 		items.splice(index,1);
 		item.el.remove();
-		deleteHandler( item.id ,item.size );		
+		deleteHandler( item.id ,item.size );
+		popWinEl.removeClass("open");		
 		update();
 	}
 	function update(){
@@ -345,6 +356,7 @@ var EVE_ShoppingCar = function(deleteHandler){
 			listContainerEl.hide();
 			totalPriceRowEl.hide();
 			toPayBtnEl.hide();
+			sideInfoPointEl.hide();
 			return;
 		}
 		var i,item,gCount = 0,gPrice=0;
@@ -362,7 +374,7 @@ var EVE_ShoppingCar = function(deleteHandler){
 		count01El.text( gCount );
 		count02El.text( gCount );
 		totalPriceEl.text(  gPrice.toFixed(2) );
-		
+		sideInfoPointEl.show();
 		emptyInfoEl.hide();
 		listContainerEl.show();
 		totalPriceRowEl.show();

@@ -71,6 +71,11 @@ header{
 	background: url(../../img/show/mobile_top_meun_close.png); 
 	display: none;
 }
+.common_mobile_topMenuBtn .return{
+	background: url(../../img/show/mobile_top_meun_return.png); 
+	display: none;
+}
+
 .common_moblieNav{
 	position: absolute;
 	top: 0;
@@ -395,6 +400,9 @@ footer .mobilFooter .copyright{
 		display: none;
 	}
 	footer .mobilFooter{
+		display: block;
+	}
+	.common_mobile_topMenuBtn .return{
 		display: block;
 	}
 	.common_pageContent.mobileOpen{

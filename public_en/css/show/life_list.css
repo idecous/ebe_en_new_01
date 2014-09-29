@@ -157,16 +157,10 @@ header .userGroup .shoppingcar .popWin .toPay{
 	text-align: center;
 }
 
-
-
-
 header .userGroup .shoppingcar .popWin .borderBottom{
 	height: 0;
 	border-bottom: 1px solid #666;
 }
-
-
-
 
 header .mainNavBar{
 	position:absolute;
@@ -298,6 +292,38 @@ header .subNavBar li .subNavListBlock .viewBlock .brandBlock a{
 }
 header .bg{
 	width: 100%;
+}
+
+.mobileSide{
+	position: fixed;
+	top: 50%;
+	right: 0;
+	display: none;
+	z-index: 500;
+}
+.mobileSide a{
+	position:relative;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../../img/show/shoppingcar_side.png); 
+}
+.mobileSide .toShoppingcarPage{
+	background-position:  0 0;
+}
+.mobileSide .toShoppingcarPage i{
+	display:block;
+	width:12px;
+	height:12px;
+	position: absolute;
+	top:6px;
+	right:6px;
+	background: url(../../img/show/shoppingcar_side_redPoint.png); 
+	display: none;
+}
+.mobileSide .scrollTop{
+	background-position:  -40px 0;
+	margin-top: 10px;
 }
 
 .whiteBG{
@@ -508,9 +534,9 @@ header .bg{
 	display: inline-block;
 	width: 15px;
 	height: 14px;
-	background: url(../../img/show/icons.png) no-repeat -60px -192px;
+	background: url(../../img/show/icons.png) no-repeat -72px -192px;
 	margin-left: 10px;
-	vertical-align: -2px;
+	vertical-align: -5px;
 }
 .common_mainPanel .filterPanel .mobileFilter li a .separator{
 	display:inline-block;
@@ -667,7 +693,6 @@ header .bg{
 	padding: 15px 0 ;
 }
 
-
 .common_mainPanel .listPanel .mobileFilterBg{
 	position: absolute;
 	left: 0;
@@ -685,6 +710,7 @@ header .bg{
 	width: 100%;
 	z-index: 1001;
 	visibility: hidden;
+	background-color: #fff;	
 }
 .common_mainPanel .listPanel .mobileFilterPop ul{
 	position: absolute;
@@ -693,7 +719,6 @@ header .bg{
 	width: 100%;
 	background-color: #fff;
 }
-
 .common_mainPanel .listPanel .mobileFilterPop .brandPop li{
 	height: auto;
 	padding: 0 10px;
@@ -712,16 +737,18 @@ header .bg{
 	line-height: 29px;
 }
 .common_mainPanel .listPanel .mobileFilterPop .colorPop {
-	padding: 10px 0 0 10px;
+	padding-bottom: 10px;
 }
 .common_mainPanel .listPanel .mobileFilterPop .colorPop li{
 	width: 40px;
 	height: 40px;
 	display: inline-block;
-	margin: 0 10px 10px 0;
+	margin: 10px 0 0 10px;
 }
 .common_mainPanel .listPanel .mobileFilterPop .colorPop li a{
 	display: block;
+	width: 40px;
+	height: 40px;
 }
 .common_mainPanel .listPanel .mobileFilterPop .colorPop li img{
 	width: 100%;
@@ -882,6 +909,9 @@ header .bg{
 	}
 	header .subNavBar,header .mainNavBar,header .common_centerBlock{
 		display: none;
+	}
+	.mobileSide{
+		display: block;
 	}
 	.common_mainPanel .filterPanel{
 		float: none;
