@@ -301,38 +301,6 @@ header .mainNavBar li .checked{
 .common_mainPanel .seriesMainBlock{
 	margin-top: 20px;
 }
-.common_mainPanel .seriesMainBlock .textBlock{
-	position: absolute;
-	top: 30px;
-	left: 30px;
-	width: 280px;
-	text-align: left;
-}
-.common_mainPanel .seriesMainBlock .textBlock h4{
-	font-size: 16px;
-}
-.common_mainPanel .seriesMainBlock .textBlock .separator{
-	vertical-align: top;
-	width: 130px;
-	height: 0;
-	border-bottom: 1px solid #fff;
-}
-.common_mainPanel .seriesMainBlock .textBlock h3{
-	font-size: 18px;
-}
-.common_mainPanel .seriesMainBlock .textBlock a{
-	font-size: 12px;
-	color: #fff;
-}
-.common_mainPanel .seriesMainBlock .textBlock a i{
-	display: inline-block;
-	width:12px;
-	height:12px;
-	margin-right:10px;
-	margin-top:40px;
-	vertical-align: -1px;
-	background: url(../../img/show/icons.png) no-repeat -60px -120px;
-}
 
 .common_mainPanel .seriesMainBlock .leftGroup{
 	width: 33.46%;
@@ -341,6 +309,7 @@ header .mainNavBar li .checked{
 .common_mainPanel .seriesMainBlock .leftGroup .border{
 	margin: 0 2px 0 4px;
 	position: relative;
+	display: block;
 }
 .common_mainPanel .seriesMainBlock img{
 	width: 100%;
@@ -354,13 +323,8 @@ header .mainNavBar li .checked{
 }
 .common_mainPanel .seriesMainBlock .rightGroup .outerBorder .topGroup{
 	position: relative;
+	display: block;
 }
-.common_mainPanel .seriesMainBlock .rightGroup .outerBorder .topGroup .textBlock{
-	top: auto;
-	left: 50px;
-	bottom: 60px;
-}
-
 .common_mainPanel .seriesMainBlock .rightGroup .outerBorder .bottomGroup{
 	margin-top: 1px;
 }
@@ -371,6 +335,7 @@ header .mainNavBar li .checked{
 .common_mainPanel .seriesMainBlock .rightGroup .outerBorder .bottomGroup .left .border{
 	margin-right: 1px;
 	position: relative;
+	display: block;
 }
 .common_mainPanel .seriesMainBlock .rightGroup .outerBorder .bottomGroup .right{
 	width: 50%;
@@ -379,11 +344,7 @@ header .mainNavBar li .checked{
 .common_mainPanel .seriesMainBlock .rightGroup .outerBorder .bottomGroup .right .border{
 	margin-left: 1px;
 	position: relative;
-}
-.common_mainPanel .seriesMainBlock .rightGroup .outerBorder .bottomGroup .right .border .textBlock{
-	top: auto;
-	bottom: 70px;
-	left: 30px;
+	display: block;
 }
 .common_mainPanel .seriesBottom{
 	clear: both;
