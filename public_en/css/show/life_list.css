@@ -429,6 +429,9 @@ header .bg{
 	border-bottom: 1px solid #ddd;
 	height:49px; 
 }
+.common_mainPanel .filterPanel .byBrand .unable a{
+	color: #ccc;
+}
 .common_mainPanel .filterPanel .byBrand li a{
 	padding-top:6px;
 	color: #666;
@@ -721,6 +724,9 @@ header .bg{
 }
 .common_mainPanel .listPanel .mobileFilterPop .brandPop li:first-child a{
 	border-top:none;
+}
+.common_mainPanel .listPanel .mobileFilterPop .brandPop .unable a{
+	color: #ccc;
 }
 .common_mainPanel .listPanel .mobileFilterPop .brandPop li a{
 	display:block;

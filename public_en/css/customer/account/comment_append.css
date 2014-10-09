@@ -4,11 +4,6 @@
 	border-bottom: 2px solid #ddd;
 	line-height: 32px;
 }
-.common_rightPanel .categoryBar span{
-	display: inline-block;
-	width: 120px;
-	text-align: left;
-}
 .common_rightPanel .categoryBar a{
 	display: inline-block;
 	width: 100px;
@@ -22,71 +17,94 @@
 	margin-bottom: -2px;
 	font-weight: bold;
 }
-.common_rightPanel .filterBar{
-	line-height: 30px;
-	height: 30px;
+
+.emptyMessage{
+	height: 500px;
+	line-height: 500px;
+	font-size: 16px;
+	text-align: center;
+	background: #fff url("../../../img/customer/account/comment_empty_bg.jpg") no-repeat center center;
+}
+
+.common_rightPanel .commentBlock{
+	border: 1px solid #ddd;
+}
+.common_rightPanel .commentBlock li {
+	border-top: 1px solid #ddd;
+}
+.common_rightPanel .commentBlock li :first-child{
+	border-top:none;
+}
+.common_rightPanel .commentBlock li .infoRow{
+	background-color: #f1f1f1;
+	border-bottom: 1px solid #ddd;
+	line-height: 39px;
+	height: 39px;
+	padding: 0 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.common_rightPanel .commentBlock li .infoRow b{
+	margin-right: 10px;
+	font-weight: normal;
+}
+.common_rightPanel .commentBlock li  .submitRow{
 	position: relative;
 }
-.common_rightPanel .filterBar div{
+.common_rightPanel .commentBlock li  .submitRow img{
 	position: absolute;
-	right: 0;
-	display: inline-block;
+	left: 20px;
+}
+.common_rightPanel .commentBlock li  .submitRow .operationCol{
+	margin: 0 24px 20px 110px;
+	min-height: 125px;
 	font-size: 12px;
 }
-.common_rightPanel .filterBar div input{
-	margin-right: 4px;
-	vertical-align: middle;
+.common_rightPanel .commentBlock li  .submitRow .operationCol p{
+	margin-top: 20px;
+	margin-right: -8px;
 }
-.common_rightPanel .filterBar div .first{
-	margin-right: 35px;
+.common_rightPanel .commentBlock li  .submitRow .operationCol p i{
+	margin: 0 4px;
+	font-style: normal;
 }
-.common_rightPanel table{
-	width: 100%;
+.common_rightPanel .commentBlock li  .submitRow .operationCol .label{
+	color: #666;
 	margin-top: 10px;
+}
+.common_rightPanel .commentBlock li  .submitRow .operationCol textarea{
+	padding:4px;
+	width: 100%;
 	border: 1px solid #ddd;
-	border-collapse:collapse;
+	margin-top: 10px;
+	height: 62px;
+	resize: none;
 }
-.common_rightPanel table thead tr{
-	height: 38px;
-	line-height: 38px;
-	background-color: #f1f1f1;
+.common_rightPanel .commentBlock li  .submitRow .operationCol .btnRow{
+	text-align: right;
+	margin-top: 10px;
 }
-.common_rightPanel table tbody td{
-	text-align: center;
-	padding: 20px 2px 10px 2px;
-	line-height: 26px;
-	font-size: 12px;
-}
-.common_rightPanel table .messageRow{
-	text-align: left;
-	padding: 0 20px 5px 20px;
-	color: #df4141;
-	border-bottom: 1px solid #ddd;
-}
-.common_rightPanel table .messageRow a{
-	margin-right: 15px;
-	color: #df4141;
-	text-decoration: none;
-}
-.common_rightPanel table tbody tr .appendShopping{
+.common_rightPanel .commentBlock li  .submitRow .operationCol .btnRow a{
 	display:inline-block;
 	width: 90px;
 	height: 25px;
 	line-height: 25px;
 	background-color: #df4141;
 	color: #fff;
-	border-radius: 4px; 
-	text-decoration:none;
+	text-align: center;
+	margin-right: -8px;
 }
-.common_rightPanel table tbody tr a{
-	text-decoration: underline;
-}
+
 .common_rightPanel .pageBar{
 	text-align: right;
 	margin-top: 10px;
 	font-size: 12px;
 	line-height:24px;
 	color: #666;
+}
+.common_rightPanel .pageBar .div{
+	display: inline-block;
 }
 .common_rightPanel .pageBar a{
 	display: inline-block;
@@ -233,108 +251,77 @@
 	height: 120px;
 }
 
-.common_mainPanel .mobileBlock{
-	display: none;
-	padding: 20px 10px 0 10px;
-}
-.common_mainPanel .mobileBlock ul{
-	font-size: 12px;
-}
-
-.common_mainPanel .mobileBlock ul li{
-	position:relative;
-	height: 208px;
-	border: 1px solid #ddd;
-	margin-bottom: 10px;
-}
-.common_mainPanel .mobileBlock ul li .topRow{
-	height: 168px;
-}
-.common_mainPanel .mobileBlock ul li .topRow img{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-}
-.common_mainPanel .mobileBlock ul li .topRow .paramCol{
-	margin: 0 10px 0 120px;
-	padding: 10px 0;
-	line-height: 20px;
-	color: #666;
-}
-.common_mainPanel .mobileBlock ul li .topRow .paramCol .name{
-	max-height: 40px;
-	overflow: hidden;
-}
-.common_mainPanel .mobileBlock ul li .topRow .paramCol .price{
-	color: #333;
-	line-height: 50px;
-}
-
-.common_mainPanel .mobileBlock ul li .bottomRow{
-	position:relative;
-	height: 40px;
-	line-height: 40px;
-	background-color: #eee;
-	text-align: center;
-}
-.common_mainPanel .mobileBlock ul li .bottomRow .cancel{
-	text-decoration: underline;
-}
-.common_mainPanel .mobileBlock ul li .bottomRow  .appendShopping{
-	position:absolute;
-	right:5px;
-	top:7px;
-	display: inline-block;
-	width: 100px;
-	height: 28px;
-	background-color: #df4141;
-	color: #fff;
-	border-radius: 4px;
-	line-height: 28px;
-}
-.common_mainPanel .mobileBlock .pageBar{
-	height: 60px;
-    line-height: 40px;
-}
-.common_mainPanel .mobileBlock .pageBar div{
-	width: 50%;
-	float: left;
-}
-.common_mainPanel .mobileBlock .pageBar div a{
-	display:block;
-	border: 1px solid  #ccc;
-	color: #666;
-	text-align: center;
-	margin-left: 10px;
-}
-.common_mainPanel .mobileBlock .pageBar div:first-child a{
-	margin-left: 0;
-	margin-right: 10px;
-}
-.common_mainPanel .mobileBlock .pageBar div a:hover{
-	color: #fff;
-	background-color: #000;
-}
-
 @media only screen and (max-width: 785px) {
-	.common_mainPanel .normolBlock{
+	
+	.common_mainPanel .common_subNavBar,
+	.common_pageContent .common_leftPanel,
+	.common_rightPanel .shortcutBar,
+	.common_rightPanel .moduleGroup,
+	.common_rightPanel .commentBlock li .infoRow b{
 		display: none;
 	}
-	.common_mainPanel .mobileBlock{
+	.common_pageContent .common_rightPanel{
+		margin-left: 0;
+	}
+	.common_rightPanel .categoryBar{
+		height: 40px;
+		line-height:40px;
+		background-color: #545454;
+		border-top:1px solid #999;
+		border: none;
+	}
+	.common_rightPanel .categoryBar a{
 		display: block;
+		float: left;
+		width: 33.33%;
+		text-align: center;
+		color: #aaa;
+	}
+	.common_rightPanel .categoryBar .current{
+		background-color: #333;
+		color: #fff;
+		border: none;
+	}
+	
+	.common_rightPanel .pageBar{
+		height: 60px;
+	    line-height: 40px;
+	    margin-top: 10px;
+	}
+	.common_rightPanel .pageBar .div{
+		width: 50%;
+		float: left;
+	}
+	.common_rightPanel .pageBar .div a{
+		display:block;
+		border: 1px solid  #ccc;
+		color: #666;
+		text-align: center;
+		margin-right: 10px;
+		margin-left: 10px;
+		background-color: #fff;
+		height: auto;
+		width: auto;
+		font-size: 14px;
+	}
+	.common_rightPanel .pageBar .div:first-child a{
+		margin-left:10px;
+		margin-right: 10px;
+	}
+	.common_rightPanel .pageBar .div a:hover{
+		color: #fff;
+		background-color: #000;
+	}
+	.common_rightPanel .pageBar form>span,
+	.common_rightPanel .pageBar form>input,
+	.common_rightPanel .pageBar form i{
+		display: none;
+	}
+	.common_mainPanel .bottomSpace{
+		height: 20px;
 	}
 	
 	
 }
-
-
-
-
-
-
-
-
-
-
 
 

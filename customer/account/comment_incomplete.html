@@ -4,12 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Comment Complete</title>
+		<title>Comment Incomplete</title>
 		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/default.css"/>
-		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/account/comment_complete.css"/>
+		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/account/comment_incomplete.css"/>
 		<script type="text/javascript" src="../../public_en/js/jquery.js"></script>
 		<script type="text/javascript" src="../../public_en/js/customer/default.js"></script>
-		<script type="text/javascript" src="../../public_en/js/customer/account/comment_complete.js"></script>
+		<script type="text/javascript" src="../../public_en/js/customer/account/comment_incomplete.js"></script>
 	</head>
 	<body>
 		<a class="common_moblie_toTop" href="javascript:;"></a>
@@ -49,6 +49,8 @@
 					</li>
 				</ul>
 			</header>
+			<form method="post" action="#"><input type="hidden" /><input type="hidden" /></form><!-- 商品评价 dingda号/ -->
+		
 			<div class="common_mainPanel">
 				<div class="common_centerBlock normolBlock">
 					<div class="common_subNavBar">订单中心 &gt; 商品评价</div>
@@ -75,52 +77,38 @@
 					</div>
 					<div class="common_rightPanel">
 						<div class="categoryBar">
-							<a class="current" href="javascript:;">已评价商品</a><a href="#">待评价商品</a><a href="#">追加评价</a>
+							<a href="javascript:;">已评价商品</a><a class="current" href="#">待评价商品</a><a href="#">追加评价</a>
 						</div>
-						<!-- <div class="emptyMessage">您暂无商品评价!</div> -->
-						<table>
-							<colgroup>
-								<col/><col/><col/><col/><col width="270"/>
-		                    </colgroup>
-							<thead>
-			                    <tr>
-			                        <th>商品信息</th>
-			                        <th></th>
-			                        <th>下单日期</th>
-			                        <th>状态</th>
-			                        <th>商品评价</th>
-			                    </tr>
-		             		</thead>
-		             		<tbody>
-		             			<tr>
-									<td>N131507400301</td>
-									<td>手绣花精疏纯羊绒圆领背心</td>
-									<td>2014-09-15</td>
-									<td>已评价</td>
-									<td>
-										<p><i>◆</i>手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领</p>
-										<div class="separator"></div>
-										<p class="append"><span>[追加评价]</span>手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领</p>
-									</td>
-								</tr>
-		             			<tr>
-									<td>N131507400301</td>
-									<td>手绣花精疏纯羊绒圆领背心</td>
-									<td>2014-09-15</td>
-									<td>已评价</td>
-									<td>
-										<p><i>◆</i>手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领</p>
-										<div class="operationBlock">
-											<a href="#">追加评价</a>
+						<!-- <div class="emptyMessage">您暂无待评价商品!</div> -->
+						<ul class="commentBlock">
+							<li>
+								<div class="infoRow"><b>N131507400301</b><span>手绣花精疏纯羊绒圆领背心-手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背心------</span></div>
+								<div class="submitRow">
+									<img src="../../public_en/source/customer/account/comment/002.jpg" />
+									<div class="operationCol">
+										<textarea></textarea>
+										<div class="btnRow">
+											<a href="javascript:;">发布评论</a>
 										</div>
-									</td>
-								</tr>
-		            
-		             		</tbody>
-						</table>
+									</div>
+								</div>								
+							</li>
+							<li>
+								<div class="infoRow"><b>N131507400301</b><span>手绣花精疏纯羊绒圆领背心-手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背心------</span></div>
+								<div class="submitRow">
+									<img src="../../public_en/source/customer/account/comment/002.jpg" />
+									<div class="operationCol">
+										<textarea></textarea>
+										<div class="btnRow">
+											<a href="javascript:;">发布评论</a>
+										</div>
+									</div>
+								</div>								
+							</li>
+						</ul>
 						<div class="pageBar">
 							<form>
-								<a class="pre" href="#"><i></i><span>上一页</span></a><a class="next" href="#"><span>下一页</span><i></i></a>
+								<div class="div"><a class="pre" href="#"><i></i><span>上一页</span></a></div><div class="div"><a class="next" href="#"><span>下一页</span><i></i></a></div>
 								<span>共2页， 到第</span><input type="text" value="1"/><span>页</span><input type="submit" value="确定"/>
 							</form>
 						</div>
@@ -199,43 +187,11 @@
 								</div>
 								<div class="justifyFix"></div>
 							</div>
-						</div>
+						</div>						
+						
 						
 					</div>
 					<div class="clearFloat bottomSpace"></div>
-				</div>
-				<div class="mobileBlock">
-					<div class="categoryBar"><a class="current" href="javascript:;">已评价商品</a><a href="#">待评价商品</a><a href="#">追加评价</a></div>
-					
-					<!-- <div class="emptyMessage">您暂无商品评价!</div> -->
-					<ul>
-						<li>
-							<div class="nameRow">kate spade 凯特·丝蓓女士蝴蝶结连衣裙</div>
-							<div class="contentRow">
-								<img src="../../public_en/source/customer/account/comment/001.jpg" />
-								<div class="paramCol">
-									<p><i>◆</i>手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领</p>
-										<div class="separator"></div>
-										<p class="append"><span>[追加评价]</span>手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领背手绣花精疏纯羊绒圆领</p>
-									<div class="timeRow"><span>评论日期：2014-09-25</span></div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="nameRow">kate spade 凯特·丝蓓女士蝴蝶结连衣裙</div>
-							<div class="contentRow">
-								<img src="../../public_en/source/customer/account/comment/001.jpg" />
-								<div class="paramCol">
-									<p><i>◆</i>手绣花精疏纯</p>
-									<div class="timeRow"><span>评论日期：2014-09-25</span><a href="#">追加评论</a></div>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<div class="pageBar">
-						<div><a href="#">上一页</a></div>
-						<div><a href="#">下一页</a></div>
-					</div>
 				</div>
 			</div>
 

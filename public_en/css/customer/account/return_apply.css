@@ -1,0 +1,77 @@
+.common_rightPanel .categoryBar{
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #ddd;
+	line-height: 32px;
+}
+.common_rightPanel .categoryBar a{
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	color: #666;
+}
+.common_rightPanel .categoryBar .current{
+	position:relative;
+	color: 	#333;
+	border-bottom: 2px solid #333;
+	margin-bottom: -2px;
+	font-weight: bold;
+}
+.common_rightPanel .formBlock{
+	width: 430px;
+	margin: 50px auto;
+	font-size: 12px;
+	height: 390px;
+}
+.common_rightPanel .formBlock li {
+	line-height: 44px;
+	width: 100%;
+	float: left;
+}
+.common_rightPanel .formBlock li .labelCol{
+	float: left;
+	width: 50px;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 20px;
+}
+.common_rightPanel .formBlock li .cotentCol{
+	float: left;
+	width: 360px;
+}
+.common_rightPanel .formBlock li .cotentCol .No{
+	border: 1px solid #dedede;
+	height: 20px;
+	padding: 4px 4px;
+	margin-top: 7px;
+}
+.common_rightPanel .formBlock li .cotentCol .No input{
+	display: block;
+	border: none;
+	width: 100%;
+}
+.common_rightPanel .formBlock li .cotentCol select{
+	margin-top: 7px;
+	display: block;
+    padding: 2px 5px;
+    width: 100%;
+    border: 1px solid #dedede;
+}
+
+
+
+
+
+.customerService{
+	border-top:1px solid #ddd;
+	padding-top:10px;
+	margin-left: 170px;
+	font-size:12px;
+}
+.customerService b{
+	font-weight: normal;
+	color: #df4141;
+}
+.bottomSpace{
+	height: 40px;
+}
