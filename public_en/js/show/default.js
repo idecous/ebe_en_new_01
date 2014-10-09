@@ -1,4 +1,4 @@
-var MobileMenu = function(){
+var EVE_MobileMenu = function(){
 	var menuEl = $(".common_moblieNav");
 	if( menuEl.length == 0 ){return;}
 	var menuOpenBtnEl = $(".common_mobile_topMenuBtn .open") ;
@@ -21,7 +21,7 @@ var MobileMenu = function(){
 	});
 };
 $(function(){
-	new MobileMenu();
+	new EVE_MobileMenu();
 	
 	
 	

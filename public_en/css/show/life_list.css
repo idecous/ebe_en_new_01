@@ -369,6 +369,9 @@ header .bg{
 	display: block;
 	color: #666;
 }
+.common_mainPanel .filterPanel .byCategory ul .unable a{
+	color: #ccc;
+}
 .common_mainPanel .filterPanel .byCategory ul li span{
 	margin-left: 2px;
 }
@@ -523,7 +526,7 @@ header .bg{
 	display: inline-block;
 	width: 15px;
 	height: 14px;
-	background: url(../../img/show/icons.png) no-repeat -72px -192px;
+	background: url(../../img/show/icons.png) no-repeat -72px -191px;
 	margin-left: 10px;
 	vertical-align: -5px;
 }

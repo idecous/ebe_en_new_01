@@ -1,0 +1,291 @@
+body,html{
+	width: 100%;
+	height: 100%;
+}
+.common_topNavigationBlock {
+	display: none;
+}
+.common_pageContent{
+	width: 100%;
+	height: 100%;
+}
+.common_topNavigationBlock .common_mobile_topMenuBtn .return{
+	display: block;
+}
+.common_topNavigationBlock{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	z-index: 5;
+}
+.common_mainPanel{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.common_mainPanel .bgImg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 1s ease-out 0s;
+}
+.common_mainPanel .bgImg.show{
+	opacity: 1;
+}
+
+.common_mainPanel .leftGroup{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width: 420px;
+	background: rgba(0,0,0,0.7);
+}
+.common_mainPanel .leftGroup .navBar{
+	position: absolute;
+	top: 20px;
+	left: 25px;
+}
+.common_mainPanel .leftGroup .navBar a{
+	display: inline-block;
+	color: #ccc;
+	font-size: 12px;
+	margin-right: 20px;
+}
+.common_mainPanel .leftGroup .logo{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -72px;
+	margin-left: -101px;
+}
+.common_mainPanel .rightGroup{
+	position:relative;
+	margin-left:420px;
+	height:100%;
+}
+.common_mainPanel .rightGroup .loginPanel{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-190px;
+	margin-left:-190px;
+	width: 380px;
+	height: 380px;
+	border: #7e7e7e;
+	box-shadow: 0 0 3px #7e7e7e;
+}
+.common_mainPanel .rightGroup .loginPanel .bg{
+	width: 302px;
+	height: 302px;
+	margin: 4px;
+	background: rgba(0,0,0,0.7);
+	padding: 35px; 
+}
+.common_mainPanel .rightGroup .loginPanel .logo{
+	display: none;
+}
+.common_mainPanel .rightGroup .loginPanel .label{
+	color: #fff;
+	line-height: 30px;
+	height: 30px;
+}
+.common_mainPanel .rightGroup .loginPanel .notFirst{
+	margin-top: 18px;
+}
+.common_mainPanel .rightGroup .loginPanel .inputRow{
+	position:relative;
+	width: 282px;
+	height: 43px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	padding: 0 8px;
+}
+.common_mainPanel .rightGroup .loginPanel .inputRow span{
+	position: absolute;
+	top: 12px;
+	left: 8px;
+	color: #ccc;
+}
+.common_mainPanel .rightGroup .loginPanel .inputRow input{
+	position:relative;
+	width: 100%;
+	border: none;
+	background: none;
+	color: #000;
+	height: 43px;
+	line-height: 43px;
+}
+
+.common_mainPanel .rightGroup .loginPanel input[type="submit"]{
+	display:block;
+	width: 136px;
+	height: 39px;
+	background-color: #df4141;
+	line-height: 39px;
+	border: none;
+	margin: 40px auto;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.common_mainPanel .rightGroup .loginPanel .registerRow{
+	position: relative;
+	font-size: 12px;
+}
+.common_mainPanel .rightGroup .loginPanel .registerRow a{
+	color: #df4141;
+}
+.common_mainPanel .rightGroup .loginPanel .registerRow .recover{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #fff;
+}
+.common_mainPanel .rightGroup .loginPanel .warn{
+	background-color: #f00;
+}
+
+.common_mainPanel .rightGroup .otherAccount{
+	position: absolute;
+	left:20px;
+	bottom: 40px;
+	display: none;
+}
+.common_mainPanel .rightGroup .otherAccount a{
+	display:inline-block;
+	width:24px;
+	height:24px;
+	background: url(../../../img/customer/shareIcon.png);
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+.common_mainPanel .rightGroup .otherAccount .tencent{
+	background-position: 0 0;
+}
+.common_mainPanel .rightGroup .otherAccount .weibo{
+	background-position: -24px 0;
+}
+
+.common_mainPanel .rightGroup  .mobileRegister{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height:60px;
+	background-color: rgba(0,0,0,0.7); 
+	line-height: 60px;
+	display: none;
+}
+.common_mainPanel .rightGroup  .mobileRegister a{
+	color: #fff;
+	text-decoration: underline;
+	margin-left: 25px;
+}
+.common_mainPanel .rightGroup  .mobileRegister .recover{
+	position: absolute;
+	right: 25px;
+}
+
+@media only screen and (min-width: 785px) and (max-width: 1000px) {
+	.common_mainPanel .leftGroup {
+		display: none;
+	}
+	.common_mainPanel .rightGroup{
+		width: 380px;
+		height: 100%;
+		background-color: rgba(0,0,0,0.7);
+		margin-left: 0;
+		float: right;
+	}
+	.common_mainPanel .rightGroup .loginPanel{
+		box-shadow: none;
+		display: block;
+		width: 300px;
+		height: 390px;
+		margin-left: -150px;
+		margin-top:-215px;
+	}
+	.common_mainPanel .rightGroup .loginPanel .bg{
+		margin: 0;
+		padding: 0;
+		background: none;
+		width: auto;
+	}
+	.common_mainPanel .rightGroup .loginPanel .logo{
+		margin:0 auto;
+		display: block;
+	}
+	.common_mainPanel .rightGroup .loginPanel .label{
+		display: none;
+	}
+	.common_mainPanel .rightGroup .loginPanel .inputRow{
+		margin-top: 60px;
+	}
+	.common_mainPanel .rightGroup .loginPanel .notFirstRow{
+		margin-top: 0;
+		border-top: none;
+
+	}
+	.common_mainPanel .rightGroup .loginPanel input[type="submit"]{
+		margin: 20px 0;
+		width: 300px;
+		height: 40px;
+		line-height: 40px;
+	}
+	.common_mainPanel .rightGroup .loginPanel .registerRow .recover,
+	.common_mainPanel .rightGroup .otherAccount{
+		display: block;
+	}
+}
+@media only screen and (max-width: 785px) {
+	.common_topNavigationBlock,
+	.common_mainPanel .rightGroup  .mobileRegister{
+		display: block;
+	}
+	.common_mainPanel .leftGroup,
+	.common_mainPanel .rightGroup .otherAccount,
+	.common_mainPanel .rightGroup .loginPanel .label,
+	.common_mainPanel .rightGroup .loginPanel .registerRow{
+		display: none;
+	}
+	.common_mainPanel .rightGroup{
+		width: auto;
+		height: 100%;
+		background:none;
+		margin-left: 0;
+	}
+	.common_mainPanel .rightGroup .loginPanel {
+		height: 130px;
+		width: 100%;
+		left:0;
+		box-shadow: none;
+		margin-left: 0;
+		margin-top: -115px;
+	}
+	.common_mainPanel .rightGroup .loginPanel .bg {
+		position:static;
+		width: auto;
+		height: auto;
+		margin: 0 25px;
+		padding: 0;
+		background: none;
+	}
+	.common_mainPanel .rightGroup .loginPanel .inputRow{
+		width: auto;
+		border-radius: 6px 6px 0 0;
+	}
+	.common_mainPanel .rightGroup .loginPanel .notFirstRow {
+		border-top:none;
+		border-radius: 0 0 6px 6px;
+	}
+	.common_mainPanel .rightGroup .loginPanel input[type="submit"] {
+		width: 100%;
+		margin: 10px 0 0 0;
+	}
+	
+}
+
