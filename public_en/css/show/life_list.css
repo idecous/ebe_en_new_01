@@ -507,6 +507,10 @@ header .bg{
 	height: 28px;
 	margin: 0 2px 2px 0;
 }
+.common_mainPanel .filterPanel .byColor ul li img{
+	width: 28px;
+	height: 28px;
+}
 .common_mainPanel .filterPanel  .bottomSpace{
 	height: 100px;
 }
