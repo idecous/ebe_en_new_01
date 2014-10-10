@@ -36,8 +36,17 @@
 	padding-right: 20px;
 }
 .common_rightPanel .formBlock li .cotentCol{
+	position:relative;
 	float: left;
 	width: 360px;
+}
+.common_rightPanel .formBlock li .cotentCol .info{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: #888;
+	line-height: 14px;
+	visibility: hidden;
 }
 .common_rightPanel .formBlock li .cotentCol .No{
 	border: 1px solid #dedede;
@@ -50,18 +59,48 @@
 	border: none;
 	width: 100%;
 }
-.common_rightPanel .formBlock li .cotentCol select{
-	margin-top: 7px;
-	display: block;
-    padding: 2px 5px;
-    width: 100%;
-    border: 1px solid #dedede;
+.common_rightPanel .formBlock li .cotentCol .selectBorder{
+	 border: 1px solid #dedede;
+	 margin-top: 7px;
 }
-
-
-
-
-
+.common_rightPanel .formBlock li .cotentCol .selectBorder select{
+	display: block;
+    padding: 5px 5px;
+    width: 100%;
+    font-size: 12px;
+    color: #666;
+    border: none;
+}
+.common_rightPanel .formBlock li .cotentCol option{
+	padding-left: 5px;
+}
+.common_rightPanel .formBlock li .cotentCol .textareaBorder{
+	border: 1px solid #dedede;
+	height: 140px;
+	padding: 4px;
+}
+.common_rightPanel .formBlock li .cotentCol textarea{
+	height:100%;
+	resize: none;
+	width: 100%;	
+	border: none;
+	font-size: 12px;
+    color: #666;
+}
+.common_rightPanel .formBlock li .submitRow{
+	text-align: center;
+}
+.common_rightPanel .formBlock li .submitRow input{
+	display: inline-block;
+	width: 135px;
+	height: 39px;
+	line-height: 39px;
+	background-color: #df4141;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	margin-top: 25px; 
+}
 .customerService{
 	border-top:1px solid #ddd;
 	padding-top:10px;
@@ -75,3 +114,58 @@
 .bottomSpace{
 	height: 40px;
 }
+
+
+@media only screen and (max-width: 785px) {
+	.common_mainPanel .common_subNavBar,
+	.common_pageContent .common_leftPanel,
+	.common_rightPanel .categoryBar,
+	.common_rightPanel .formBlock li .labelCol,
+	.customerService  {
+		display: none;		
+	}
+	.common_pageContent .common_rightPanel{
+		margin-left: 0;
+		padding-top: 20px;
+	}
+	.common_rightPanel .formBlock{
+		margin: 0 15px;
+		width: auto;
+	}
+	.common_rightPanel .formBlock li{
+		line-height: 30px;
+		margin-bottom: 10px;
+	}
+	.common_rightPanel .formBlock li .cotentCol{
+		width: auto;
+		float: none;
+	}
+	.common_rightPanel .formBlock li .cotentCol .info{
+		visibility: visible;
+	}
+	.common_rightPanel .formBlock li .cotentCol .selectBorder{
+		margin-top: 0;
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

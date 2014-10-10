@@ -2,11 +2,11 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-		<title>Return Apply</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Return Specific</title>
 		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/default.css"/>
-		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/account/return_apply.css"/>
+		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/account/return_specific.css"/>
 		<script type="text/javascript" src="../../public_en/js/jquery.js"></script>
 		<script type="text/javascript" src="../../public_en/js/customer/default.js"></script>
 	</head>
@@ -48,7 +48,8 @@
 					</li>
 				</ul>
 			</header>
-		
+			
+
 			<div class="common_mainPanel">
 				<div class="common_centerBlock normolBlock">
 					<div class="common_subNavBar">订单中心 &gt; 办理退货</div>
@@ -75,39 +76,64 @@
 					</div>
 					<div class="common_rightPanel">
 						<div class="categoryBar">
-							<a class="current" href="javascript:;">申请退货</a>
+							<a href="#">申请退换货</a><a class="current" href="javascript:;">查看记录</a>
 						</div>
-						<form>
-							<ul class="formBlock">
-								<li>
-									<div class="labelCol">订 单 号</div>
-									<div class="cotentCol"><div class="No"><input type="text" /></div></div>
-								</li>
-								<li>
-									<div class="labelCol">退货商品</div>
-									<div class="cotentCol">
-										<div class="selectBorder">
-											<select><option value="">N131507400301手绣花精疏纯羊绒圆领背心</option>
-		                                        <option value="">N131507400302手绣花精疏纯羊绒圆领背心</option>
-		                                        <option value="">N131507400303手绣花精疏纯羊绒圆领背心</option>
-		                                 	</select>
-										</div>
-		                            </div>
-								</li>
-								<li>
-									<div class="labelCol">退货理由</div>
-									<div class="cotentCol"><span class="info">退货理由：</span><div class="textareaBorder"><textarea></textarea></div></div>
-								</li>
-								<li>
-									<div class="labelCol">&nbsp;</div>
-									<div class="cotentCol submitRow"><input type="submit" value="申请退货"/></div>
-								</li>
-							</ul>
-						</form>
-					</div>					
-					<div class="clearFloat"></div>
-					<div class="customerService">您还可以拨打  <b>400-888-6666</b> 进行咨询</div>
-					<div class="bottomSpace"></div>
+						<table>
+							<colgroup>
+								<col width="100"/><col/><col/><col/><col/>
+		                    </colgroup>
+							<thead>
+			                    <tr>
+			                        <th>商品图片</th>
+			                        <th>商品编号</th>
+			                        <th>商品名称</th>
+			                        <th>类型</th>
+			                        <th>价格</th>
+			                    </tr>
+		             		</thead>
+		             		<tbody>
+		             			<tr>
+									<td><img src="../../public_en/source/customer/account/return/001.jpg" /></td>
+									<td>N131507400301</td>
+									<td>手绣花精疏纯羊绒圆领背心</td>
+									<td>成衣</td>
+									<td>￥9999.00</td>
+								</tr>
+		             		</tbody>         
+						</table>
+						
+						<div class="mobileInfo">
+							<img src="../../public_en/source/customer/account/return/001.jpg" />
+							<div class="paramBlock">
+								<div>商品编号:N131507400301</div>
+								<div>商品名称:手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背心</div>
+								<div>类型:成衣</div>
+								<div>价格:￥9999.00</div>
+							</div>
+						</div>
+						
+						
+						
+						<div class="subTitleBar">退款协议信息</div>
+						<ul class="paramBlock">
+							<li><div class="label">申请退款时间：</div><div class="content">2014-02-18 22:29</div></li>
+							<li><div class="label">退款状态：</div><div class="content"><b>退款成功</b></div></li>
+							<li><div class="label">货物状态：</div><div class="content">买家已退货</div></li>
+							<li><div class="label">买家是否需要退货：</div><div class="content">是</div></li>
+							<li><div class="label">退还给买家的金额：</div><div class="content">299.00 元</div></li>
+							<li><div class="label">支付给卖家的金额：</div><div class="content">0.00 元（有疑问请查看帮助）</div></li>
+							<li><div class="label">退款原因：</div><div class="content">收到商品不符</div></li>
+							<li><div class="label">退款说明：</div><div class="content">衣服太大不合身</div></li>
+						</ul>
+						<div class="subTitleBar">退款协议信息</div>
+						<ul class="paramBlock">
+							<li><div class="label">退货时间：</div><div class="content">2014-02-19 23:28</div></li>
+							<li><div class="label">物流公司：</div><div class="content">圆通速递 （快递）</div></li>
+							<li><div class="label">发货单号：</div><div class="content">6483722628 </div></li>
+							<li><div class="label">卖家收货地址：</div><div class="content">王翠利 ，010-58103196 ，北京北京市大兴区北京市大兴区中关村医药基地天河区东区往东1000米,双禾物流院内裂帛物流中心，王翠利，010-58103196 ，102600</div></li>
+						</ul>	
+					</div>
+					<div class="clearFloat bottomSpace"></div>
 				</div>
 			</div>
 

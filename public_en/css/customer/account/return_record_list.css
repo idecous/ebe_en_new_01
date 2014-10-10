@@ -1,0 +1,234 @@
+.common_rightPanel .categoryBar{
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #ddd;
+	line-height: 32px;
+}
+.common_rightPanel .categoryBar a{
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	color: #666;
+}
+.common_rightPanel .categoryBar .current{
+	position:relative;
+	color: 	#333;
+	border-bottom: 2px solid #333;
+	margin-bottom: -2px;
+	font-weight: bold;
+}
+.common_rightPanel ul li{
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+	font-size: 12px;
+}          
+.common_rightPanel ul li .titleRow{
+	position:relative;
+	height: 37px;
+	border-bottom: 1px solid #ddd;
+	background-color: #f1f1f1;
+	line-height: 37px;
+}
+.common_rightPanel ul li .titleRow span{
+	margin-left: 20px;
+}
+.common_rightPanel ul li .titleRow b{
+	font-weight: normal;
+}
+.common_rightPanel ul li .titleRow a{
+	position:absolute;
+	right:20px;
+	top: 10px;
+	display: block;
+	width: 17px;
+	height: 21px;
+	background: url("../../../img/customer/icons.png") no-repeat -72px 0;
+}
+.common_rightPanel ul li .paramRow{
+	position: relative;
+	height: 125px;
+}
+.common_rightPanel ul li .paramRow img{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.common_rightPanel ul li .paramRow .descript{
+	margin: 0 120px 0 100px;
+	height: 125px;
+}
+.common_rightPanel ul li .paramRow .descript p{
+	line-height: 20px;
+	display: inline-block;
+	margin-top: 15px;
+}
+.common_rightPanel ul li .paramRow .operation{
+	position:absolute;
+	right:0;
+	top:0;
+	text-align:center;
+	line-height: 125px;
+	height: 125px;
+	width: 100px;
+}
+.common_rightPanel ul li .paramRow .operation a{
+	text-decoration: underline;
+}
+.common_rightPanel .pageBar{
+	text-align: right;
+	margin-top: 10px;
+	font-size: 12px;
+	line-height:24px;
+	color: #666;
+}
+.common_rightPanel .pageBar .div{
+	display: inline-block;
+}
+.common_rightPanel .pageBar a{
+	display: inline-block;
+	border: 1px solid #ccc;
+	color: #666;
+	width: 70px;
+	height: 24px;
+	text-align: center;
+	margin-right: 10px;
+}
+.common_rightPanel .pageBar a:hover{
+	color: #fff;
+	background-color: #333;
+}
+.common_rightPanel .pageBar a i{
+	display: inline-block;
+	width: 5px;
+	height: 9px;
+	background: url("../../../img/customer/icons.png");
+}
+.common_rightPanel .pageBar .pre i{
+	background-position: -58px -9px;
+	margin-right: 6px;
+} 
+.common_rightPanel .pageBar .next i{
+	background-position: -58px 0;
+	margin-left: 6px;
+} 
+.common_rightPanel .pageBar input{
+	display: inline-block;
+}
+.common_rightPanel .pageBar input[type="text"]{
+	width: 38px;
+	height: 24px;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin: 0 4px;
+}
+.common_rightPanel .pageBar input[type="submit"]{
+	background-color: #fff;
+	border: 1px solid #ccc;
+	width: 50px;
+	height: 24px;
+	margin-left: 10px;
+	cursor: pointer;
+	color: #666;
+}
+.common_rightPanel .pageBar input[type="submit"]:hover{
+	color: #fff;
+	background-color: #333;
+}
+
+.clause{
+	margin-top: 40px;
+	font-size: 12px;
+	margin-left: 170px;
+}
+.clause span{
+	margin-right: 5px;
+}
+.clause a{
+	color: #df4141;
+	margin-right: 5px;
+}
+.common_mainPanel .bottomSpace{
+	height: 120px;
+}
+@media only screen and (max-width: 785px) {
+	.common_mainPanel .common_subNavBar,
+	.common_pageContent .common_leftPanel,
+	.clause{
+		display: none;
+	}	
+	.common_pageContent .common_rightPanel {
+		margin-left: 0;
+	}
+	.common_rightPanel .categoryBar{
+		height: 40px;
+		line-height:40px;
+		background-color: #545454;
+		border-top:1px solid #999;
+		border: none;
+	}
+	.common_rightPanel .categoryBar a{
+		display: block;
+		float: left;
+		width: 50%;
+		text-align: center;
+		color: #aaa;
+	}
+	.common_rightPanel .categoryBar .current{
+		background-color: #333;
+		color: #fff;
+		border: none;
+	}
+	.common_rightPanel .pageBar{
+		height: 60px;
+	    line-height: 40px;
+	    margin-top: 10px;
+	}
+	.common_rightPanel .pageBar .div{
+		width: 50%;
+		float: left;
+	}
+	.common_rightPanel .pageBar .div a{
+		display:block;
+		border: 1px solid  #ccc;
+		color: #666;
+		text-align: center;
+		margin-right: 10px;
+		margin-left: 10px;
+		background-color: #fff;
+		height: auto;
+		width: auto;
+		font-size: 14px;
+	}
+	.common_rightPanel .pageBar .div:first-child a{
+		margin-left:10px;
+		margin-right: 10px;
+	}
+	.common_rightPanel .pageBar .div a:hover{
+		color: #fff;
+		background-color: #000;
+	}
+	.common_rightPanel .pageBar form>span,
+	.common_rightPanel .pageBar form>input,
+	.common_rightPanel .pageBar form i{
+		display: none;
+	}
+	.common_mainPanel .bottomSpace{
+		height: 20px;
+	}
+	.common_rightPanel ul li .titleRow span:first-child{
+		display: none;
+	}
+	.common_rightPanel ul li .paramRow{
+		height: auto;
+	}
+	.common_rightPanel ul li .paramRow .descript{
+		min-height: 125px;
+		height: auto;
+	}
+	
+}
+
+
+
+
+

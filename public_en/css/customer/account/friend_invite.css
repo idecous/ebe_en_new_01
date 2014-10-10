@@ -1,0 +1,9 @@
+.common_mainPanel .mainView{
+	position:relative;
+	margin-top: 50px;
+}
+.common_mainPanel .mainView .normalBg{
+	width: 100%;
+	position: relative;
+}
+

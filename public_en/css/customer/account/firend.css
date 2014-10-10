@@ -1,0 +1,180 @@
+.common_rightPanel .categoryBar{
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #ddd;
+	line-height: 32px;
+}
+.common_rightPanel .categoryBar a{
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	color: #666;
+}
+.common_rightPanel .categoryBar .current{
+	position:relative;
+	color: 	#333;
+	border-bottom: 2px solid #333;
+	margin-bottom: -2px;
+	font-weight: bold;
+}
+
+
+.common_rightPanel .extraBlock{
+	position:relative;
+	margin-top: 40px;
+}
+.common_rightPanel .extraBlock .bg{
+	width: 100%;
+}
+.common_rightPanel .extraBlock .cards{
+	position: absolute;
+	left: 3.04%;
+	bottom: -22px;
+	width: 30.97%;
+	z-index: 1;
+}
+.common_rightPanel .invitePanel{
+	border: 1px solid #dedede;
+}
+.common_rightPanel .invitePanel .normal{
+	width: 33.65%;
+}
+.common_rightPanel .invitePanel .mobile{
+	display: none;
+}
+
+.common_rightPanel .invitePanel .content{
+	width: 66.35%;
+	float: right;
+}
+.common_rightPanel .invitePanel .content h1{
+	font-size: 16px;
+	padding: 0 20px;
+	margin-top: 3%;
+}
+.common_rightPanel .invitePanel .content p{
+	padding: 5px 20px 10px 20px;
+}
+.common_rightPanel .invitePanel .content p i{
+	color: #e0183f;
+	font-style: normal;
+}
+.common_rightPanel .invitePanel .content a{
+	display: inline-block;
+	margin-left: 20px;
+	width: 90px;
+	height: 25px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	line-height: 25px;
+	border-radius: 2px; 
+}
+
+
+
+.common_rightPanel .extraBlock .leftBlock{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 62.8%;
+	height: 100%;
+	border: 1px solid #ddd;
+}
+.common_rightPanel .extraBlock .leftBlock .linkGroup{
+	width: 37.86%;
+	float: right;
+	line-height: 35px;
+	margin-top: 11%;
+}
+.common_rightPanel .extraBlock .leftBlock .linkGroup a{
+	display: block;
+	text-decoration: underline;
+}
+.common_rightPanel .extraBlock .rightBlock{
+	width:32.8%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: block;
+}
+.common_rightPanel .extraBlock .rightBlock img{
+	width: 100%;
+}
+.bottomSpace{
+	height: 120px;
+}
+
+.bottomSpace{
+	height: 120px;
+}
+@media only screen and (min-width: 785px) and (max-width: 840px) {
+	.common_rightPanel .invitePanel .content p{
+		font-size: 12px;
+	}
+	.common_rightPanel .invitePanel .content h1{
+		margin-top: 2%;
+	}
+}
+@media only screen and (max-width: 785px) {
+	.common_mainPanel .common_subNavBar,
+	.common_pageContent .common_leftPanel,
+	.common_rightPanel .categoryBar,
+	.common_rightPanel .invitePanel .normal,
+	.common_rightPanel .extraBlock {
+		display: none;		
+	}
+	.common_pageContent .common_rightPanel {
+		margin-left: 0;
+	}
+	.common_rightPanel .invitePanel{
+		text-align: center;
+		border: none;
+	}
+	.common_rightPanel .invitePanel .mobile{
+		display: inline-block;
+		width: 100%;
+		max-width: 320px;
+	}
+	.common_rightPanel .invitePanel .content{
+		width: auto;
+		float: none;
+	}
+	.common_rightPanel .invitePanel .content h1 {
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.common_rightPanel .invitePanel .content p{
+		line-height: 20px;
+		margin-top: 10px;
+	}
+	.common_rightPanel .invitePanel .content a{
+		display:block;
+		width:auto;
+		height: 32px;
+		line-height: 32px;
+		background-color: #df4141;
+		margin: 0 20px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

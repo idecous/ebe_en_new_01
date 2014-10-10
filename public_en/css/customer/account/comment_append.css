@@ -32,7 +32,7 @@
 .common_rightPanel .commentBlock li {
 	border-top: 1px solid #ddd;
 }
-.common_rightPanel .commentBlock li :first-child{
+.common_rightPanel .commentBlock li:first-child{
 	border-top:none;
 }
 .common_rightPanel .commentBlock li .infoRow{

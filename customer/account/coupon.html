@@ -2,11 +2,11 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-		<title>Return Apply</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Coupon</title>
 		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/default.css"/>
-		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/account/return_apply.css"/>
+		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/account/coupon.css"/>
 		<script type="text/javascript" src="../../public_en/js/jquery.js"></script>
 		<script type="text/javascript" src="../../public_en/js/customer/default.js"></script>
 	</head>
@@ -21,7 +21,7 @@
 						<a class="return" href="#"></a>
 					</div>
 					<img src="../../public_en/img/customer/logo_top.png" />
-					<h1>办理退货</h1>
+					<h1>优惠券</h1>
 				</div>
 				<ul class="common_mainNavBar">
 					<li><a href="javascript:;">首页</a></li><li><a href="#">品味生活</a></li><li><a href="#">风尚搭配</a></li><li><a class="checked" href="#">时尚元素</a></li><li><a href="#">发现</a></li>
@@ -48,10 +48,9 @@
 					</li>
 				</ul>
 			</header>
-		
 			<div class="common_mainPanel">
 				<div class="common_centerBlock normolBlock">
-					<div class="common_subNavBar">订单中心 &gt; 办理退货</div>
+					<div class="common_subNavBar">订单中心 &gt; 您的优惠券</div>
 					<div class="common_leftPanel">
 						<a class="groupName home" href="javascript:;"><i></i><span>我的EBE</span></a>
 						<div class="separator"></div>	
@@ -61,7 +60,7 @@
 							<li><a href="#">我的订单<b>5</b></a></li>
 							<li><a href="#">我的收藏</a></li>
 							<li><a href="#">商品评价</a></li>
-							<li class="current"><a href="#">办理退货</a></li>
+							<li><a href="#">办理退货</a></li>
 						</ul>
 						<a class="groupName account" href="javascript:;"><i></i><span>账号中心 </span></a>	
 						<div class="separator"></div>	
@@ -69,45 +68,117 @@
 							<li><a href="#">个人信息</a></li>
 							<li><a href="#">收货地址</a></li>
 							<li><a href="#">修改密码</a></li>
-							<li><a href="#">您的优惠券</a></li>
+							<li class="current"><a href="#">您的优惠券</a></li>
 							<li><a href="#">邀请好友</a></li>
 						</ul>
 					</div>
 					<div class="common_rightPanel">
 						<div class="categoryBar">
-							<a class="current" href="javascript:;">申请退货</a>
+							<a class="current" href="javascript:;">未使用</a><a href="#">已使用</a><a href="#">已过期</a>
 						</div>
-						<form>
-							<ul class="formBlock">
-								<li>
-									<div class="labelCol">订 单 号</div>
-									<div class="cotentCol"><div class="No"><input type="text" /></div></div>
-								</li>
-								<li>
-									<div class="labelCol">退货商品</div>
-									<div class="cotentCol">
-										<div class="selectBorder">
-											<select><option value="">N131507400301手绣花精疏纯羊绒圆领背心</option>
-		                                        <option value="">N131507400302手绣花精疏纯羊绒圆领背心</option>
-		                                        <option value="">N131507400303手绣花精疏纯羊绒圆领背心</option>
-		                                 	</select>
-										</div>
-		                            </div>
-								</li>
-								<li>
-									<div class="labelCol">退货理由</div>
-									<div class="cotentCol"><span class="info">退货理由：</span><div class="textareaBorder"><textarea></textarea></div></div>
-								</li>
-								<li>
-									<div class="labelCol">&nbsp;</div>
-									<div class="cotentCol submitRow"><input type="submit" value="申请退货"/></div>
-								</li>
-							</ul>
-						</form>
-					</div>					
-					<div class="clearFloat"></div>
-					<div class="customerService">您还可以拨打  <b>400-888-6666</b> 进行咨询</div>
-					<div class="bottomSpace"></div>
+						<!-- <div class="emptyMessage">您暂无优惠券!</div> -->
+						<table>
+							<colgroup>
+								<col width="120"/><col/><col width="240"/><col/><col/><col/>
+		                   </colgroup> 
+							<thead>
+			                    <tr>
+			                        <th>优惠券号码</th>
+			                        <th>价值</th>
+			                        <th>使用说明</th>
+			                        <th>获得日期</th>
+			                        <th>最后有效期</th>
+			                        <th>状态</th>
+			                    </tr>
+		             		</thead>
+		             		<tbody>
+		             			<tr>
+									<td>NMD150C_bDwa0S </td>
+									<td>￥50.00</td>
+									<td>欢迎加入EBE，立减50元+免运费优惠券(满488元即可使用)，七天有效期</td>
+									<td>2014-09-15</td>
+									<td>2014-07-10</td>
+									<td>已过期</td>
+								</tr>
+		             			<tr>
+									<td>NMD150C_bDwa0S </td>
+									<td>￥50.00</td>
+									<td>欢迎加入EBE，立减50元+免运费优惠券(满488元即可使用)，七天有效期</td>
+									<td>2014-09-15</td>
+									<td>2014-07-10</td>
+									<td>已过期</td>
+								</tr>
+		             		</tbody>
+						</table>
+						<div class="pageBar">
+							<form>
+								<a class="pre" href="#"><i></i><span>上一页</span></a><a class="next" href="#"><span>下一页</span><i></i></a>
+								<span>共2页， 到第</span><input type="text" value="1"/><span>页</span><input type="submit" value="确定"/>
+							</form>
+						</div>
+						<div class="hintBar">
+							优惠券使用方式： 在购物车页面中的“输入优惠券号码”处输入您的优惠券码，点击提交验证后即可使用
+						</div>
+						<div class="extraBlock">
+							<img class="bg" src="../../public_en/img/customer/account/coupon_list_holder_extra.png" />							
+							<img class="cards" src="../../public_en/source/customer/account/coupon/cards.png" />
+							<div class="leftBlock">
+								<div class="linkGroup">
+									<a href="#">◆ 如何使用优惠券?</a>
+									<a href="#">◆ 优惠券详细细则?</a>
+								</div>
+							</div>
+							<a class="rightBlock" href="#"><img src="../../public_en/source/customer/account/coupon/002.jpg" /></a>
+						</div>
+						
+					</div>
+					<div class="clearFloat bottomSpace"></div>
+					
+				</div>
+				<div class="mobileBlock">
+					<div class="categoryBar">
+						<a class="current" href="javascript:;">未使用</a><a href="#">已使用</a><a href="#">已过期</a>
+					</div>
+					<!-- <div class="emptyMessage">您暂无优惠券!</div> -->
+					<ul>
+						<li>
+							<div class="values">
+								<div class="head"></div>
+								<div class="body"><i>9999</i>元</div>
+								<div class="tail"></div>
+							</div>
+							<div class="descript">
+								<div class="number">优惠券编号：NMD150C_bDwa0S优惠券编号：NMD150C_bDwa0S优惠券编号：NMD150C_bDwa0S优惠券编号：NMD150C_bDwa0S</div>
+								<div class="param">购物满4000元时可使用<br/>有效期至2014年10月25日</div>
+							</div>	
+						</li>
+						<li>
+							<div class="values">
+								<div class="head"></div>
+								<div class="body"><i>10</i>元</div>
+								<div class="tail"></div>
+							</div>
+							<div class="descript">
+								<div class="number">优惠券编号：NMD150C_bDwa0S优惠券编号：NMD150C_bDwa0S优惠券编号：NMD150C_bDwa0S优惠券编号：NMD150C_bDwa0S</div>
+								<div class="param">购物满4000元时可使用<br/>有效期至2014年10月25日<br/>有效期至2014年10月25日</div>
+							</div>	
+						</li>
+						<li>
+							<div class="values">
+								<div class="head"></div>
+								<div class="body"><i>10</i>元</div>
+								<div class="tail"></div>
+							</div>
+							<div class="descript">
+								<div class="number">优惠券编号：NMD150C_bDwa0S优惠券编号：NMD150C_bDwa0S优惠券编号：NMD150C_bDwa0S优惠券编号：NMD150C_bDwa0S</div>
+								<div class="param">购物满4000元时可使用<br/>有效期至2014年10月25日<br/>有效期至2014年10月25日</div>
+							</div>	
+						</li>
+					</ul>
+					<div class="pageBar">
+						<div><a href="#">上一页</a></div>
+						<div><a href="#">下一页</a></div>
+					</div>
 				</div>
 			</div>
 

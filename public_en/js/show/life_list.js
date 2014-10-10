@@ -72,7 +72,7 @@ var EBE_ListItem = function(submitHandler,errorHandler,unit){
 				that.errorHandler();
 				return false;
 			}
-			that.submitHandler( that.id, that.sizeEl.eq(that.sizeIndex).text()  );
+			that.submitHandler( that.id, that.sizeEl.eq(that.sizeIndex).text() , that.sizeEl.eq(that.sizeIndex).attr("iid")    );
 			return false;
 		});
 	};
@@ -97,7 +97,7 @@ var EBE_ListItem = function(submitHandler,errorHandler,unit){
 		var tEl02 = $("<div class='shoppingcar'></div>").appendTo( tEl01 );
 		var tEl03 = $("<div class='size'></div>").appendTo( tEl02 );
 		for(var i=0; i < data.sizes.length;i++){
-			tEl03.append( $("<span>"+ data.sizes[i]+"</span>") );
+			tEl03.append( $("<span iid='"+  data.sizesID[i] +"'>"+ data.sizes[i]+"</span>") );
 		}
 		this.sizeEl = tEl03.find("span");
 		tEl03 = $("<div class='submitRow'></div>").appendTo(tEl02);
@@ -412,6 +412,7 @@ $(function(){
 				url:"#",
 				imgUrl:"public_en/source/show/life_list/" + imgs[ countID%2 ],
 				sizes:["X","M","L"],
+				sizesID:["S_0_"+countID,"S_1_"+countID,"S_2_"+countID],
 				enName:"eve by eve`s" + countID,
 				cnName:"绿野仙踪组连体泳衣" + countID,
 				realPrice:"1500.00",
@@ -428,8 +429,8 @@ $(function(){
 		console.log("删除购物车商品(商品ID/尺寸)",id,size);
 		//请求服务器
 	});
-	var list = new EBE_List(function(id,size){
-		console.log("添加到购物车(商品ID/尺寸)",id,size);
+	var list = new EBE_List(function(id,size,sizeID){
+		console.log("添加到购物车(商品ID/尺寸/尺寸ID)",id,size,sizeID);
 		//请求服务器
 		shoppingCar.addGoods({
 			id:"sc_02",
