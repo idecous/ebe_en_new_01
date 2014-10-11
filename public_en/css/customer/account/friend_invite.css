@@ -6,4 +6,175 @@
 	width: 100%;
 	position: relative;
 }
+.common_mainPanel .bottomBlock{
+	background-color: #f3f3f3;
+}
+.common_mainPanel .bottomBlock .emailInputRow{
+	padding-top: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+.common_mainPanel .bottomBlock .emailInputRow .cell{
+	display: inline-block;
+	width: 442px;
+}
+.common_mainPanel .bottomBlock .emailInputRow .cell .inputBorder{
+	position:relative;
+	display: inline-block;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	width: 276px;
+	height: 37px;
+	padding: 0 10px;
+}
+.common_mainPanel .bottomBlock .emailInputRow .cell .inputBorder span{
+	position: absolute;
+	top: -2px;
+	left: 10px;
+	color: #adadad;
+}
+.common_mainPanel .bottomBlock .emailInputRow .cell .inputBorder input[type='text']{
+	position:relative;
+	z-index:1;
+	width: 100%;
+	border: none;
+	background:none;
+	top: -2px;
+}
+
+.common_mainPanel .bottomBlock .emailInputRow .cell input[type='submit']{
+	vertical-align:top;
+	display:inline-block;
+	width: 136px;
+	height: 39px;
+	border: none;
+	background-color:#df4141; 
+	color: #fff;
+	margin-left: 7px;
+	border-radius: 2px;
+}
+.common_mainPanel .bottomBlock .subTitle{
+	margin-top: 25px;
+}
+.common_mainPanel .bottomBlock .importBlock{
+	text-align: justify;
+	margin-top: 12px;
+}
+.common_mainPanel .bottomBlock .importBlock a{
+	display: inline-block;
+	height: 39px;
+	line-height:39px;
+	width: 18.7%;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px; 
+	margin-bottom: 10px;
+	white-space: nowrap;
+}
+.common_mainPanel .bottomBlock .contentBlock{
+	background-color: #fff;
+	padding: 20px 30px;
+	color: #666;
+	font-size: 12px;
+}
+
+.common_mainPanel .bottomBlock .messageBlock{
+	display: none;
+	margin-top: 20px;
+}
+.common_mainPanel .bottomBlock .messageBlock h1{
+	font-size: 22px;
+}
+.common_mainPanel .bottomBlock .messageBlock .separator{
+	height: 0;
+	border-bottom: 1px solid #333;
+	width: 70px;
+	display: inline-block;
+}
+.common_mainPanel .bottomBlock .messageBlock h2{
+	font-size: 16px;
+	margin-top: 10px;
+}
+.common_mainPanel .bottomBlock .messageBlock p{
+	margin: 0 25px;
+	color: #666;
+	margin-top: 10px;
+	line-height: 24px;
+}
+.common_mainPanel .bottomBlock .messageBlock p i{
+	color: #e0183f;
+	font-style: normal;
+}
+.common_mainPanel .bottomBlock .mobileBg{
+	display: none;
+}
+
+.bottomSpace{
+	height: 50px;
+}
+
+@media only screen and (max-width: 850px) {
+	.common_mainPanel .bottomBlock .importBlock a{
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width: 785px) {
+	
+	.common_mainPanel .common_subNavBar,
+	.common_mainPanel .mainView ,
+	.common_mainPanel .bottomBlock .subTitle,
+	.common_mainPanel .bottomBlock .importBlock{
+		display: none;
+	}
+	.common_mainPanel .bottomBlock .messageBlock ,
+	.common_mainPanel .bottomBlock .mobileBg {
+		display: block;
+	}
+	.common_centerBlock{
+		background-color: #fff;
+		text-align: center;
+	}
+	.common_mainPanel .bottomBlock .emailInputRow {
+		padding: 20px 15px 25px 15px;
+		background-color: #eee;
+		height: auto;
+	}
+	.common_mainPanel .bottomBlock .emailInputRow .cell {
+		width: auto;
+		display: block;
+	}
+	.common_mainPanel .bottomBlock .emailInputRow .cell .inputBorder{
+		width: auto;
+		display: block;
+	}
+	.common_mainPanel .bottomBlock .emailInputRow .cell input[type="submit"] {
+		margin-top: 20px;
+		margin-left: 0;
+	}
+	.common_mainPanel .bottomBlock .mobileBg{
+		display: inline-block;
+		width: 100%;
+		max-width: 320px;
+	}
+	.common_mainPanel .bottomBlock .contentBlock p{
+		line-height: 20px;
+		color: #333;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 

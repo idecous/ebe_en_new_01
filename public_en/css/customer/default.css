@@ -57,6 +57,10 @@ h1,h2,h3,h4,h5,h6{
 .enFontFamily{
 	font-family: "Times New Roman";
 }
+.common_invisible{
+	visibility: hidden;
+}
+
 .common_moblie_toTop{
 	display: block;
 	position: fixed;

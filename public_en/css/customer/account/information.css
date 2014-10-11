@@ -1,0 +1,123 @@
+.common_rightPanel .categoryBar{
+	position:relative;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #ddd;
+	line-height: 32px;
+}
+.common_rightPanel .categoryBar a{
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+	color: #666;
+}
+.common_rightPanel .categoryBar .current{
+	position:relative;
+	color: 	#333;
+	border-bottom: 2px solid #333;
+	margin-bottom: -2px;
+}
+.common_rightPanel .formBlock{
+	width: 440px;
+	margin-top: 15px;
+	margin-left: 4px;
+	font-size: 12px;
+}
+.common_rightPanel .formBlock li:nth-child(n+5){
+	display: none;
+}
+.common_rightPanel .formBlock li:last-child{
+	display: block;
+}
+
+.common_rightPanel .formBlock .label{
+	color: #666;
+	line-height: 30px;
+}
+.common_rightPanel .formBlock .label i{
+	font-style: normal;
+	color: #df4141;
+	margin-right: 4px;
+}
+.common_rightPanel .formBlock .inputBorder{
+	border: 1px solid #ddd;
+	height: 20px;
+	padding: 4px 4px;
+}
+.common_rightPanel .formBlock .inputBorder input{
+	width: 100%;
+	border: none;
+}
+.common_rightPanel .formBlock .passwordChangeSelector{
+	line-height: 40px;
+}
+.common_rightPanel .formBlock .passwordChangeSelector input{
+	vertical-align: -2px;
+	margin-right: 6px;
+	cursor: pointer;
+	font-size: 12px;
+}
+.common_rightPanel .formBlock .passwordChangeSelector span{
+	cursor: pointer;
+}
+
+.common_rightPanel .formBlock .warn{
+	visibility: hidden;
+	color: #f00;
+	line-height: 22px;
+}
+.common_rightPanel .formBlock .submitRow{
+	padding-top: 10px;
+}
+.common_rightPanel .formBlock input[type='submit']{
+	background-color: #df4141;
+	width: 135px;
+	height: 39px;
+	text-align: center;
+	line-height: 39px;
+	border: none;
+	color: #fff;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.bottomSpace{
+	height: 120px;
+}
+
+@media only screen and (max-width: 785px) {
+	.common_mainPanel .common_subNavBar,
+	.common_pageContent .common_leftPanel ,
+	.common_rightPanel .categoryBar {
+		display: none;
+	}
+	.common_pageContent .common_rightPanel{
+		margin-left: 0;
+	}
+	.common_rightPanel .formBlock {
+		width: auto;
+		margin:0;
+		padding: 20px 10px;
+	}
+	.common_rightPanel .formBlock  .submitRow input{
+		display:block;
+		width: 100%;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

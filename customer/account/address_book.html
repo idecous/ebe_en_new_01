@@ -2,13 +2,14 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Return List</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<title>Address List</title>
 		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/default.css"/>
-		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/account/return_list.css"/>
+		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/account/address_book.css"/>
 		<script type="text/javascript" src="../../public_en/js/jquery.js"></script>
 		<script type="text/javascript" src="../../public_en/js/customer/default.js"></script>
+		<script type="text/javascript" src="../../public_en/js/customer/account/address_book.js"></script>
 	</head>
 	<body>
 		<a class="common_moblie_toTop" href="javascript:;"></a>
@@ -21,7 +22,7 @@
 						<a class="return" href="#"></a>
 					</div>
 					<img src="../../public_en/img/customer/logo_top.png" />
-					<h1>办理退货</h1>
+					<h1>收货地址</h1>
 				</div>
 				<ul class="common_mainNavBar">
 					<li><a href="javascript:;">首页</a></li><li><a href="#">品味生活</a></li><li><a href="#">风尚搭配</a></li><li><a class="checked" href="#">时尚元素</a></li><li><a href="#">发现</a></li>
@@ -48,9 +49,12 @@
 					</li>
 				</ul>
 			</header>
+			<form action="#" method="post"><input type="hidden"/></form><!-- 设为默认 -->
+			<form action="#" method="post"><input type="hidden"/></form><!-- 删除 -->
+
 			<div class="common_mainPanel">
 				<div class="common_centerBlock normolBlock">
-					<div class="common_subNavBar">订单中心 &gt; 办理退货</div>
+					<div class="common_subNavBar">订单中心 &gt; 收货地址</div>
 					<div class="common_leftPanel">
 						<a class="groupName home" href="javascript:;"><i></i><span>我的EBE</span></a>
 						<div class="separator"></div>	
@@ -60,48 +64,56 @@
 							<li><a href="#">我的订单<b>5</b></a></li>
 							<li><a href="#">我的收藏</a></li>
 							<li><a href="#">商品评价</a></li>
-							<li class="current"><a href="#">办理退货</a></li>
+							<li><a href="#">办理退货</a></li>
 						</ul>
 						<a class="groupName account" href="javascript:;"><i></i><span>账号中心 </span></a>	
 						<div class="separator"></div>	
 						<ul>
 							<li><a href="#">个人信息</a></li>
-							<li><a href="#">收货地址</a></li>
+							<li class="current"><a href="#">收货地址</a></li>
 							<li><a href="#">您的优惠券</a></li>
 							<li><a href="#">邀请好友</a></li>
 						</ul>
 					</div>
 					<div class="common_rightPanel">
 						<div class="categoryBar">
-							<a class="current" href="javascript:;">申请退换货</a><a href="#">查看记录</a>
+							<a class="current" href="javascript:;">Address Book</a><a href="#">New Address</a>
 						</div>
+						<!-- <div class="emptyMessage">Empty!</div> -->
 						<table>
-		                    <thead>
+							<thead>
 			                    <tr>
-			                        <th width="100">订单编号</th>
-			                        <th>订单商品</th>
-			                        <th width="100">下单时间</th>
+			                    	<th class="hidden"></th>
+			                        <th>收货人</th>
+			                        <th width="280">详细地址</th>
+			                        <th>电话/手机</th>
+			                        <th></th>
 			                        <th width="100">操作</th>
 			                    </tr>
 		             		</thead>
 		             		<tbody>
+		             			<tr class="defaultRow">
+		             				<td class="hidden">a_01</td>
+									<td>SMITHE</td>
+									<td>广东省 深圳市 南山区 桃源东钟爱大厦1楼 </td>
+									<td>13606060606</td>
+									<td>默认地址</td>
+									<td>
+										<a class="edit" href="#">编辑地址</a>
+										<a class="del" href="javascript:;">删除地址</a>
+									</td>
+								</tr>
 		             			<tr>
-									<td>688515498</td>
-									<td>kate spade/凯特·丝蓓女士蝴蝶结连衣裙  </td>
-									<td>2014/9/15</td>
-									<td><a href="#">申请退货</a></td>
-								</tr>
-								<tr>
-									<td>688515498</td>
-									<td>kate spade/凯特·丝蓓女士蝴蝶结连衣裙  </td>
-									<td>2014/9/15</td>
-									<td><a href="#">申请退货</a></td>
-								</tr>
-								<tr>
-									<td>688515498</td>
-									<td>kate spade/凯特·丝蓓女士蝴蝶结连衣裙  </td>
-									<td>2014/9/15</td>
-									<td><a href="#">申请退货</a></td>
+		             				<td class="hidden">a_01</td>
+									<td>SMITHE</td>
+									<td>广东省 深圳市 南山区 桃源东钟爱大厦2楼 </td>
+									<td>13606060606</td>
+									<td></td>
+									<td>
+										  <a class="default" href="javascript:;">设为默认地址</a>
+										  <a class="edit" href="#">编辑地址</a>
+										  <a class="del" href="javascript:;">删除地址</a>
+									</td>
 								</tr>
 		             		</tbody>
 						</table>
@@ -111,48 +123,44 @@
 								<span>共2页， 到第</span><input type="text" value="1"/><span>页</span><input type="submit" value="确定"/>
 							</form>
 						</div>
-						<!-- <div class="emptyMessage">暂时无记录</div> -->
-					</div>
-					<div class="clearFloat"></div>
-					<div class="clause"><span>申请退货常见问题：</span><a href="#">《退换货说明》</a><a href="#">《退款说明》</a></div>
-					<div class="bottomSpace"></div>
+							
+					</div>	
+					<div class="clearFloat bottomSpace"></div>			
 				</div>
+				
 				<div class="mobileBlock">
+					<div class="categoryBar"><a class="current" href="javascript:;">Address Book</a><a href="#">New Address</a></div>
+					<!-- <div class="emptyMessage">Empty!</div> -->
 					<ul>
-						<li>
-							<div class="nameRow">手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背心</div>
-							<div class="contentRow">
-								<img src="../../public_en/source/customer/account/comment/003.jpg" />
-								<div class="paramCol">
-									<div class="No">订单号：<b>1001470070</b></div>
-									<div class="price">订单总额：<b>￥3688</b></div>
-									<div class="count">共1件</div>
-								</div>
+						<li class="defaultRow" iid="aaaa1">
+							<div>
+								<div class="name">SMITHE 13606060606</div>
+								<p>广东省 深圳市 南山区 桃源东钟爱大厦1楼 </p>
 							</div>
 							<div class="operationRow">
-								<span>订单日期：2014-09-24</span>
-								<a href="#">申请退货</a>
+								<a class="edit" href="#"></a>
+							  	<a class="del" href="javascript:;"></a>	
 							</div>
 						</li>
-						<li>
-							<div class="nameRow">手绣花精疏纯羊绒圆领背心手绣花精疏纯羊绒圆领背心</div>
-							<div class="contentRow">
-								<img src="../../public_en/source/customer/account/comment/003.jpg" />
-								<div class="paramCol">
-									<div class="No">订单号：<b>1001470070</b></div>
-									<div class="price">订单总额：<b>￥3688</b></div>
-									<div class="count">共1件</div>
-								</div>
+						<li iid="aaaa2">
+							<div>
+								<div class="name">SMITHE 13606060606</div>
+								<p>广东省 深圳市 南山区 桃源东钟爱大厦2楼 </p>
 							</div>
 							<div class="operationRow">
-								<span>订单日期：2014-09-24</span>
-								<a href="#">申请退货</a>
+								<a class="default" href="javascript:;"></a>
+								<a class="edit" href="#"></a>
+							  	<a class="del" href="javascript:;"></a>	
 							</div>
 						</li>
 					</ul>
-					<!-- <div class="emptyMessage">暂时无记录</div> -->
-				</div>	
+					<div class="pageBar">
+						<div><a href="#">上一页</a></div>
+						<div><a href="#">下一页</a></div>
+					</div>
+				</div>
 			</div>
+
 			<footer>
 				<div class="common_footerCenterBlock servicesPanel">
 						<ul class="feature">

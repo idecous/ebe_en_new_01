@@ -419,6 +419,7 @@ header .bg{
 	overflow:hidden;
 	max-height: 2500px;
     transition: max-height 0.25s ease-in;
+    margin-top: 10px;
 }
 .common_mainPanel .filterPanel .byBrand ul.close{
 	max-height: 0;
@@ -427,7 +428,7 @@ header .bg{
 }
 .common_mainPanel .filterPanel .byBrand li{
 	border-bottom: 1px solid #ddd;
-	height:49px; 
+	height:30px; 
 }
 .common_mainPanel .filterPanel .byBrand .unable a{
 	color: #ccc;
@@ -442,6 +443,41 @@ header .bg{
 	line-height: 15px;
 	height: 30px;
 }
+
+.common_mainPanel .filterPanel .bySeries{
+	margin-top: 40px;
+} 
+.common_mainPanel .filterPanel .bySeries ul{
+	overflow:hidden;
+	max-height: 2500px;
+    transition: max-height 0.25s ease-in;
+    margin-top: 10px;
+}
+.common_mainPanel .filterPanel .bySeries ul.close{
+	max-height: 0;bySeries
+	transition: max-height 0.25s ease-out;
+    overflow: hidden;
+}
+.common_mainPanel .filterPanel .bySeries li{
+	border-bottom: 1px solid #ddd;
+	height:30px; 
+}
+.common_mainPanel .filterPanel .bySeries .unable a{
+	color: #ccc;
+}
+.common_mainPanel .filterPanel .bySeries li a{
+	padding-top:6px;
+	color: #666;
+	display: block;
+	vertical-align: middle;
+}
+.common_mainPanel .filterPanel .bySeries li a span{
+	line-height: 15px;
+	height: 30px;
+}
+
+
+
 .common_mainPanel .filterPanel .byPrice{
 	margin-top: 50px;
 	color: #999;
