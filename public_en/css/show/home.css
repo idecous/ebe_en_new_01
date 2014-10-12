@@ -201,7 +201,7 @@ header .mainNavBar li .checked{
 	z-index: 1;
 	text-align: center;
 	transition: all 0.25s ease-out 0s;
-	opacity: 0;
+	opacity: 1;
 }
 .common_mainPanel .actMainBlock .detailsViewBorder ul li:hover .textBlock{
 	opacity: 1;
