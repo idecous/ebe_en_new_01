@@ -118,7 +118,10 @@ header{
 }
 .common_moblieNav ul .account a{
 	padding-left: 0;
+	display: inline-block;
+	padding: 0 4px;
 }
+
 
 .common_pageContent{
 	position:relative;
