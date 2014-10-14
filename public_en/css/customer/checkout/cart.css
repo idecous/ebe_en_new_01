@@ -128,6 +128,9 @@
 	vertical-align: -1px;
 	cursor: pointer;
 }
+.common_mainPanel .updateRow .codeGroup input[type='submit']:hover{
+	background-color: #444;
+}
 .common_mainPanel .updateRow .updateBtn{
 	width: 127px;
 	height: 30px;
@@ -141,10 +144,15 @@
 	vertical-align: -1px;
 	cursor: pointer;
 }
+.common_mainPanel .updateRow .updateBtn:hover{
+	background-color: #333;
+	color: #fff;
+}
 
 .common_mainPanel .shippingTaxBlock{
 	border: 1px solid #ddd;
-	margin-top: 50px;
+	margin-top: 20px;
+	padding-bottom: 10px;
 }
 .common_mainPanel .shippingTaxBlock .titleBar{
 	height: 38px;
@@ -224,11 +232,15 @@
 	vertical-align: middle;
 	cursor: pointer;
 }
+.common_mainPanel .shippingTaxBlock .addressRow .submitRow input:hover{
+	color: #fff;
+	background-color: #333;
+}
 
 .common_mainPanel .shippingTaxBlock .shippingRow{
 	border-top: 1px dotted #ddd; 
 	padding: 15px 0;
-	margin: 10px 15px 0 15px;
+	margin: 10px 10px 0 10px;
 }
 .common_mainPanel .shippingTaxBlock .shippingRow h4{
 	font-size: 12px;
@@ -269,6 +281,10 @@
 	font-size: 12px;
 	cursor: pointer;
 }
+.common_mainPanel .shippingTaxBlock .shippingRow .submitBlock input:hover{
+	background-color: #333;
+	color: #fff;
+}
 .common_mainPanel .amountBlock{
 	line-height: 50px;
 }
@@ -292,9 +308,15 @@
 	text-align: center;
 	background-color: #df4141;
 }
+.common_mainPanel .actionBlock a:hover{
+	background-color: #f25656;
+}
 .common_mainPanel .actionBlock a:first-child{
 	margin-right: 20px;
 	background-color: #333;
+}
+.common_mainPanel .actionBlock a:first-child:hover{
+	background-color: #444;
 }
 .common_mainPanel .mobileBlock{
 	display: none;
@@ -415,12 +437,51 @@
 		position: static;
 		text-align: center;
 		width: auto;
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 	.common_mainPanel .shippingTaxBlock .shippingRow .submitBlock input{
 		width: 100%;
 	}
+	.common_mainPanel .shippingTaxBlock .addressRow ul li{
+		padding: 15px 10px 0 10px;
+	}
+	.common_mainPanel .shippingTaxBlock .addressRow ul li .label {
+		position: static;
+		width: auto;
+		text-align: left;
+		font-size: 14px;
+	}
+	.common_mainPanel .shippingTaxBlock .addressRow ul li .inputSelect,
+	.common_mainPanel .shippingTaxBlock .addressRow ul li .inputBorder {
+		margin: 6px 0 ;
+	}
+	.common_mainPanel .shippingTaxBlock .addressRow ul li select {
+		font-size: 14px;
+		padding: 3px 4px;
+	}
+	.common_mainPanel .shippingTaxBlock .addressRow ul li input{
+		font-size: 14px;
+	}
 	
+	.common_mainPanel .amountBlock {
+		padding: 0 10px;
+		line-height: 30px;
+	}
+	.common_mainPanel .amountBlock span{
+		display: block;
+	}
+	.common_mainPanel .actionBlock{
+		text-align: left;
+		padding: 0 10px;
+	}
+	.common_mainPanel .actionBlock a{
+		display: block;
+		margin-top: 10px;
+		text-align: center;
+	}
+	.common_mainPanel .actionBlock a:first-child{
+		margin-right: 0;
+	}
 	
 	
 	
