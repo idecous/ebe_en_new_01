@@ -540,8 +540,6 @@ var EBE_GoodsParameter = function(sizeWarn,submitHandler){
 	}
 };
 
-
-
 var EBE_ElementRow = function(el){
 	var el = el;
 	var rightBlockEl = el.find(".rightBlock");

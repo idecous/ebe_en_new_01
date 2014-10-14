@@ -107,6 +107,8 @@
 	             			</tr>
 	             		</tbody>
 					</table>
+					<input type="hidden"/><!--优惠卷 -->
+					</form>
 					<ul class="mobileBlock">
 						<li>
 							<div class="imgCol">
@@ -147,57 +149,59 @@
 						<div class="codeGroup"><span>Discount Code</span><input type="text"/><input type="submit" name="apply_code" value="APPLY CODE"/></div>
 						<input class="updateBtn" type="submit" name="update_car" value="UPDATE BAG"/>
 					</div>
-					</form>
-					
 					<div class="shippingTaxBlock">
 						<div class="titleBar">Estimate Shipping And Tax</div>
-						<div class="addressRow">
-							<ul>
-								<li>
-									<div class="label">Country<i>*</i></div>
-										<div class="inputSelect">
-											<select>
-												<option selected="selected" value="US">United States</option>
-											</select>
-										</div>
-										<div class="warn">请不要留空!</div>
-								</li>
-								<li>
-									<div class="label">State/Province<i>*</i></div>
-										<div class="inputSelect">
-											<select>
-		                                        <option value="">Please select</option>
-												<option value="1" title="Alabama">Alabama</option>
-												<option value="2" title="Alaska">Alaska</option>
-		                                    </select>
-										</div>
-										<div class="warn">请不要留空!</div>
-								</li>
-								<li>
-									<div class="label">ZIP/POSTAL CODE<i>*</i></div>
-										<div class="inputBorder">
-											<input type="text"/>
-										</div>
-										<div class="warn">请不要留空!</div>
-								</li>
-							</ul>
-							<div class="submitRow">
-								<input type="submit" value="GET A QUOTE"/>
-							</div>
-						</div>
-						<div class="shippingRow">
-							<h4>Select Shipping Method</h4>
-							<div class="selectBlock">
+						<form action="#">
+							<div class="addressRow">
 								<ul>
-									<li><input name="group01" type="radio"/><span>FedEx Ground $7.00</sapn></li>
-									<li><input name="group01" type="radio"/><span>FedEx 2-Day $20.00</sapn></li>
-									<li><input name="group01" type="radio"/><span>FedEx Next Day $26.00</sapn></li>		
+									<li>
+										<div class="label">Country<i>*</i></div>
+											<div class="inputSelect">
+												<select>
+													<option selected="selected" value="US">United States</option>
+												</select>
+											</div>
+											<div class="warn">请不要留空!</div>
+									</li>
+									<li>
+										<div class="label">State/Province<i>*</i></div>
+											<div class="inputSelect">
+												<select>
+			                                        <option value="">Please select</option>
+													<option value="1" title="Alabama">Alabama</option>
+													<option value="2" title="Alaska">Alaska</option>
+			                                    </select>
+											</div>
+											<div class="warn">请不要留空!</div>
+									</li>
+									<li>
+										<div class="label">ZIP/POSTAL CODE<i>*</i></div>
+											<div class="inputBorder">
+												<input type="text"/>
+											</div>
+											<div class="warn">请不要留空!</div>
+									</li>
 								</ul>
-								<div class="submitBlock">
-									<input type="submit" value="UPDATE TOTAL"/>
+								<div class="submitRow">
+									<input type="submit" value="GET A QUOTE"/>
 								</div>
 							</div>
-						</div>
+						</form>
+						<form>
+							<div class="shippingRow">
+								<h4>Select Shipping Method</h4>
+								<div class="selectBlock">
+									<ul>
+										<li><input name="group01" type="radio" checked="checked"/><span>FedEx Ground $7.00</sapn></li>
+										<li><input name="group01" type="radio"/><span>FedEx 2-Day $20.00</sapn></li>
+										<li><input name="group01" type="radio"/><span>FedEx Next Day $26.00</sapn></li>		
+									</ul>
+									<div class="submitBlock">
+										<input type="submit" value="UPDATE TOTAL"/>
+									</div>
+								</div>
+							</div>
+						</form>
 					</div>
 					
 					<div class="amountBlock">

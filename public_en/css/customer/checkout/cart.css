@@ -114,6 +114,9 @@
 	margin-right: 10px;
 	padding: 2px 4px;
 }
+.common_mainPanel .updateRow .codeGroup input[type='text'].warn{
+	border: 1px solid #f00;	
+}
 .common_mainPanel .updateRow .codeGroup input[type='submit']{
 	width: 100px;
 	height: 29px;
@@ -262,6 +265,9 @@
 	margin-right: 4px;
 	vertical-align: -1px;
 }
+.common_mainPanel .shippingTaxBlock .shippingRow ul li span{
+	cursor: default;
+}
 .common_mainPanel .shippingTaxBlock .shippingRow .submitBlock{
 	position: absolute;
 	top: 0;
@@ -341,6 +347,10 @@
 	text-align: center;
 	display: inline-block;
 	padding: 0 4px;
+}
+.common_mainPanel .mobileBlock li .imgCol .toWish:hover{
+	background-color: #333;
+	color: #fff;
 }
 .common_mainPanel .mobileBlock li .paramCol{
 	margin: 0 50px 0 130px;
