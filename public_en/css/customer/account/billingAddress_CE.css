@@ -1,0 +1,164 @@
+.common_rightPanel .categoryBar{
+	position:relative;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #ddd;
+	line-height: 32px;
+}
+.common_rightPanel .categoryBar a{
+	display: inline-block;
+	width: 160px;
+	text-align: center;
+	color: #666;
+}
+.common_rightPanel .categoryBar .current{
+	position:relative;
+	color: 	#333;
+	border-bottom: 2px solid #333;
+	margin-bottom: -2px;
+}
+.common_rightPanel .subTitleBar{
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 5px;
+	margin-top: 30px;
+}
+.common_rightPanel .formBlock{
+	font-size: 12px;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.common_rightPanel .formBlock .half{
+	width: 50%;
+	float: left;
+}
+.common_rightPanel .formBlock .half:first-child .label,
+.common_rightPanel .formBlock .half:first-child .inputBorder,
+.common_rightPanel .formBlock .half:first-child .inputSelect,
+.common_rightPanel .formBlock .half:first-child .warn{
+	margin-left: 0;
+	margin-right: 10px;
+}
+.common_rightPanel .formBlock .label{
+	color: #666;
+	line-height: 30px;
+	margin-left: 10px;
+}
+.common_rightPanel .formBlock .label i{
+	font-style: normal;
+	color: #df4141;
+	margin-right: 4px;
+}
+.common_rightPanel .formBlock .inputBorder{
+	border: 1px solid #ddd;
+	height: 20px;
+	padding: 4px 4px;
+	margin-left: 10px;
+}
+.common_rightPanel .formBlock .inputBorder input{
+	width: 100%;
+	border: none;
+}
+.common_rightPanel .formBlock .inputSelect{
+	border: 1px solid #ddd;
+	height: 28px;
+	margin-left: 10px;
+}
+.common_rightPanel .formBlock .inputSelect select{
+	display: block;
+	border: none;
+	width: 100%;
+	padding:3px 4px;
+	font-size: 14px;
+}
+.common_rightPanel .formBlock .inputSelect select option{
+	padding: 0 4px;
+}
+
+.common_rightPanel .formBlock .warn{
+	visibility: hidden;
+	color: #f00;
+	line-height: 22px;
+	margin-left: 10px;
+}
+.common_rightPanel .submitRow{
+	padding-top: 10px;
+	clear: both;
+}
+.common_rightPanel .submitRow input{
+	background-color: #df4141;
+	width: 135px;
+	height: 39px;
+	text-align: center;
+	line-height: 39px;
+	border: none;
+	color: #fff;
+	border-radius: 3px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.bottomSpace{
+	height: 120px;
+}
+
+@media only screen and (max-width: 785px) {
+	.common_mainPanel .common_subNavBar,
+	.common_pageContent .common_leftPanel {
+		display: none;
+	}
+	.common_pageContent .common_rightPanel {
+		margin-left: 0;
+	}
+	.common_rightPanel .categoryBar{
+		height: 40px;
+		line-height:40px;
+		background-color: #545454;
+		border-top:1px solid #999;
+		border: none;
+	}
+	.common_rightPanel .categoryBar a{
+		display: block;
+		float: left;
+		width: 50%;
+		text-align: center;
+		color: #aaa;
+	}
+	.common_rightPanel .categoryBar .current{
+		background-color: #333;
+		color: #fff;
+		border: none;
+	}
+	.common_rightPanel .formBlock .half {
+		float: none;
+		width: auto;
+		margin: 0 10px;
+	}
+	.common_rightPanel .formBlock .half:first-child .label, 
+	.common_rightPanel .formBlock .half:first-child .inputBorder, 
+	.common_rightPanel .formBlock .half:first-child .inputSelect, 
+	.common_rightPanel .formBlock .half:first-child .warn {
+	    margin-left: 0;
+	    margin-right: 0;
+	}
+	.common_rightPanel .formBlock .half .label, 
+	.common_rightPanel .formBlock .half .inputBorder, 
+	.common_rightPanel .formBlock .half .inputSelect, 
+	.common_rightPanel .formBlock .half .warn {
+	    margin-left: 0;
+	    margin-right: 0;
+	}
+	.common_rightPanel .subTitleBar {
+		text-align: center;
+	}
+	.common_rightPanel .submitRow {
+		padding: 0 10px;
+	}
+	.common_rightPanel .submitRow input{
+		display: block;
+		width: 100%;
+	}
+	
+}
+
+
+
+

@@ -350,6 +350,8 @@ header .userGroup .shoppingcar .popWin .borderBottom{
 	line-height: 28px;
 	font-weight: bold;
 	margin-top: 10px;
+	text-align: left;
+	padding-left: 20px;
 }
 .common_pageContent .common_leftPanel .current{
 	color: #df4141;
@@ -361,7 +363,7 @@ header .userGroup .shoppingcar .popWin .borderBottom{
 .common_pageContent .common_leftPanel .groupName i{
 	position:absolute;
 	top:8px;
-	left:18px;
+	left:4px;
 	display: inline-block;
 	width: 14px;
 	height: 14px;
@@ -410,10 +412,6 @@ header .userGroup .shoppingcar .popWin .borderBottom{
 .common_pageContent .common_rightPanel{
 	margin-left: 170px;
 }
-
-
-
-
 
 footer {
 	background-color: #000;

@@ -1,0 +1,159 @@
+.common_mainPanel .subTitleBar{
+	font-size: 16px;
+	border-bottom: 1px solid #666;
+	padding: 20px 0 10px 0;
+}
+.common_mainPanel table .hide{
+	display: none;
+}
+.common_mainPanel table{
+	width: 100%;
+	margin-top: 10px;
+	border: 1px solid #ddd;
+	border-collapse:collapse;
+}
+.common_mainPanel table thead tr{
+	height: 38px;
+	line-height: 38px;
+	background-color: #f1f1f1;
+	border-bottom: 1px solid #ddd;
+}
+.common_mainPanel table thead tr th{
+	font-size: 12px;
+	font-weight: normal;
+}
+.common_mainPanel table tbody td{
+	text-align: center;
+	padding: 20px 2px 10px 2px;
+	line-height: 26px;
+	font-size: 12px;
+	border-bottom: 1px solid #ddd;
+}
+.common_mainPanel table tbody td img{
+	float:left;
+	position: relative;
+	top: -5px;
+	left: 5px;	
+}
+.common_mainPanel table tbody td .descriptBlock{
+	margin-left: 90px;
+	text-align: left;
+	min-height: 100px;
+}
+.common_mainPanel table tbody td .descriptBlock h3{
+	margin-top: 5px;
+	font-size: 14px;
+}
+.common_mainPanel table tbody td .descriptBlock div{
+	color: #666;
+	font-size: 12px;
+	line-height: 20px;
+}
+.common_mainPanel table tbody td .quantity{
+	width: 84px;
+	height: 24px;
+}
+.common_mainPanel table tbody td .quantity a{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	line-height:22px;
+	text-align:center;
+	border: 1px solid #ddd;
+}
+.common_mainPanel table tbody td .quantity input{
+	width: 28px;
+	height: 22px;
+	border: 1px solid #ddd;
+	text-align:center;
+	vertical-align: -1px;
+	margin: 0 3px;
+}
+.common_mainPanel table tbody td .toWish{
+	display:inline-block;
+	border: 1px solid #333;
+	width: 127px;
+	height: 28px;
+	line-height:28px;
+	border-radius: 3px;
+	text-align: center;
+	padding: 0 10px;
+}
+.common_mainPanel table tbody td .toWish:hover{
+	color: #fff;
+	background-color: #333; 
+}
+.common_mainPanel table tbody td .delBtn{
+	display:inline-block;
+	width: 16px;
+	height: 16px;
+	background: url("../../../img/customer/icons.png") no-repeat -24px -180px;
+	
+}
+.common_mainPanel .updateRow{
+	border: 1px solid #ddd;
+	border-top: none;
+	background-color: #f1f1f1;
+	height: 65px;
+	line-height: 65px;
+	padding: 0 20px;
+	text-align: right;
+}
+.common_mainPanel .updateRow .codeGroup{
+	float: left;	
+}
+.common_mainPanel .updateRow .codeGroup span{
+	font-size: 12px;
+	margin-right: 10px;
+}
+.common_mainPanel .updateRow .codeGroup input[type='text']{
+	width: 192px;
+	height: 24px;
+	border: 1px solid #ddd;
+	margin-right: 10px;
+	padding: 2px 4px;
+}
+.common_mainPanel .updateRow .codeGroup input[type='submit']{
+	width: 100px;
+	height: 29px;
+	line-height:29px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border: none;
+	display: inline-block;
+	border-radius: 3px;
+	font-size: 12px;
+	vertical-align: -1px;
+}
+.common_mainPanel .updateRow .updateBtn{
+	width: 127px;
+	height: 30px;
+	line-height:30px;
+	background-color: #f1f1f1;
+	border: 1px solid #333;
+	text-align: center;
+	display: inline-block;
+	border-radius: 3px;
+	font-size: 12px;
+	vertical-align: -1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

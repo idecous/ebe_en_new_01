@@ -34,6 +34,7 @@
 	z-index: 1;
 }
 .common_rightPanel .invitePanel{
+	position:relative;
 	border: 1px solid #dedede;
 }
 .common_rightPanel .invitePanel .normal{
@@ -45,7 +46,9 @@
 
 .common_rightPanel .invitePanel .content{
 	width: 66.35%;
-	float: right;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 .common_rightPanel .invitePanel .content h1{
 	font-size: 16px;
@@ -70,8 +73,6 @@
 	line-height: 25px;
 	border-radius: 2px; 
 }
-
-
 
 .common_rightPanel .extraBlock .leftBlock{
 	position:absolute;
@@ -139,6 +140,7 @@
 	.common_rightPanel .invitePanel .content{
 		width: auto;
 		float: none;
+		position: static;
 	}
 	.common_rightPanel .invitePanel .content h1 {
 		font-size: 14px;

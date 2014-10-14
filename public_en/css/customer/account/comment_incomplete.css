@@ -215,7 +215,7 @@
 .common_rightPanel .moduleGroup .history .item .descriptBlock h2{
 	display:inline-block;
 	font-size: 18px;
-	margin: 3px 15px;
+	margin: 6px 15px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	border-top:1px solid #fff;

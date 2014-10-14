@@ -7,7 +7,7 @@
 }
 .common_rightPanel .categoryBar a{
 	display: inline-block;
-	width: 120px;
+	width: 160px;
 	text-align: center;
 	color: #666;
 }
@@ -114,7 +114,6 @@
 .bottomSpace{
 	height: 120px;
 }
-
 .common_mainPanel .mobileBlock{
 	display: none;
 	background-color: #eee;
@@ -207,30 +206,3 @@
 		display: block;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

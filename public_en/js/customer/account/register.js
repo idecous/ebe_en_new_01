@@ -25,7 +25,7 @@ var EBE_Background = function(){
 
 
 
-var EBE_LoginRow = function(el,pattern){
+var EBE_LoginRow = function(labelEl,el,pattern){
 	var infoEl = el.children("span");
 	var inputEl = el.children("input").val(""); 
 	
@@ -41,8 +41,10 @@ var EBE_LoginRow = function(el,pattern){
 		var result = pattern.test( $.trim( inputEl.val() ) );
 		if(!result){
 			el.addClass("warn");
+			labelEl.addClass("warnInfo");
 		}else{
 			el.removeClass("warn");
+			labelEl.removeClass("warnInfo");
 		}
 		return result;
 	}
@@ -54,34 +56,61 @@ var EBE_LoginRow = function(el,pattern){
 		result =( getValue() == val ) && result;
 		if(!result){
 			el.addClass("warn");
+			labelEl.addClass("warnInfo");
 		}else{
 			el.removeClass("warn");
+			labelEl.removeClass("warnInfo");
 		}
 		return result;
 	}
-	
 	return {"verify":verify,"getValue":getValue,"isEqual":isEqual};
 };
 var EBE_Register = function(patternAccount,patternPassword){
+	var topWarnEls = $(".common_mainPanel .rightGroup .loginPanel .topWarn");
+	var labelEls = $(".common_mainPanel .rightGroup .loginPanel .label");
 	var rowEls = $(".common_mainPanel .rightGroup .loginPanel .inputRow");
-	var accountRow = new EBE_LoginRow( rowEls.eq(0),patternAccount );
-	var passwordRow = new EBE_LoginRow( rowEls.eq(1),patternPassword );
-	var repeatRow = new EBE_LoginRow( rowEls.eq(2),patternPassword );
+	var accountRow = new EBE_LoginRow( labelEls.eq(0),rowEls.eq(0),patternAccount );
+	var passwordRow = new EBE_LoginRow( labelEls.eq(1),rowEls.eq(1),patternPassword );
+	var repeatRow = new EBE_LoginRow( labelEls.eq(2),rowEls.eq(2),patternPassword );
 	
 	var formEl = $(".common_mainPanel .rightGroup .loginPanel .bg form");	
 
 	 formEl.submit(function(){
-	 	var correct = accountRow.verify();
-		correct = passwordRow.verify() && correct;
-		correct = repeatRow.isEqual( passwordRow.getValue() ) && correct;
-		return correct;
+	 	var correct1 = accountRow.verify();
+	 	if( correct1 ){
+	 		topWarnEls.eq(0).hide();
+	 	}else{
+	 		topWarnEls.eq(0).show();
+			topWarnEls.eq(1).hide();
+			topWarnEls.eq(2).hide();
+	 	}
+	 	var correct2 = passwordRow.verify();
+	 	if(correct1){
+	 		if( correct2 ){
+	 			topWarnEls.eq(1).hide();
+	 		}else{
+	 			topWarnEls.eq(1).show();
+				topWarnEls.eq(2).hide();
+	 		}
+	 	}
+	 	var correct3 = repeatRow.isEqual( passwordRow.getValue() );
+	 	if( correct1 && correct2){
+	 		if( correct3 ){
+	 			topWarnEls.eq(2).hide();
+	 		}else{
+	 			topWarnEls.eq(2).show();
+	 		}	
+	 	}
+		return correct2 && correct2 && correct3;
 	 });	
 };
 
 $(function(){
 	new EBE_Background();
-	new EBE_Register( /(^[1]+[3,4,5,8]+\d{9})|(^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$)/,
+	new EBE_Register( /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
 				   /^[a-zA-Z0-9!@#$%^&*]{6,16}$/i );
+				   
+				   
 	$(".leftGroup .navBar a:eq(1)").click(function(){
 		var url = window.location;  
         var title = document.title;  

@@ -2,14 +2,16 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-		<title>Return Apply</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Cart</title>
 		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/default.css"/>
-		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/account/return_apply.css"/>
+		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/checkout/cart.css"/>
 		<script type="text/javascript" src="../../public_en/js/jquery.js"></script>
 		<script type="text/javascript" src="../../public_en/js/customer/default.js"></script>
+		<script type="text/javascript" src="../../public_en/js/customer/checkout/cart.js"></script>
 	</head>
+
 	<body>
 		<a class="common_moblie_toTop" href="javascript:;"></a>
 		<div class="common_pageContent">
@@ -21,7 +23,7 @@
 						<a class="return" href="#"></a>
 					</div>
 					<img src="../../public_en/img/customer/logo_top.png" />
-					<h1>办理退货</h1>
+					<h1>Shopping Cart</h1>
 				</div>
 				<ul class="common_mainNavBar">
 					<li><a href="javascript:;">首页</a></li><li><a href="#">品味生活</a></li><li><a href="#">风尚搭配</a></li><li><a class="checked" href="#">时尚元素</a></li><li><a href="#">发现</a></li>
@@ -48,66 +50,70 @@
 					</li>
 				</ul>
 			</header>
-		
+			<form action="#" method="post"><input type="hidden"/></form><!-- 删除 -->
+			<form action="#" method="post"><input type="hidden"/></form><!-- 收藏 -->
 			<div class="common_mainPanel">
 				<div class="common_centerBlock normolBlock">
-					<div class="common_subNavBar">订单中心 &gt; 办理退货</div>
-					<div class="common_leftPanel">
-						<a class="groupName home" href="javascript:;"><i></i><span>我的EBE</span></a>
-						<div class="separator"></div>	
-						<a class="groupName order" href="javascript:;"><i></i><span>订单中心 </span></a>	
-						<div class="separator"></div>	
-						<ul>
-							<li><a href="#">我的订单<b>5</b></a></li>
-							<li><a href="#">我的收藏</a></li>
-							<li><a href="#">商品评价</a></li>
-							<li class="current"><a href="#">办理退货</a></li>
-						</ul>
-						<a class="groupName account" href="javascript:;"><i></i><span>账号中心 </span></a>	
-						<div class="separator"></div>	
-						<ul>
-							<li><a href="#">个人信息</a></li>
-							<li><a href="#">收货地址</a></li>
-							<li><a href="#">账单地址</a></li>
-							<li><a href="#">您的优惠券</a></li>
-							<li><a href="#">邀请好友</a></li>
-						</ul>
+					<div class="subTitleBar">Shopping Cart</div>
+					<table>
+						<thead>
+		                    <tr>
+		                    	<th class="hidden"></th>
+		                        <th>ITEMS</th>
+		                        <th width="100">QTY</th>
+		                        <th>PRICE</th>
+		                        <th></th>
+		                        <th width="60">SUBTOTAL</th>
+		                        <th>REMOVE</th>   
+		                    </tr>
+	             		</thead>
+	             		<tbody>
+	             			<tr>
+	             				<td class="hidden"><input type="hidden" value="id001"/></td>
+	             				<td>
+	             					<img src="../../public_en/source/customer/checkout/001.jpg" />
+	             					<div class="descriptBlock">
+	             						<h3>ABBY DEEP V TOP</h3>
+	             						<div>Color BLACK</div>
+	             						<div>Size S</div>
+	             					</div>
+	             				</td>
+	             				<td>
+	             					<div class="quantity"><a class="reduce" href="javascript:;">-</a><input type="text" value="1"><a class="increase" href="javascript:;">+</a></div>
+	             				</td>
+	             				<td><span>$1,333.00</span></td>
+	             				<td><a class="toWish" href="javascript:;">ADD TO WISHLIST</a></td>
+	             				<td><span>$1,333.00</span></td>
+	             				<td><a class="delBtn" href="javascript:;"></a></td>
+	             			</tr>
+	             			<tr>
+	             				<td class="hidden"><input type="hidden" value="id002"/></td>
+	             				<td>
+	             					<img src="../../public_en/source/customer/checkout/001.jpg" />
+	             					<div class="descriptBlock">
+	             						<h3>ABBY DEEP V TOP</h3>
+	             						<div>Color BLACK</div>
+	             						<div>Size S</div>
+	             					</div>
+	             				</td>
+	             				<td>
+	             					<div class="quantity"><a class="reduce" href="javascript:;">-</a><input type="text" value="1"><a class="increase" href="javascript:;">+</a></div>
+	             				</td>
+	             				<td><span>$1,333.00</span></td>
+	             				<td><a class="toWish" href="javascript:;">ADD TO WISHLIST</a></td>
+	             				<td><span>$1,333.00</span></td>
+	             				<td><a class="delBtn" href="javascript:;"></a></td>
+	             			</tr>
+	             		</tbody>
+					</table>
+					
+					<div class="updateRow">
+						<div class="codeGroup"><span>Discount Code</span><input type="text"/><input type="submit" value="APPLY CODE"/></div>
+						<input class="updateBtn" type="submit" value="UPDATE BAG"/>
 					</div>
-					<div class="common_rightPanel">
-						<div class="categoryBar">
-							<a class="current" href="javascript:;">申请退货</a>
-						</div>
-						<form>
-							<ul class="formBlock">
-								<li>
-									<div class="labelCol">订 单 号</div>
-									<div class="cotentCol"><div class="No"><input type="text" /></div></div>
-								</li>
-								<li>
-									<div class="labelCol">退货商品</div>
-									<div class="cotentCol">
-										<div class="selectBorder">
-											<select><option value="">N131507400301手绣花精疏纯羊绒圆领背心</option>
-		                                        <option value="">N131507400302手绣花精疏纯羊绒圆领背心</option>
-		                                        <option value="">N131507400303手绣花精疏纯羊绒圆领背心</option>
-		                                 	</select>
-										</div>
-		                            </div>
-								</li>
-								<li>
-									<div class="labelCol">退货理由</div>
-									<div class="cotentCol"><span class="info">退货理由：</span><div class="textareaBorder"><textarea></textarea></div></div>
-								</li>
-								<li>
-									<div class="labelCol">&nbsp;</div>
-									<div class="cotentCol submitRow"><input type="submit" value="申请退货"/></div>
-								</li>
-							</ul>
-						</form>
-					</div>					
-					<div class="clearFloat"></div>
-					<div class="customerService">您还可以拨打  <b>400-888-6666</b> 进行咨询</div>
-					<div class="bottomSpace"></div>
+					
+					
+					
 				</div>
 			</div>
 

@@ -79,6 +79,7 @@ body,html{
 	box-shadow: 0 0 3px #7e7e7e;
 }
 .common_mainPanel .rightGroup .loginPanel .bg{
+	position:relative;
 	width: 302px;
 	height: 302px;
 	margin: 4px;
@@ -88,11 +89,55 @@ body,html{
 .common_mainPanel .rightGroup .loginPanel .logo{
 	display: none;
 }
+.common_mainPanel .rightGroup .loginPanel .topWarn{
+	position:absolute;
+	top:0;
+	left:0;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 4px; 
+	color: #3a3a3a;
+	font-size: 12px;
+	line-height: 27px;
+	width:100%;
+	display: none;
+	height: 0;
+	overflow: hidden;
+}
+.common_mainPanel .rightGroup .loginPanel .topWarn div{
+	margin: 0 6px;
+}
+.common_mainPanel .rightGroup .loginPanel .topWarn i{
+	display: inline-block;
+	width:21px;
+	height:17px;
+	background: url(../../../img/customer/account/account_warn.png);
+	vertical-align: -2px;
+	margin-right: 8px;
+}
+
 .common_mainPanel .rightGroup .loginPanel .label{
+	position:relative;
 	color: #fff;
 	line-height: 30px;
 	height: 30px;
 }
+.common_mainPanel .rightGroup .loginPanel .label .warnBlock{
+	position: absolute;
+	top:0;
+	right:0;
+	width: 130px;
+	font-size: 12px;
+	visibility: hidden;
+}
+.common_mainPanel .rightGroup .loginPanel .label .warnBlock i{
+	display: inline-block;
+	width:21px;
+	height:17px;
+	background: url(../../../img/customer/account/account_warn.png);
+	vertical-align: -2px;
+	margin-right: 8px;
+}
+
 .common_mainPanel .rightGroup .loginPanel .notFirst{
 	margin-top: 18px;
 }
@@ -148,7 +193,10 @@ body,html{
 	color: #fff;
 }
 .common_mainPanel .rightGroup .loginPanel .warn{
-	background-color: #f00;
+	border-color: #f00;
+}
+.common_mainPanel .rightGroup .loginPanel .warnInfo .warnBlock{
+	visibility: visible;	
 }
 
 .common_mainPanel .rightGroup .otherAccount{
@@ -193,6 +241,7 @@ body,html{
 }
 
 @media only screen and (min-width: 785px) and (max-width: 1000px) {
+	.common_mainPanel .rightGroup .loginPanel .label .warnBlock,
 	.common_mainPanel .leftGroup {
 		display: none;
 	}
@@ -225,12 +274,11 @@ body,html{
 		display: none;
 	}
 	.common_mainPanel .rightGroup .loginPanel .inputRow{
-		margin-top: 60px;
+		margin-top: 33px;
 	}
 	.common_mainPanel .rightGroup .loginPanel .notFirstRow{
 		margin-top: 0;
 		border-top: none;
-
 	}
 	.common_mainPanel .rightGroup .loginPanel input[type="submit"]{
 		margin: 20px 0;
@@ -242,11 +290,18 @@ body,html{
 	.common_mainPanel .rightGroup .otherAccount{
 		display: block;
 	}
+	.common_mainPanel .rightGroup .loginPanel .topWarn{
+		background:none;
+		color:#fff;
+		top: 145px;		
+		height: 27px;
+	}
 	.common_mainPanel .rightGroup .otherAccount{
 		color: #fff;
 	}
 }
 @media only screen and (max-width: 785px) {
+	.common_mainPanel .rightGroup .loginPanel .label .warnBlock,
 	.common_topNavigationBlock,
 	.common_mainPanel .rightGroup  .mobileRegister{
 		display: block;
@@ -256,6 +311,10 @@ body,html{
 	.common_mainPanel .rightGroup .loginPanel .label,
 	.common_mainPanel .rightGroup .loginPanel .registerRow{
 		display: none;
+	}
+	.common_mainPanel .rightGroup .loginPanel .topWarn{
+		top: -34px;
+		height: 27px;
 	}
 	.common_mainPanel .rightGroup{
 		width: auto;
@@ -272,7 +331,7 @@ body,html{
 		margin-top: -115px;
 	}
 	.common_mainPanel .rightGroup .loginPanel .bg {
-		position:static;
+		position:relative;
 		width: auto;
 		height: auto;
 		margin: 0 25px;

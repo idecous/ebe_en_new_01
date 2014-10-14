@@ -4,14 +4,15 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-		<title>Return Apply</title>
+		<title>Billing Address Book</title>
 		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/default.css"/>
-		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/account/return_apply.css"/>
+		<link rel="stylesheet" type="text/css" href="../../public_en/css/customer/account/billingAddress_book.css"/>
 		<script type="text/javascript" src="../../public_en/js/jquery.js"></script>
 		<script type="text/javascript" src="../../public_en/js/customer/default.js"></script>
+		<script type="text/javascript" src="../../public_en/js/customer/account/billingAddress_book.js"></script>
 	</head>
 	<body>
-		<a class="common_moblie_toTop" href="javascript:;"></a>
+		<a class="common_moblie_toTop" href="javascript:;"></a>		
 		<div class="common_pageContent">
 			<header>
 				<div class="common_topNavigationBlock">
@@ -21,7 +22,7 @@
 						<a class="return" href="#"></a>
 					</div>
 					<img src="../../public_en/img/customer/logo_top.png" />
-					<h1>办理退货</h1>
+					<h1>账单地址</h1>
 				</div>
 				<ul class="common_mainNavBar">
 					<li><a href="javascript:;">首页</a></li><li><a href="#">品味生活</a></li><li><a href="#">风尚搭配</a></li><li><a class="checked" href="#">时尚元素</a></li><li><a href="#">发现</a></li>
@@ -48,10 +49,12 @@
 					</li>
 				</ul>
 			</header>
-		
+			<form action="#" method="post"><input type="hidden"/></form><!-- 设为默认 -->
+			<form action="#" method="post"><input type="hidden"/></form><!-- 删除 -->
+
 			<div class="common_mainPanel">
 				<div class="common_centerBlock normolBlock">
-					<div class="common_subNavBar">订单中心 &gt; 办理退货</div>
+					<div class="common_subNavBar">订单中心 &gt; 账单地址</div>
 					<div class="common_leftPanel">
 						<a class="groupName home" href="javascript:;"><i></i><span>我的EBE</span></a>
 						<div class="separator"></div>	
@@ -61,54 +64,100 @@
 							<li><a href="#">我的订单<b>5</b></a></li>
 							<li><a href="#">我的收藏</a></li>
 							<li><a href="#">商品评价</a></li>
-							<li class="current"><a href="#">办理退货</a></li>
+							<li><a href="#">办理退货</a></li>
 						</ul>
 						<a class="groupName account" href="javascript:;"><i></i><span>账号中心 </span></a>	
 						<div class="separator"></div>	
 						<ul>
 							<li><a href="#">个人信息</a></li>
-							<li><a href="#">收货地址</a></li>
+							<li class="current"><a href="#">收货地址</a></li>
 							<li><a href="#">账单地址</a></li>
 							<li><a href="#">您的优惠券</a></li>
 							<li><a href="#">邀请好友</a></li>
 						</ul>
 					</div>
-					<div class="common_rightPanel">
+					    <div class="common_rightPanel">
 						<div class="categoryBar">
-							<a class="current" href="javascript:;">申请退货</a>
+							<a class="current" href="javascript:;">Billing Address</a><a href="#">New Billing Address</a>
 						</div>
-						<form>
-							<ul class="formBlock">
-								<li>
-									<div class="labelCol">订 单 号</div>
-									<div class="cotentCol"><div class="No"><input type="text" /></div></div>
-								</li>
-								<li>
-									<div class="labelCol">退货商品</div>
-									<div class="cotentCol">
-										<div class="selectBorder">
-											<select><option value="">N131507400301手绣花精疏纯羊绒圆领背心</option>
-		                                        <option value="">N131507400302手绣花精疏纯羊绒圆领背心</option>
-		                                        <option value="">N131507400303手绣花精疏纯羊绒圆领背心</option>
-		                                 	</select>
-										</div>
-		                            </div>
-								</li>
-								<li>
-									<div class="labelCol">退货理由</div>
-									<div class="cotentCol"><span class="info">退货理由：</span><div class="textareaBorder"><textarea></textarea></div></div>
-								</li>
-								<li>
-									<div class="labelCol">&nbsp;</div>
-									<div class="cotentCol submitRow"><input type="submit" value="申请退货"/></div>
-								</li>
-							</ul>
-						</form>
-					</div>					
-					<div class="clearFloat"></div>
-					<div class="customerService">您还可以拨打  <b>400-888-6666</b> 进行咨询</div>
-					<div class="bottomSpace"></div>
+						<!-- <div class="emptyMessage">Empty!</div> -->
+						<table>
+							<thead>
+			                    <tr>
+			                    	<th class="hidden"></th>
+			                        <th>收货人</th>
+			                        <th width="280">详细地址</th>
+			                        <th>电话/手机</th>
+			                        <th></th>
+			                        <th width="100">操作</th>
+			                    </tr>
+		             		</thead>
+		             		<tbody>
+		             			<tr class="defaultRow">
+		             				<td class="hidden">a_01</td>
+									<td>SMITHE</td>
+									<td>广东省 深圳市 南山区 桃源东钟爱大厦1楼 </td>
+									<td>13606060606</td>
+									<td>默认地址</td>
+									<td>
+										<a class="edit" href="#">编辑</a>
+										<a class="del" href="javascript:;">删除</a>
+									</td>
+								</tr>
+		             			<tr>
+		             				<td class="hidden">a_01</td>
+									<td>SMITHE</td>
+									<td>广东省 深圳市 南山区 桃源东钟爱大厦2楼 </td>
+									<td>13606060606</td>
+									<td></td>
+									<td>
+										  <a class="edit" href="#">编辑</a>
+										  <a class="default" href="javascript:;">设为默认地址</a>
+										  <a class="del" href="javascript:;">删除</a>
+									</td>
+								</tr>
+		             		</tbody>
+						</table>
+						<div class="pageBar">
+							<form>
+								<a class="pre" href="#"><i></i><span>上一页</span></a><a class="next" href="#"><span>下一页</span><i></i></a>
+								<span>共2页， 到第</span><input type="text" value="1"/><span>页</span><input type="submit" value="确定"/>
+							</form>
+						</div>		
+					</div>
+					<div class="clearFloat bottomSpace"></div>			
 				</div>
+				<div class="mobileBlock">
+					<div class="categoryBar"><a class="current" href="javascript:;">Billing Address</a><a href="#">New Billing Address</a></div>
+					<!-- <div class="emptyMessage">Empty!</div> -->
+					<ul>
+						<li class="defaultRow" iid="aaaa1">
+							<div>
+								<div class="name">SMITHE 13606060606</div>
+								<p>广东省 深圳市 南山区 桃源东钟爱大厦1楼 </p>
+							</div>
+							<div class="operationRow">
+								<a class="edit" href="#"></a>
+							  	<a class="del" href="javascript:;"></a>	
+							</div>
+						</li>
+						<li iid="aaaa2">
+							<div>
+								<div class="name">SMITHE 13606060606</div>
+								<p>广东省 深圳市 南山区 桃源东钟爱大厦2楼 </p>
+							</div>
+							<div class="operationRow">
+								<a class="default" href="javascript:;"></a>
+								<a class="edit" href="#"></a>
+							  	<a class="del" href="javascript:;"></a>	
+							</div>
+						</li>
+					</ul>
+					<div class="pageBar">
+						<div><a href="#">上一页</a></div>
+						<div><a href="#">下一页</a></div>
+					</div>
+				</div>		
 			</div>
 
 			<footer>
