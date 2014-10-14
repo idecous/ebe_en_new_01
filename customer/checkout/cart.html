@@ -55,6 +55,7 @@
 			<div class="common_mainPanel">
 				<div class="common_centerBlock normolBlock">
 					<div class="subTitleBar">Shopping Cart</div>
+					<form action="#" method="post">
 					<table>
 						<thead>
 		                    <tr>
@@ -79,7 +80,7 @@
 	             					</div>
 	             				</td>
 	             				<td>
-	             					<div class="quantity"><a class="reduce" href="javascript:;">-</a><input type="text" value="1"><a class="increase" href="javascript:;">+</a></div>
+	             					<div class="quantitySelector"><a class="reduce" href="javascript:;">-</a><input type="text" maxlength="2" name="cart[qty]" value="1"><a class="increase" href="javascript:;">+</a></div>
 	             				</td>
 	             				<td><span>$1,333.00</span></td>
 	             				<td><a class="toWish" href="javascript:;">ADD TO WISHLIST</a></td>
@@ -97,7 +98,7 @@
 	             					</div>
 	             				</td>
 	             				<td>
-	             					<div class="quantity"><a class="reduce" href="javascript:;">-</a><input type="text" value="1"><a class="increase" href="javascript:;">+</a></div>
+	             					<div class="quantitySelector"><a class="reduce" href="javascript:;">-</a><input type="text" name="cart[qty]" value="1"><a class="increase" href="javascript:;">+</a></div>
 	             				</td>
 	             				<td><span>$1,333.00</span></td>
 	             				<td><a class="toWish" href="javascript:;">ADD TO WISHLIST</a></td>
@@ -106,13 +107,110 @@
 	             			</tr>
 	             		</tbody>
 					</table>
-					
+					<ul class="mobileBlock">
+						<li iid = "id001">
+							<div class="imgCol">
+								<img src="../../public_en/source/customer/checkout/001.jpg" />
+								<a class="toWish" href="javascript:;">ADD TO WISHLIST</a>
+							</div>
+							<div class="paramCol">
+								<h3>ABBY DEEP V TOP</h3>
+         						<div>Color BLACK</div>
+         						<div>Size S</div>
+         						<div class="quantitySelector"><a class="reduce" href="javascript:;">-</a><input type="text" maxlength="2" name="cart[qty]" value="1"><a class="increase" href="javascript:;">+</a></div>
+								<div>Price<span>$1,333.00</span></div>
+								<div>Sub Total<span>$1,333.00</span></div>
+							</div>
+							<div class="operationCol">
+								
+								<a class="delBtn" href="javascript:;"></a>
+							</div>
+						</li>
+						<li iid = "id002">
+							<div class="imgCol">
+								<img src="../../public_en/source/customer/checkout/001.jpg" />
+								<a class="toWish" href="javascript:;">ADD TO WISHLIST</a>
+							</div>
+							<div class="paramCol">
+								<h3>ABBY DEEP V TOP</h3>
+         						<div>Color BLACK</div>
+         						<div>Size S</div>
+         						<div class="quantitySelector"><a class="reduce" href="javascript:;">-</a><input type="text" maxlength="2" name="cart[qty]" value="1"><a class="increase" href="javascript:;">+</a></div>
+								<div>Price<span>$1,333.00</span></div>
+								<div>Sub Total<span>$1,333.00</span></div>
+							</div>
+							<div class="operationCol">
+								<a class="delBtn" href="javascript:;"></a>
+							</div>
+						</li>
+					</ul>
 					<div class="updateRow">
-						<div class="codeGroup"><span>Discount Code</span><input type="text"/><input type="submit" value="APPLY CODE"/></div>
-						<input class="updateBtn" type="submit" value="UPDATE BAG"/>
+						<div class="codeGroup"><span>Discount Code</span><input type="text"/><input type="submit" name="apply_code" value="APPLY CODE"/></div>
+						<input class="updateBtn" type="submit" name="update_car" value="UPDATE BAG"/>
+					</div>
+					</form>
+					
+					
+					<div class="shippingTaxBlock">
+						<div class="titleBar">Estimate Shipping And Tax</div>
+						<div class="addressRow">
+							<ul>
+								<li>
+									<div class="label">Country<i>*</i></div>
+										<div class="inputSelect">
+											<select>
+												<option selected="selected" value="US">United States</option>
+											</select>
+										</div>
+										<div class="warn">请不要留空!</div>
+								</li>
+								<li>
+									<div class="label">State/Province<i>*</i></div>
+										<div class="inputSelect">
+											<select>
+		                                        <option value="">Please select</option>
+												<option value="1" title="Alabama">Alabama</option>
+												<option value="2" title="Alaska">Alaska</option>
+		                                    </select>
+										</div>
+										<div class="warn">请不要留空!</div>
+								</li>
+								<li>
+									<div class="label">ZIP/POSTAL CODE<i>*</i></div>
+										<div class="inputBorder">
+											<input type="text"/>
+										</div>
+										<div class="warn">请不要留空!</div>
+								</li>
+							</ul>
+							<div class="submitRow">
+								<input type="submit" value="GET A QUOTE"/>
+							</div>
+						</div>
+						<div class="shippingRow">
+							<h4>Select Shipping Method</h4>
+							<div class="selectBlock">
+								<ul>
+									<li><input name="group01" type="radio"/><span>FedEx Ground $7.00</sapn></li>
+									<li><input name="group01" type="radio"/><span>FedEx 2-Day $20.00</sapn></li>
+									<li><input name="group01" type="radio"/><span>FedEx Next Day $26.00</sapn></li>		
+								</ul>
+								<div class="submitBlock">
+									<input type="submit" value="UPDATE TOTAL"/>
+								</div>
+							</div>
+						</div>
 					</div>
 					
-					
+					<div class="amountBlock">
+						<span>Subtotal  $1,603.00</span>
+						<span>Flat Rate - Fixed  $1,603.00</span>
+						<b>Grand Total $1,603.00</b>
+					</div>
+					<div class="actionBlock">
+						<a href="#">CONTINUE SHOPPING</a><a href="#">PROCEED TO CHECKOUT</a>
+					</div>
+					<div class="bottomSpace"></div>
 					
 				</div>
 			</div>
