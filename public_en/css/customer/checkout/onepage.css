@@ -87,14 +87,18 @@
 	height: 31px;
 	font-size: 16px;
 	text-transform: uppercase;
+	padding-bottom: 0;
 }
-
+.common_mainPanel .checkoutProcessBlock li{
+	padding-bottom: 10px;
+}
 .common_mainPanel .checkoutProcessBlock li .titleBar{
 	position:relative;
 	height: 40px;
 	line-height: 40px;
 	background-color: #ddd;
 	overflow: hidden;
+	color: #666;
 }
 .common_mainPanel .checkoutProcessBlock li .titleBar .stepNum{
 	position:absolute;
@@ -115,6 +119,8 @@
 	padding: 0 10px;
 }
 .common_mainPanel .checkoutProcessBlock li .titleBar a{
+	position: absolute;
+	top: 10px;
 	
 }
 

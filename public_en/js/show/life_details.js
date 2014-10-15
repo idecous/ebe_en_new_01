@@ -505,16 +505,25 @@ var EBE_GoodsParameter = function(sizeWarn,submitHandler,favoritesHandler){
 		contentBtnEl.eq(contentIndex).addClass("checked");
 		contentLiEl.eq(contentIndex).addClass("checked");
 	});
+	var priceEl = el.find("h3 b");
 	var sizeIndex = -1;
-	var colorsEl = el.find(".sizeGroup .list a");
-	colorsEl.click(function(){
-		var tIndex = colorsEl.index(this);
+	var priceEls = el.find(".sizeGroup .list a");
+	for(var i=0; i < priceEls.length;i++){
+		if( priceEls.eq(i).hasClass("checked")  ){
+			sizeIndex = i;
+			priceEl.text(  priceEls.eq(sizeIndex).attr("price") );
+			break;
+		}
+	}
+	priceEls.click(function(){
+		var tIndex = priceEls.index(this);
 		if(sizeIndex == tIndex){return;}
 		if( sizeIndex != -1 ){
-			colorsEl.eq(sizeIndex).removeClass("checked");
+			priceEls.eq(sizeIndex).removeClass("checked");
 		}
 		sizeIndex = tIndex;
-		colorsEl.eq(sizeIndex).addClass("checked");
+		priceEls.eq(sizeIndex).addClass("checked");
+		priceEl.text(  priceEls.eq(sizeIndex).attr("price") );
 	});
 	el.find(".appendShopping a span").click(appendGoodsHandler);
 	el.find(".appendShopping a i").click(favoritesHandler);
@@ -547,7 +556,7 @@ var EBE_GoodsParameter = function(sizeWarn,submitHandler,favoritesHandler){
 		if( sizeIndex == -1){
 			alert( sizeWarn );
 		}else{
-			submitHandler( colorsEl.eq(sizeIndex).text() ,colorsEl.eq(sizeIndex).attr("iid")  );
+			submitHandler( priceEls.eq(sizeIndex).text() ,priceEls.eq(sizeIndex).attr("iid")  );
 		}
 	}
 };
