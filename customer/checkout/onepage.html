@@ -123,7 +123,7 @@
 										<div class="warn">请输入密码!</div>
 									</div>
 									<div class="forgotRow"><a href="#">Forgot your password?</a></div>
-									<a class="loginSubmit" href="javascript:;">LOGIN</a>
+									<a class="continueButtton" href="javascript:;">LOGIN</a>
 									
 								</div>
 								<div class="registerBlock">
@@ -133,7 +133,7 @@
 										<li><input type="radio"/><span>Checkout as Guest</span></li>
 										<li><input type="radio"/><span>Register</span></li>
 									</ul>
-									<a href="javascript:;">CONTINUE</a>
+									<a class="continueButtton" href="javascript:;">CONTINUE</a>
 								</div>
 								<div class="clearFloat"></div>
 								<div class="loadingRow">
@@ -143,7 +143,7 @@
 							</div>
 						</li>
 						
-						<li class="billingInformation action">
+						<li class="billingInformation allow">
 							<div class="titleBar">
 								<span class="stepNum">2</span>
 								<h2>Billing Information</h2>
@@ -152,53 +152,242 @@
 							<div class="operationBlock">
 								<div class="inputUnit">
 									<div class="label"><i>*</i>Select a billing address from your address book or enter a new </div>
-									<div class="selectBorder"><select>
+									<div class="selectBorder">
+										<select>
 										<option value="1">1</option>
-									</select>
-									<div class="warn"></div>
+										</select>
+									</div>
+									<div class="warn">&nbsp;</div>
 								</div>
 								
-								<div class="inputUnit">
+								<div class="inputUnit halfLeft">
 									<div class="label"><i>*</i>First Name</div>
 									<div class="inputBorder"><input type="text"/></div>
 									<div class="warn">不要留空!</div>
 								</div>
-								<div class="inputUnit">
+								<div class="inputUnit halfRight">
+									<div class="label"><i>*</i>Last Name</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfLeft">
+									<div class="label">Company</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">&nbsp;</div>
+								</div>								
+								<div class="inputUnit halfRight">
 									<div class="label"><i>*</i>Email Address</div>
 									<div class="inputBorder"><input type="text"/></div>
 									<div class="warn">不要留空!</div>
 								</div>
 								<div class="inputUnit">
-									<div class="label"><i>*</i>Email Address</div>
+									<div class="label"><i>*</i>Address</div>
 									<div class="inputBorder"><input type="text"/></div>
 									<div class="warn">不要留空!</div>
 								</div>
 								
+								<div class="inputUnit halfLeft">
+									<div class="label"><i>*</i>Country</div>
+									<div class="selectBorder">
+										<select>
+											<option value="1">&nbsp;</option>
+										</select>
+									</div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfRight">
+									<div class="label"><i>*</i>State/Province</div>
+									<div class="selectBorder">
+										<select>
+											<option value="1">1</option>
+										</select>
+									</div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfLeft">
+									<div class="label"><i>*</i>City</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfRight">
+									<div class="label"><i>*</i>Zip/Postal Code</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfLeft">
+									<div class="label"><i>*</i>Telephone</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfRight">
+									<div class="label">Fax</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
 								
+								<div class="inputUnit halfLeft">
+									<div class="label"><i>*</i>Password</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfRight">
+									<div class="label"><i>*</i>Confirm Password</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
 								
-								
-								
-								
-								
-								
+								<div class="saveRow">
+									<input type="checkbox" /><span>Save in address book</span>
+								</div>
+								<div class="addressRow">
+									<div>
+										<input type="radio" /><span>Ship to this address</span>
+									</div>
+									<div>
+										<input type="radio" /><span>Ship to different address</span>
+									</div>									
+								</div>
+
+								<div class="continueRow">
+									<a class="continueButtton"  href="javascript:;">CONTINUE</a>
+								</div>
+								<div class="loadingRow">
+									<img src="../../public_en/img/customer/loader.gif" />
+									<span>Loading next step... </span>
+								</div>
 							</div>
 						</li>
 						
-						
-						
-						
-						
-						<li class="billingInformation">
+						<li class="shippingInformation action">
 							<div class="titleBar">
 								<span class="stepNum">3</span>
 								<h2>Shipping Information</h2>
 								<a href="javascript:;"><span>Edit</span><i></i></a>
 							</div>
 							<div class="operationBlock">
-								333
+								<div class="inputUnit">
+									<div class="label"><i>*</i>Select a shipping address from your address book or enter a new address.</div>
+									<div class="selectBorder">
+										<select>
+										<option value="1">1</option>
+										</select>
+									</div>
+									<div class="warn">&nbsp;</div>
+								</div>
+								<div class="inputUnit halfLeft">
+									<div class="label"><i>*</i>First Name</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfRight">
+									<div class="label"><i>*</i>Last Name</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfLeft">
+									<div class="label">Company</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">&nbsp;</div>
+								</div>								
+								<div class="inputUnit">
+									<div class="label"><i>*</i>Address</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								
+								<div class="inputUnit halfLeft">
+									<div class="label"><i>*</i>Country</div>
+									<div class="selectBorder">
+										<select>
+											<option value="1">&nbsp;</option>
+										</select>
+									</div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfRight">
+									<div class="label"><i>*</i>State/Province</div>
+									<div class="selectBorder">
+										<select>
+											<option value="1">1</option>
+										</select>
+									</div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfLeft">
+									<div class="label"><i>*</i>City</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfRight">
+									<div class="label"><i>*</i>Zip/Postal Code</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfLeft">
+									<div class="label"><i>*</i>Telephone</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfRight">
+									<div class="label">Fax</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								
+								<div class="operationRow">
+									<div>
+										<input type="checkbox" /><span>Save in address book</span>
+									</div>
+									<div>
+										<input type="checkbox" /><span>Use Billing Address</span>
+									</div>									
+								</div>
+
+								<div class="continueRow">
+									<a class="continueButtton"  href="javascript:;">CONTINUE</a>
+								</div>
+								<div class="loadingRow">
+									<img src="../../public_en/img/customer/loader.gif" />
+									<span>Loading next step... </span>
+								</div>
+								
 							</div>
 						</li>
 						
+						
+						
+						
+						
+						<li class="shippingMethod">
+							<div class="titleBar">
+								<span class="stepNum">4</span>
+								<h2>Shipping Method</h2>
+								<a href="javascript:;"><span>Edit</span><i></i></a>
+							</div>
+							<div class="operationBlock">
+								333
+							</div>
+						</li>
+						<li class="paymentInformation">
+							<div class="titleBar">
+								<span class="stepNum">5</span>
+								<h2>Payment Information</h2>
+								<a href="javascript:;"><span>Edit</span><i></i></a>
+							</div>
+							<div class="operationBlock">
+								333
+							</div>
+						</li>
+						<li class="orderReview">
+							<div class="titleBar">
+								<span class="stepNum">6</span>
+								<h2>Order Review</h2>
+								<a href="javascript:;"><span>Edit</span><i></i></a>
+							</div>
+							<div class="operationBlock">
+								333
+							</div>
+						</li>
 						
 					</ul>
 					
