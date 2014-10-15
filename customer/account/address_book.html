@@ -51,6 +51,7 @@
 			</header>
 			<form action="#" method="post"><input type="hidden"/></form><!-- 设为默认 -->
 			<form action="#" method="post"><input type="hidden"/></form><!-- 删除 -->
+			<form action="#" method="post"><input type="hidden"/></form><!-- 设为默认 账单地址-->
 
 			<div class="common_mainPanel">
 				<div class="common_centerBlock normolBlock">
@@ -71,7 +72,6 @@
 						<ul>
 							<li><a href="#">个人信息</a></li>
 							<li class="current"><a href="#">收货地址</a></li>
-							<li><a href="#">账单地址</a></li>
 							<li><a href="#">您的优惠券</a></li>
 							<li><a href="#">邀请好友</a></li>
 						</ul>
@@ -93,12 +93,15 @@
 			                    </tr>
 		             		</thead>
 		             		<tbody>
-		             			<tr class="defaultRow">
+		             			<tr>
 		             				<td class="hidden">a_01</td>
 									<td>SMITHE</td>
 									<td>广东省 深圳市 南山区 桃源东钟爱大厦1楼 </td>
 									<td>13606060606</td>
-									<td>默认地址</td>
+									<td>
+										<span class="defaultAddress">默认收货地址</span><br/>
+										<span class="defaultbilling">默认账单地址</span>
+									</td>
 									<td>
 										<a class="edit" href="#">编辑</a>
 										<a class="del" href="javascript:;">删除</a>
@@ -111,8 +114,9 @@
 									<td>13606060606</td>
 									<td></td>
 									<td>
+										  <a class="default" href="javascript:;">默认收货地址</a>
+										  <a class="billing" href="javascript:;">默认账单地址</a>
 										  <a class="edit" href="#">编辑</a>
-										  <a class="default" href="javascript:;">设为默认地址</a>
 										  <a class="del" href="javascript:;">删除</a>
 									</td>
 								</tr>
@@ -133,10 +137,15 @@
 					<div class="categoryBar"><a class="current" href="javascript:;">Address Book</a><a href="#">New Address</a></div>
 					<!-- <div class="emptyMessage">Empty!</div> -->
 					<ul>
-						<li class="defaultRow" iid="aaaa1">
+						<li iid="aaaa1">
 							<div>
 								<div class="name">SMITHE 13606060606</div>
 								<p>广东省 深圳市 南山区 桃源东钟爱大厦1楼 </p>
+								<div class="defaultBlock">
+									<span class="defaultAddress">默认收货地址</span>
+									<span class="defaultbilling">默认账单地址</span>
+								</div>
+						
 							</div>
 							<div class="operationRow">
 								<a class="edit" href="#"></a>
@@ -149,6 +158,7 @@
 								<p>广东省 深圳市 南山区 桃源东钟爱大厦2楼 </p>
 							</div>
 							<div class="operationRow">
+								<a class="billing" href="javascript:;"></a>
 								<a class="default" href="javascript:;"></a>
 								<a class="edit" href="#"></a>
 							  	<a class="del" href="javascript:;"></a>	

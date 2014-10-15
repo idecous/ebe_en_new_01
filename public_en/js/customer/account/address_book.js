@@ -25,6 +25,35 @@ var EBE_SetDefaultManager = function( setDefaultHandler ){
 		}	
 	});
 };
+
+var EBE_SetDefaultBillingManager = function( setDefaultBillingHandler ){
+	var formEl = $(".common_pageContent form:eq(2)");
+	var inputEl = formEl.find("input");
+	var setBtnEls = $(".common_rightPanel table tbody a.billing");
+	
+	setBtnEls.click(function(){
+		var rowEl = setBtnEls.eq( setBtnEls.index(this) ).parents("tr");
+		var address = $.trim( rowEl.find("td:eq(2)").text() );
+		var id = $.trim( rowEl.find("td:eq(0)").text() );
+		if( setDefaultBillingHandler(address) ){
+			inputEl.val( id );
+			formEl.submit();
+		}
+	});
+	
+	
+	var mobileBillingBtnEls = $(".common_mainPanel .mobileBlock ul li .operationRow .billing");
+	mobileBillingBtnEls.click(function(){
+		var rowEl = mobileBillingBtnEls.eq( mobileBillingBtnEls.index(this) ).parents("li");
+		var address = $.trim( rowEl.find("div:eq(0) p").text() );
+		var id = $.trim( rowEl.attr("iid") );
+		if( setDefaultBillingHandler(address) ){
+			inputEl.val( id );
+			formEl.submit();
+		}	
+	});	
+};
+
 var EBE_DeleteManager = function(delHandler){
 	var formEl = $(".common_pageContent form:eq(1)");
 	var inputEl = formEl.find("input");
@@ -54,6 +83,9 @@ var EBE_DeleteManager = function(delHandler){
 $(function(){
 	new EBE_SetDefaultManager(function(address){
 		return  confirm("是否把："+ address+" 设为默认地址?");
+	});
+	new EBE_SetDefaultBillingManager(function(address){
+		return  confirm("是否把："+ address+" 设为默认账单地址?");
 	});
 	new EBE_DeleteManager(function(address){
 		return  confirm("是否删除："+ address+" ?");

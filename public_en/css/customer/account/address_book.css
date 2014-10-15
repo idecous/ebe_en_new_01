@@ -47,9 +47,13 @@
 	margin-right: 10px;
 	display: block;
 }
-.common_rightPanel table .defaultRow {
+.common_rightPanel table .defaultAddress {
 	color: #df4141;
 }
+.common_rightPanel table  .defaultbilling{
+	color: #ff9000;
+}
+
 .common_rightPanel table .hidden{
 	display: none;
 }
@@ -147,11 +151,21 @@
 	padding: 10px;
 	line-height: 20px;
 }
-.common_mainPanel .mobileBlock ul  .defaultRow{
-	color: #f00;	
-}
 .common_mainPanel .mobileBlock ul li p{
 	font-size: 12px;
+}
+.common_mainPanel .mobileBlock ul li .defaultBlock{
+	margin-top: 10px;
+	border-top: 1px solid #ddd; 
+	font-size: 12px;
+	padding-top:5px;
+}
+.common_mainPanel .mobileBlock ul li .defaultAddress{
+	color: #df4141;
+	margin-right: 10px;
+}
+.common_mainPanel .mobileBlock ul li .defaultbilling{
+	color: #ff9000;
 }
 .common_mainPanel .mobileBlock ul li .operationRow{
 	text-align: right;
@@ -162,7 +176,7 @@
 }
 .common_mainPanel .mobileBlock ul li .operationRow a{
 	display: inline-block;
-	width: 17px;
+	width: 22px;
 	height: 21px;
 	background:  url("../../../img/customer/icons.png");
 	vertical-align: middle;
@@ -172,9 +186,12 @@
 	background-position: -72px -21px;
 }
 .common_mainPanel .mobileBlock ul li .operationRow .del{
-	background-position: -72px -42px;
+	background-position: -72px 0;
 }
 .common_mainPanel .mobileBlock ul li .operationRow .default{
+	background-position: -72px -43px;
+}
+.common_mainPanel .mobileBlock ul li .operationRow .billing{
 	background-position: -72px -63px;
 }
 
