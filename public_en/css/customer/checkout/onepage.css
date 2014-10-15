@@ -149,6 +149,13 @@
 .common_mainPanel .checkoutProcessBlock li .operationBlock h3{
 	font-size: 14px;
 }
+.common_mainPanel .checkoutProcessBlock li .operationBlock .error{
+	border: 1px solid #f00;
+	background-color: #faebe7;
+	padding: 0 4px;
+	margin-top: 4px;
+	color: #f00;
+}
 .common_mainPanel .checkoutProcessBlock li .operationBlock .loadingRow{
 	text-align: right;
 	margin-top: 10px;

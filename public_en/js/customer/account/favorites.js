@@ -68,13 +68,14 @@ var EVE_AppendToShoppingcarManager = function(appendHandler){
 	tableAppendBtnEls.click(function(){
 		var btnEl = tableAppendBtnEls.eq( tableAppendBtnEls.index(this) );
 		var orderID = $.trim( btnEl.parents("tr").find("td:eq(1)").text() );
-		appendHandler( orderID );		
+		
+		appendHandler( orderID ,btnEl.attr("iid"));		
 	});
 	var mobileAppendBtnEls = $(".common_mainPanel .mobileBlock ul li .bottomRow .appendShopping");
 	mobileAppendBtnEls.click(function(){
 		var btnEl = mobileAppendBtnEls.eq( mobileAppendBtnEls.index(this) );
 		var orderID = $.trim( btnEl.parents("li").find(".topRow .paramCol .No span").text() );
-		appendHandler( orderID );		
+		appendHandler( orderID ,btnEl.attr("iid"));	
 	});
 };
 
@@ -84,8 +85,9 @@ $(function(){
 	new EVE_DeleteManager(function(orderID){
 		return confirm("是否删除商品："+orderID+"?");
 	});
-	new EVE_AppendToShoppingcarManager(function(orderID){
+	new EVE_AppendToShoppingcarManager(function(orderID,iid){
 		if( confirm("是否把商品："+orderID+" 加入购物车?") ){
+			console.log(iid);
 			//请求服务器
 			G_shoppingCar.addGoods({
 				id:"sc_02",

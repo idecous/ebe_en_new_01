@@ -101,7 +101,7 @@
 					</div>
 					<ul class="checkoutProcessBlock">
 						<li class="titleRow">Checkout</li>
-						<li class="checkoutMethod action">
+						<li class="checkoutMethod allow">
 							<div class="titleBar">
 								<span class="stepNum">1</span>
 								<h2>Checkout Method</h2>
@@ -110,6 +110,7 @@
 							<div class="operationBlock">
 								<div class="loginBlock">
 									<h3>Login</h3>
+									<div class="error"><i></i>无效的登录名或密码。</div>
 									<div class="info01">Already registered? Please log in below:</div>
 									<div class="inputUnit">
 										<div class="label"><i>*</i>Email Address</div>
@@ -141,6 +142,7 @@
 								</div>
 							</div>
 						</li>
+						
 						<li class="billingInformation action">
 							<div class="titleBar">
 								<span class="stepNum">2</span>
@@ -148,9 +150,44 @@
 								<a href="javascript:;"><span>Edit</span><i></i></a>
 							</div>
 							<div class="operationBlock">
-								2222
+								<div class="inputUnit">
+									<div class="label"><i>*</i>Select a billing address from your address book or enter a new </div>
+									<div class="selectBorder"><select>
+										<option value="1">1</option>
+									</select>
+									<div class="warn"></div>
+								</div>
+								
+								<div class="inputUnit">
+									<div class="label"><i>*</i>First Name</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit">
+									<div class="label"><i>*</i>Email Address</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit">
+									<div class="label"><i>*</i>Email Address</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								
+								
+								
+								
+								
+								
+								
+								
 							</div>
 						</li>
+						
+						
+						
+						
+						
 						<li class="billingInformation">
 							<div class="titleBar">
 								<span class="stepNum">3</span>
