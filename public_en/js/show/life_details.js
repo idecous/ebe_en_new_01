@@ -473,7 +473,7 @@ var EBE_GoodsPreview = function(levelCount){
 	}	
 };
 
-var EBE_GoodsParameter = function(sizeWarn,submitHandler){
+var EBE_GoodsParameter = function(sizeWarn,submitHandler,favoritesHandler){
 	var html7BodyEl = $("html, body");
 	var sizeDataTitleEl = $(".common_mainPanel .sizeDataPanel h3");
 	var el = $(".common_mainPanel .detailPanel .rightBlock .paramPanel");
@@ -505,7 +505,8 @@ var EBE_GoodsParameter = function(sizeWarn,submitHandler){
 		sizeIndex = tIndex;
 		colorsEl.eq(sizeIndex).addClass("checked");
 	});
-	el.find(".appendShopping a").click(appendGoodsHandler);
+	el.find(".appendShopping a span").click(appendGoodsHandler);
+	el.find(".appendShopping a i").click(favoritesHandler);
 	//--
 	var messageBlockEl = el.find(".messageBlock");
 	var mobileMessageEl = $("<div class='mobile_paramMessage'></div>");
@@ -535,7 +536,7 @@ var EBE_GoodsParameter = function(sizeWarn,submitHandler){
 		if( sizeIndex == -1){
 			alert( sizeWarn );
 		}else{
-			submitHandler( colorsEl.eq(sizeIndex).text() );
+			submitHandler( colorsEl.eq(sizeIndex).text() ,colorsEl.eq(sizeIndex).attr("iid")  );
 		}
 	}
 };
@@ -720,8 +721,8 @@ $(function(){
 	new EBE_GoodsPreview(2);
 	new EBE_ElementGroup();	
 	new EBE_RecommendPanel();
-	new EBE_GoodsParameter("请选择尺寸！",function(size){
-		console.log("添加到购物车(尺寸)",size);
+	new EBE_GoodsParameter("请选择尺寸！",function(size,sizeID){
+		console.log("添加到购物车(尺寸/尺寸ID)",size,sizeID);
 		//请求服务器	
 		shoppingCar.addGoods({
 			id:"sc_02",
@@ -731,6 +732,9 @@ $(function(){
 			price:"￥ 2121",
 			num:"数量:1"
 		});
+	},function(){
+		console.log("添加到收藏");
+		
 	});
 	var shoppingCar = new EVE_ShoppingCar(function(id,size){
 		console.log("删除购物车商品(商品ID/尺寸)",id,size);

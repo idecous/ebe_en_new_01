@@ -6,6 +6,96 @@
 	margin-right: 	310px;
 }
 
-.common_mainPanel .carListBlock{
+.common_mainPanel .cartListBlock{
 	float: right;
+	width: 266px;
+	border: 1px solid #ddd;
+	font-size: 12px;
 }
+
+.common_mainPanel .cartListBlock .topInfoBar{
+	height: 30px;
+	line-height:30px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+.common_mainPanel .cartListBlock .itemsBlock li{
+	position: relative;
+}
+.common_mainPanel .cartListBlock .itemsBlock li img{
+	position: absolute;
+	top:10px;
+	left: 20px;
+}
+.common_mainPanel .cartListBlock .itemsBlock li .paramCol{
+	margin-left: 100px;
+	margin-right:10px;
+	min-height: 110px;
+	padding-top:10px;
+	font-size: 12px;
+}
+.common_mainPanel .cartListBlock .itemsBlock li .paramCol .number{
+	color: #666;
+	line-height: 32px;
+}
+.common_mainPanel .cartListBlock .viewAllRow{
+	border-bottom: 1px solid #ddd;
+	line-height: 40px;	
+	text-align: center;
+}
+.common_mainPanel .cartListBlock .viewAllRow a{
+	text-decoration: underline;
+}
+.common_mainPanel .cartListBlock .summaryTitleBar{
+	text-align: center;
+	height: 32px;
+	line-height: 32px;
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+	text-transform: uppercase;
+}
+.common_mainPanel .cartListBlock .summaryBlock li{
+	position: relative;
+	padding: 10px 0 ;
+}
+.common_mainPanel .cartListBlock .summaryBlock li .label{
+	margin-left:10px;
+	width: 145px;
+	text-align: right;
+}
+.common_mainPanel .cartListBlock .summaryBlock li .priceCol{
+	position: absolute;
+	top: 10px;
+	right: 0;
+	width: 85px;
+}
+.common_mainPanel .cartListBlock .summaryBlock .total {
+	font-size: 14px;
+	height: 44px;
+	line-height: 44px;
+	
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.common_mainPanel .cartListBlock .summaryBlock .total .separator{
+	border-top: 1px dotted #ddd;
+	height: 0;
+	margin: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
