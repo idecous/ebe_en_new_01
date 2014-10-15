@@ -33,22 +33,32 @@ var EVE_FilterManager = function(){
 var EVE_DeleteManager = function(delSureHandler){
 	var formEl = $(".common_pageContent form:eq(1)");
 	var inputEls = formEl.find("input");
-	var tableDelBtnEls = $(".common_rightPanel table tbody tr td a[href='javascript:;']:not(.appendShopping)"); 
+	var tableDelBtnEls = $(".common_rightPanel table tbody tr td a[class='del']"); 
+	tableDelBtnEls.each(function(index){
+		var btnEl = tableDelBtnEls.eq(index);
+		btnEl.data("url",btnEl.attr("href"));
+		btnEl.attr("href","javascript:;");
+	});
+	
 	tableDelBtnEls.click(function(){
 		var btnEl = tableDelBtnEls.eq( tableDelBtnEls.index(this) );
 		var orderID = $.trim( btnEl.parents("tr").find("td:eq(1)").text() );
 		if( delSureHandler(orderID) ){
-			inputEls.val(orderID);
-			formEl.submit();
+			window.location.href = btnEl.data("url");
 		}
 	});
 	var mobileDelBtnEls = $(".common_mainPanel .mobileBlock ul li .bottomRow .cancel");
+	mobileDelBtnEls.each(function(index){
+		var btnEl = mobileDelBtnEls.eq(index);
+		btnEl.data("url",btnEl.attr("href"));
+		btnEl.attr("href","javascript:;");
+	});
+	
 	mobileDelBtnEls.click(function(){
 		var btnEl = mobileDelBtnEls.eq( mobileDelBtnEls.index(this) );
 		var orderID = $.trim( btnEl.parents("li").find(".topRow .paramCol .No span").text() );
 		if( delSureHandler(orderID) ){
-			inputEls.val(orderID);
-			formEl.submit();
+			window.location.href = btnEl.data("url");
 		}
 	});
 };
