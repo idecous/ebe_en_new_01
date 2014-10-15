@@ -173,6 +173,14 @@ var EBE_GoodsPreviewNavigator = function(el,changeViewHandler){
 	var firstIndex = 0;
 	var viewIndex = -1;
 	
+	var defaultIndex = 0;
+	for( var i=0; i <liEls.length;i++ ){
+		if( liEls.eq(i).hasClass("checked") ){
+			defaultIndex = i;
+			break;
+		}
+	}
+
 	arrowEl.eq(1).click(function(){
 		firstIndex++;
 		setFirstIndex(firstIndex);
@@ -202,7 +210,7 @@ var EBE_GoodsPreviewNavigator = function(el,changeViewHandler){
 				arrowEl.eq(1).show();
 			}
 		}
-		ulEl.css("left", -firstIndex * (uWidth+10)  );	
+		ulEl.css("left", -firstIndex * (uWidth+10) );
 	}
 	function setViewIndex(val){
 		if( viewIndex == val){
@@ -211,6 +219,9 @@ var EBE_GoodsPreviewNavigator = function(el,changeViewHandler){
 		viewIndex = val;
 		liEls.removeClass("checked");
 		liEls.eq(viewIndex).addClass("checked");
+		if( val - firstIndex > 3){
+			setFirstIndex( val - firstIndex - 3);	
+		}
 	}
 	liEls.mouseenter(function(){
 		var index = liEls.index(this);
@@ -220,7 +231,7 @@ var EBE_GoodsPreviewNavigator = function(el,changeViewHandler){
 	});
 	
 	return {"resizeHandler":resizeHandler,
-	"setViewIndex":setViewIndex,
+	"setViewIndex":setViewIndex,"defaultIndex":defaultIndex,
 	"el":navEl};
 };
 
@@ -448,9 +459,9 @@ var EBE_GoodsPreview = function(levelCount){
 			isFirst = false;
 			mainVewImgEls.width(minScale * mainOrgWidth).css({"left":-viewAreaWidth/2,"top":-viewAreaHeight/2}).addClass("anime");
 			mainVewCenterEl.css( {"left":viewAreaWidth*0.5 ,"top":viewAreaHeight*0.5 } );
-			setViewIndex(0);
+			setViewIndex( navigator.defaultIndex );
 			navigator.resizeHandler(viewAreaWidth);
-			navigator.setViewIndex(0);
+			navigator.setViewIndex(  navigator.defaultIndex );
 			return;
 		}
 		var rate = minScale + (1-minScale)/levelCount * scaleLevel;
