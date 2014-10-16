@@ -1,0 +1,187 @@
+.common_rightPanel .orderTypeBar{
+	border-bottom: 2px solid #ddd;
+	line-height: 32px;
+	margin-top: 5px;
+}
+.common_rightPanel .orderTypeBar a{
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	color: #666;
+}
+.common_rightPanel .orderTypeBar .current{
+	position:relative;
+	color: 	#333;
+	border-bottom: 2px solid #333;
+	margin-bottom: -2px;
+}
+.common_rightPanel .orderBlock{
+	overflow: hidden;
+}
+.common_rightPanel .orderBlock h3{
+	font-size: 14px;
+	margin-right:20px;
+	line-height: 30px;
+	font-weight: bold;
+}
+.common_rightPanel .orderBlock p{
+	font-size: 12px;
+	margin-right:20px; 
+	padding-bottom: 20px;
+} 
+.common_rightPanel .orderBlock .right h3{
+	margin-left: 20px;
+}
+.common_rightPanel .orderBlock .right p{
+	margin-left: 20px;
+	line-height: 20px;
+}
+.common_rightPanel .orderBlock .half{
+	width: 50%;
+	float: left;
+}
+.common_rightPanel table{
+	width: 100%;
+	margin-top: 10px;
+	border: 1px solid #ddd;
+	border-collapse:collapse;
+}
+.common_rightPanel table thead tr{
+	height: 38px;
+	line-height: 38px;
+	background-color: #f1f1f1;
+	padding: 0 4px;
+}
+.common_rightPanel table tbody td{
+	text-align: center;
+	padding: 10px 2px;
+	line-height: 26px;
+	font-size: 12px;
+}
+
+.common_rightPanel table .alignLeft{
+	text-align: left;
+	padding: 0 10px;
+}
+.common_rightPanel .totalRow{
+	line-height: 50px;
+	text-align: right;
+}
+.common_rightPanel .totalRow span{
+	margin-left: 20px;
+	font-size: 12px;
+}
+.common_rightPanel .totalRow .total{
+	font-size: 16px;
+}
+.bottomSpace{
+	height: 120px;
+}
+
+.common_mainPanel .mobileBlock{
+	display: none;
+	font-size: 12px;
+	padding-bottom: 20px;
+	margin-top: 20px;
+}
+.common_mainPanel .mobileBlock ul li {
+	border: 1px solid #ddd;
+	margin: 0 10px 10px 10px;
+}
+.common_mainPanel .mobileBlock ul li .paramRow{
+	position: relative;
+}
+.common_mainPanel .mobileBlock ul li .paramRow img{
+	position:absolute;
+	top: 10px;
+	left: 10px;
+}
+.common_mainPanel .mobileBlock ul li .paramRow .paramCol{
+	margin: 0 10px 0 120px;
+	padding: 10px 10px;
+	height:145px;
+	line-height: 24px;
+}
+.common_mainPanel .mobileBlock ul li .paramRow .paramCol h1{
+	font-size: 14px;
+	margin-top: 20px;
+}
+.common_mainPanel .mobileBlock ul li .NoRow{
+	height: 30px;
+	line-height:30px;
+	padding: 0 10px;
+	background-color: #eee;
+}
+
+
+
+@media only screen and (max-width: 785px) {
+	.common_pageContent .common_leftPanel ,
+	.common_mainPanel .common_subNavBar{
+		display: none;
+	}
+	.common_pageContent .common_rightPanel{
+		margin-left: 0;
+	}
+	.common_mainPanel .normolBlock table{
+		display: none;
+	}
+	.common_mainPanel .mobileBlock{
+		display: block;
+	}
+	
+	.common_rightPanel .orderTypeBar{
+		height: 40px;
+		line-height:40px;
+		background-color: #545454;
+		border-top:1px solid #999;
+		border: none;
+	}
+	.common_rightPanel .orderTypeBar a{
+		display: block;
+		float: left;
+		width: 50%;
+		text-align: center;
+		color: #aaa;
+	}
+	.common_rightPanel .orderTypeBar .current{
+		background-color: #333;
+		color: #fff;
+		border: none;
+	}
+	.common_rightPanel .orderBlock .half {
+		float: none;
+		width: auto;
+	}
+	.common_rightPanel .orderBlock p,
+	.common_rightPanel .orderBlock .right p{
+		margin: 10px 10px 0 10px;
+	}
+	
+	.common_rightPanel .orderBlock h3,
+	.common_rightPanel .orderBlock .right h3{
+		margin: 0;
+		padding: 0 10px;
+	}
+
+	.common_rightPanel .orderBlock h3{
+		text-align: center;
+		font-size: 14px;
+		line-height: 40px;
+		border-bottom: 1px solid #ddd;
+		
+	}
+	.common_rightPanel .totalRow{
+		margin: 0 10px;
+	}
+	.common_rightPanel .totalRow span{
+		white-space: nowrap;
+	}
+	.bottomSpace{
+		height: 80px;
+	}
+}
+
+
+
+

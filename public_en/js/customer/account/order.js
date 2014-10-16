@@ -15,32 +15,99 @@ var EBE_ModuleGroup = function(){
 	});
 };
 var EVE_DeleteOrderManager = function(delHandler){
-	var tableDelBtnEls = $(".common_rightPanel table a[href='javascript:;']"); 
+	var tableDelBtnEls = $(".common_rightPanel table .del");
+	tableDelBtnEls.each(function(index){
+		var btnEl = tableDelBtnEls.eq(index);
+		btnEl.data("url",btnEl.attr("href"));
+		btnEl.attr("href","javascript:;");
+	});
 	tableDelBtnEls.click(function(){
 		var btnEl = tableDelBtnEls.eq( tableDelBtnEls.index(this) );
 		var orderIDColEl =  btnEl.parents("tr").children("td:eq(0)");
-		delHandler( $.trim( orderIDColEl.text() ) );
+		if( delHandler( $.trim(orderIDColEl.text()) ) ){
+			window.location.href = btnEl.data("url");
+		}
+	});	
+	var mobileDelBtnEls = $(".mobileBlock ul .del"); 
+	mobileDelBtnEls.each(function(index){
+		var btnEl = mobileDelBtnEls.eq(index);
+		btnEl.data("url",btnEl.attr("href"));
+		btnEl.attr("href","javascript:;");
 	});
-	var mobileDelBtnEls = $(".mobileBlock ul a[href='javascript:;']"); 
 	mobileDelBtnEls.click(function(){
 		var btnEl = mobileDelBtnEls.eq( mobileDelBtnEls.index(this) );
 		var orderIDColEl =  btnEl.parents("li").children(".NoRow").find("span>span");
-		delHandler( $.trim( orderIDColEl.text() ) );
+		if( delHandler( $.trim(orderIDColEl.text()) ) ){
+			window.location.href = btnEl.data("url");
+		}
 	});
 };
-
-
+var EVE_RemindManager = function(delHandler){
+	var tableDelBtnEls = $(".common_rightPanel table .remind");
+	tableDelBtnEls.each(function(index){
+		var btnEl = tableDelBtnEls.eq(index);
+		btnEl.data("url",btnEl.attr("href"));
+		btnEl.attr("href","javascript:;");
+	});
+	tableDelBtnEls.click(function(){
+		var btnEl = tableDelBtnEls.eq( tableDelBtnEls.index(this) );
+		var orderIDColEl =  btnEl.parents("tr").children("td:eq(0)");
+		if( delHandler( $.trim(orderIDColEl.text()) ) ){
+			window.location.href = btnEl.data("url");
+		}
+	});	
+	var mobileDelBtnEls = $(".mobileBlock ul .remind"); 
+	mobileDelBtnEls.each(function(index){
+		var btnEl = mobileDelBtnEls.eq(index);
+		btnEl.data("url",btnEl.attr("href"));
+		btnEl.attr("href","javascript:;");
+	});
+	mobileDelBtnEls.click(function(){
+		var btnEl = mobileDelBtnEls.eq( mobileDelBtnEls.index(this) );
+		var orderIDColEl =  btnEl.parents("li").children(".NoRow").find("span>span");
+		if( delHandler( $.trim(orderIDColEl.text()) ) ){
+			window.location.href = btnEl.data("url");
+		}
+	});
+};
+var EVE_ReceivingManager = function(delHandler){
+	var tableDelBtnEls = $(".common_rightPanel table .receiving");
+	tableDelBtnEls.each(function(index){
+		var btnEl = tableDelBtnEls.eq(index);
+		btnEl.data("url",btnEl.attr("href"));
+		btnEl.attr("href","javascript:;");
+	});
+	tableDelBtnEls.click(function(){
+		var btnEl = tableDelBtnEls.eq( tableDelBtnEls.index(this) );
+		var orderIDColEl =  btnEl.parents("tr").children("td:eq(0)");
+		if( delHandler( $.trim(orderIDColEl.text()) ) ){
+			window.location.href = btnEl.data("url");
+		}
+	});	
+	var mobileDelBtnEls = $(".mobileBlock ul .receiving"); 
+	mobileDelBtnEls.each(function(index){
+		var btnEl = mobileDelBtnEls.eq(index);
+		btnEl.data("url",btnEl.attr("href"));
+		btnEl.attr("href","javascript:;");
+	});
+	mobileDelBtnEls.click(function(){
+		var btnEl = mobileDelBtnEls.eq( mobileDelBtnEls.index(this) );
+		var orderIDColEl =  btnEl.parents("li").children(".NoRow").find("span>span");
+		if( delHandler( $.trim(orderIDColEl.text()) ) ){
+			window.location.href = btnEl.data("url");
+		}
+	});
+};
 $(function(){
 	new EBE_ModuleGroup();
 	
-	var delFormEl = $("form:eq(0)");
-	var delInputEL = delFormEl.children("input").val("");
 	new EVE_DeleteOrderManager(function(orderID){
-		if ( confirm("是否删除订单："+orderID+"?") ){
-			delInputEL.val(orderID);
-			delFormEl.submit();			
-		}
+			return confirm("是否删除订单："+orderID+"?"); 
+		});
+	new EVE_RemindManager(function(orderID){
+			return confirm("是否提醒订单："+orderID+" 发货?"); 
 	});
-	
-	
+	new EVE_ReceivingManager(function(orderID){
+		return confirm("订单："+orderID+" 收货确认?"); 
+	});
 });

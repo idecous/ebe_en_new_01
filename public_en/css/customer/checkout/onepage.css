@@ -156,6 +156,7 @@
 	padding: 0 4px;
 	margin-top: 4px;
 	color: #f00;
+	display: none;
 }
 .common_mainPanel .checkoutProcessBlock li .operationBlock .loadingRow{
 	text-align: right;
@@ -225,7 +226,6 @@
 	padding-top: 2px;
 	visibility: hidden;
 }
-
 .common_mainPanel .checkoutProcessBlock .allow .titleBar a{
 	display: block;
 }
@@ -247,45 +247,45 @@
 .common_mainPanel .checkoutProcessBlock .action .titleBar{
 	background-color: #f1f1f1;
 }
-.common_mainPanel .checkoutProcessBlock .checkoutMethod .loginBlock{
+.common_mainPanel .checkoutProcessBlock .login .loginBlock{
 	float:right;
 	width: 48%;
 }
-.common_mainPanel .checkoutProcessBlock .checkoutMethod .loginBlock .info01{
+.common_mainPanel .checkoutProcessBlock .login .loginBlock .info01{
 	margin: 5px 0 20px 0;
 }
-.common_mainPanel .checkoutProcessBlock .checkoutMethod .loginBlock .forgotRow{
+.common_mainPanel .checkoutProcessBlock .login .loginBlock .forgotRow{
 	margin-top: 5px;
 }
-.common_mainPanel .checkoutProcessBlock .checkoutMethod .loginBlock .forgotRow a{
+.common_mainPanel .checkoutProcessBlock .login .loginBlock .forgotRow a{
 	text-decoration: underline;
 }
-.common_mainPanel .checkoutProcessBlock .checkoutMethod .loginBlock .continueButtton{
+.common_mainPanel .checkoutProcessBlock .login .loginBlock .continueButtton{
 	margin-top: 25px;
 } 
 
-.common_mainPanel .checkoutProcessBlock .checkoutMethod .registerBlock{
+.common_mainPanel .checkoutProcessBlock .login .registerBlock{
 	float:left;
 	width: 48%;
 }
-.common_mainPanel .checkoutProcessBlock .checkoutMethod .registerBlock div{
+.common_mainPanel .checkoutProcessBlock .login .registerBlock div{
 	margin-top: 5px;
 }
-.common_mainPanel .checkoutProcessBlock .checkoutMethod .registerBlock ul{
+.common_mainPanel .checkoutProcessBlock .login .registerBlock ul{
 	margin-top: 20px;
 	line-height: 30px;
 }
-.common_mainPanel .checkoutProcessBlock .checkoutMethod .registerBlock ul input{
+.common_mainPanel .checkoutProcessBlock .login .registerBlock ul input{
 	margin-right:5px;
 	vertical-align: -2px;
 }
-.common_mainPanel .checkoutProcessBlock .checkoutMethod .registerBlock a{
+.common_mainPanel .checkoutProcessBlock .login .registerBlock a{
 	margin-top: 10px;
 }
 
 .common_mainPanel .checkoutProcessBlock .billingInformation .saveRow{
 	clear: both;
-	margin-top: 20px;
+	padding-top: 10px;
 }
 .common_mainPanel .checkoutProcessBlock .billingInformation .saveRow input{
 	margin-right: 10px;
@@ -318,6 +318,10 @@
 
 .common_mainPanel .checkoutProcessBlock .shippingMethod ul{
 	margin-top: 20px;
+	line-height: 30px;
+}
+.common_mainPanel .checkoutProcessBlock .shippingMethod ul input{
+	margin-right: 4px;
 }
 .common_mainPanel .checkoutProcessBlock .shippingMethod .continueRow{
 	margin-top: 10px;
@@ -438,12 +442,12 @@
 	.common_mainPanel .checkoutProcessBlock li .operationBlock{
 		padding: 10px;
 	}
-	.common_mainPanel .checkoutProcessBlock .checkoutMethod .registerBlock{
+	.common_mainPanel .checkoutProcessBlock .login .registerBlock{
 		width: auto;
 		float: none;
 		margin-top: 20px;
 	}
-	.common_mainPanel .checkoutProcessBlock .checkoutMethod .loginBlock{
+	.common_mainPanel .checkoutProcessBlock .login .loginBlock{
 		width: auto;
 		float: none;
 	}
