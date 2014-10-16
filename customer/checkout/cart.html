@@ -50,8 +50,6 @@
 					</li>
 				</ul>
 			</header>
-			<form action="#" method="post"><input type="hidden"/></form><!-- 删除 -->
-			<form action="#" method="post"><input type="hidden"/></form><!-- 收藏 -->
 			<div class="common_mainPanel">
 				<div class="common_centerBlock normolBlock">
 					<div class="subTitleBar">Shopping Cart</div>
@@ -59,7 +57,6 @@
 					<table>
 						<thead>
 		                    <tr>
-		                    	<th class="hidden"></th>
 		                        <th>ITEMS</th>
 		                        <th width="100">QTY</th>
 		                        <th>PRICE</th>
@@ -70,7 +67,6 @@
 	             		</thead>
 	             		<tbody>
 	             			<tr>
-	             				<td class="hidden"><input type="hidden" value="id001"/></td>
 	             				<td>
 	             					<img src="../../public_en/source/customer/checkout/001.jpg" />
 	             					<div class="descriptBlock">
@@ -83,16 +79,15 @@
 	             					<div class="quantitySelector"><a class="reduce" href="javascript:;">-</a><input type="text" maxlength="2" name="cart[qty]" value="1"><a class="increase" href="javascript:;">+</a></div>
 	             				</td>
 	             				<td><span>$1,333.00</span></td>
-	             				<td><a class="toWish" href="javascript:;">ADD TO WISHLIST</a></td>
+	             				<td><a class="toWish" href="#toWish">ADD TO WISHLIST</a></td>
 	             				<td><span>$1,333.00</span></td>
-	             				<td><a class="delBtn" href="javascript:;"></a></td>
+	             				<td><a class="delBtn" href="#del"></a></td>
 	             			</tr>
 	             			<tr>
-	             				<td class="hidden"><input type="hidden" value="id002"/></td>
 	             				<td>
 	             					<img src="../../public_en/source/customer/checkout/001.jpg" />
 	             					<div class="descriptBlock">
-	             						<h3>ABBY DEEP V TOP</h3>
+	             						<h3>ABBY DEEP V TOP2</h3>
 	             						<div>Color BLACK</div>
 	             						<div>Size S</div>
 	             					</div>
@@ -101,19 +96,20 @@
 	             					<div class="quantitySelector"><a class="reduce" href="javascript:;">-</a><input type="text" name="cart[qty]" value="1"><a class="increase" href="javascript:;">+</a></div>
 	             				</td>
 	             				<td><span>$1,333.00</span></td>
-	             				<td><a class="toWish" href="javascript:;">ADD TO WISHLIST</a></td>
+	             				<td><a class="toWish" href="#toWish">ADD TO WISHLIST</a></td>
 	             				<td><span>$1,333.00</span></td>
-	             				<td><a class="delBtn" href="javascript:;"></a></td>
+	             				<td><a class="delBtn" href="#del"></a></td>
 	             			</tr>
 	             		</tbody>
 					</table>
-					<input type="hidden"/><!--优惠卷 -->
 					</form>
+					
+					
 					<ul class="mobileBlock">
 						<li>
 							<div class="imgCol">
 								<img src="../../public_en/source/customer/checkout/001.jpg" />
-								<a class="toWish" href="javascript:;">ADD TO WISHLIST</a>
+								<a class="toWish" href="#toWish">ADD TO WISHLIST</a>
 							</div>
 							<div class="paramCol">
 								<h3>ABBY DEEP V TOP</h3>
@@ -124,13 +120,13 @@
 								<div>Sub Total<span>$1,333.00</span></div>
 							</div>
 							<div class="operationCol">
-								<a class="delBtn" href="javascript:;"></a>
+								<a class="delBtn" href="#del"></a>
 							</div>
 						</li>
 						<li>
 							<div class="imgCol">
 								<img src="../../public_en/source/customer/checkout/001.jpg" />
-								<a class="toWish" href="javascript:;">ADD TO WISHLIST</a>
+								<a class="toWish" href="#toWish">ADD TO WISHLIST</a>
 							</div>
 							<div class="paramCol">
 								<h3>ABBY DEEP V TOP</h3>
@@ -141,12 +137,15 @@
 								<div>Sub Total<span>$1,333.00</span></div>
 							</div>
 							<div class="operationCol">
-								<a class="delBtn" href="javascript:;"></a>
+								<a class="delBtn" href="#del"></a>
 							</div>
 						</li>
 					</ul>
+					
 					<div class="updateRow">
-						<div class="codeGroup"><span>Discount Code</span><input type="text"/><input type="submit" name="apply_code" value="APPLY CODE"/></div>
+						<form action="#code">
+							<div class="codeGroup"><span>Discount Code</span><input type="text"/><input type="submit" name="apply_code" value="APPLY CODE"/></div>
+						</form>
 						<input class="updateBtn" type="submit" name="update_car" value="UPDATE BAG"/>
 					</div>
 					<div class="shippingTaxBlock">

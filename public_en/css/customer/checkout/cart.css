@@ -407,6 +407,7 @@
 	.common_mainPanel .updateRow .codeGroup input[type="text"] {
 		width: 100%;
 		padding: 2px 0;
+		margin-right: 0;
 	}
 	.common_mainPanel .updateRow .codeGroup input[type="submit"] {
 		width: 100%;

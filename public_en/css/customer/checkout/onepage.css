@@ -87,8 +87,9 @@
 	text-transform: uppercase;
 	padding-bottom: 0;
 }
-.common_mainPanel .checkoutProcessBlock li{
+.common_mainPanel .checkoutProcessBlock>li{
 	padding-bottom: 10px;
+	position: relative;
 }
 .common_mainPanel .checkoutProcessBlock li .titleBar{
 	position:relative;
@@ -272,6 +273,7 @@
 }
 .common_mainPanel .checkoutProcessBlock .checkoutMethod .registerBlock ul{
 	margin-top: 20px;
+	line-height: 30px;
 }
 .common_mainPanel .checkoutProcessBlock .checkoutMethod .registerBlock ul input{
 	margin-right:5px;
@@ -314,15 +316,113 @@
 	margin-top: 10px;
 }
 
+.common_mainPanel .checkoutProcessBlock .shippingMethod ul{
+	margin-top: 20px;
+}
+.common_mainPanel .checkoutProcessBlock .shippingMethod .continueRow{
+	margin-top: 10px;
+}
+.common_mainPanel .checkoutProcessBlock .paymentInformation{
+	z-index: 2;
+}
 
-
-
-
-
-
-
-
-
+.common_mainPanel .checkoutProcessBlock .paymentInformation .descript a{
+	display: inline-block;
+	margin-top: 27px;
+	color: #666;
+}
+.common_mainPanel .checkoutProcessBlock .paymentInformation .popBlock{
+	position: absolute;
+	top: 320px;
+	left: 335px;
+	width: 512px;
+	height: 260px;
+	background: url(../../../img/customer/checkout/onepage_popwin.png) no-repeat;
+	visibility: hidden;
+	display: none;
+}
+.common_mainPanel .checkoutProcessBlock .paymentInformation .continueRow{
+	clear: both;
+	padding-top: 10px;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .listBlock li{
+	position: relative;
+	padding: 10px 0;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .listBlock .paramCol{
+	margin-right: 140px;
+	color: #666;
+	line-height: 20px;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .listBlock .paramCol h1{
+	font-size: 14px;
+	color: #333; 
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .listBlock .quantityCol{
+	position: absolute;
+	top: 0;
+	right: 100px;
+	width: 40px;
+	text-align: center;
+	line-height: 70px;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .listBlock .price{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100px;
+	text-align: right;
+	font-size: 14px;
+	line-height: 70px;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .listBlock .headerRow{
+	border-bottom: 1px solid #ddd;
+	padding: 0;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .headerRow .paramCol{
+	line-height: 24px;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .headerRow .price{
+	font-size: 12px;
+	line-height: 24px;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .headerRow .quantityCol{
+	line-height: 24px;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .totalBlock{
+	line-height: 40px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin-top: 10px;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .totalBlock li{
+	position: relative;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .totalBlock .label{
+	margin-right: 110px;
+	text-align: right;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .totalBlock .priceCol{
+	position: absolute;
+	right:0;
+	top: 0;
+	text-align: right;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .totalBlock b{
+	font-size: 16px;	
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .continueRow{
+	position: relative;
+	margin-top: 20px;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .continueRow .extra{
+	position: absolute;
+	top: 8px;
+	right: 0;
+}
+.common_mainPanel .checkoutProcessBlock .orderReview .continueRow .extra a{
+	text-decoration: underline;
+}
 .bottomSpace{
 	height: 120px;
 }
@@ -360,8 +460,19 @@
 	.common_mainPanel .checkoutProcessBlock li .operationBlock .continueButtton {
 		width: 100%;
 	}
-	
-
+	.common_mainPanel .checkoutProcessBlock .paymentInformation .descript a{
+		margin-top: 0;
+	}
+	.common_mainPanel .checkoutProcessBlock .orderReview .continueRow{
+		margin-top: 0;
+	}
+	.common_mainPanel .checkoutProcessBlock .orderReview .continueRow .extra{
+		position: static;
+		line-height: 40px;
+	}
+	.bottomSpace{
+		height: 20px;
+	}
 	
 }
 

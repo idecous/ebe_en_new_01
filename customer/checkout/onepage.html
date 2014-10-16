@@ -101,7 +101,7 @@
 					</div>
 					<ul class="checkoutProcessBlock">
 						<li class="titleRow">Checkout</li>
-						<li class="checkoutMethod allow">
+						<li class="checkoutMethod action">
 							<div class="titleBar">
 								<span class="stepNum">1</span>
 								<h2>Checkout Method</h2>
@@ -143,7 +143,7 @@
 							</div>
 						</li>
 						
-						<li class="billingInformation allow">
+						<li class="billingInformation">
 							<div class="titleBar">
 								<span class="stepNum">2</span>
 								<h2>Billing Information</h2>
@@ -258,7 +258,7 @@
 							</div>
 						</li>
 						
-						<li class="shippingInformation action">
+						<li class="shippingInformation">
 							<div class="titleBar">
 								<span class="stepNum">3</span>
 								<h2>Shipping Information</h2>
@@ -350,24 +350,32 @@
 									<img src="../../public_en/img/customer/loader.gif" />
 									<span>Loading next step... </span>
 								</div>
-								
 							</div>
 						</li>
 						
-						
-						
-						
-						
-						<li class="shippingMethod">
+						<li class="shippingMethod allow">
 							<div class="titleBar">
 								<span class="stepNum">4</span>
 								<h2>Shipping Method</h2>
 								<a href="javascript:;"><span>Edit</span><i></i></a>
 							</div>
 							<div class="operationBlock">
-								333
+								<h3>Select Shipping Method</h3>
+								<ul>
+									<li><input type="radio" /><span>FedEx Ground $7.00</span></li>
+									<li><input type="radio" /><span>FedEx 2-Day $20.00</span></li>
+									<li><input type="radio" /><span>FedEx Next Day $26.00</span></li>
+								</ul>
+								<div class="continueRow">
+									<a class="continueButtton"  href="javascript:;">CONTINUE</a>
+								</div>
+								<div class="loadingRow">
+									<img src="../../public_en/img/customer/loader.gif" />
+									<span>Loading next step... </span>
+								</div>
 							</div>
 						</li>
+						
 						<li class="paymentInformation">
 							<div class="titleBar">
 								<span class="stepNum">5</span>
@@ -375,8 +383,55 @@
 								<a href="javascript:;"><span>Edit</span><i></i></a>
 							</div>
 							<div class="operationBlock">
-								333
+								<div class="inputUnit">
+									<div class="label"><i>*</i>Credit Card Type</div>
+									<div class="selectBorder">
+										<select>
+										<option value="1">1</option>
+										</select>
+									</div>
+									<div class="warn">&nbsp;</div>
+								</div>
+								<div class="inputUnit">
+									<div class="label"><i>*</i>Credit Card Number</div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfLeft">
+									<div class="label"><i>*</i>Expiration Date </div>
+									<div class="selectBorder">
+										<select>
+										<option value="1">1</option>
+										</select>
+									</div>
+									<div class="warn">&nbsp;</div>
+								</div>
+								<div class="inputUnit halfRight">
+									<div class="label"></div>
+									<div class="selectBorder">
+										<select>
+										<option value="1">1</option>
+										</select>
+									</div>
+									<div class="warn">&nbsp;</div>
+								</div>
+								<div class="inputUnit halfLeft">
+									<div class="label"><i>*</i>Card Verification Number </div>
+									<div class="inputBorder"><input type="text"/></div>
+									<div class="warn">不要留空!</div>
+								</div>
+								<div class="inputUnit halfRight descript">
+									<a class="descript" href="javascript:;"><span>What is this?</span></a>
+								</div>
+								<div class="continueRow">
+									<a class="continueButtton"  href="javascript:;">CONTINUE</a>
+								</div>
+								<div class="loadingRow">
+									<img src="../../public_en/img/customer/loader.gif" />
+									<span>Loading next step... </span>
+								</div>
 							</div>
+							<div class="popBlock"></div>	
 						</li>
 						<li class="orderReview">
 							<div class="titleBar">
@@ -385,7 +440,46 @@
 								<a href="javascript:;"><span>Edit</span><i></i></a>
 							</div>
 							<div class="operationBlock">
-								333
+								<ul class="listBlock">
+									<li class="headerRow">
+										<div class="paramCol">PRODUCT NAME</div>
+										<div class="quantityCol">QTY</div>
+										<div class="price">SUBTOTAL</div>
+									</li>
+									<li>
+										<div class="paramCol">
+											<h1>ABBY DEEP V TOP</h1>
+											<div>Color BLACK</div>
+											<div>Size S</div>
+											<div>$1,333.00</div>
+										</div>
+										<div class="quantityCol">999</div>
+										<div class="price"><b>$888,333.00</b></div>
+									</li>
+									<li>
+										<div class="paramCol">
+											<h1>ABBY DEEP V TOP</h1>
+											<div>Color BLACK</div>
+											<div>Size S</div>
+											<div>$1,333.00</div>
+										</div>
+										<div class="quantityCol">999</div>
+										<div class="price"><b>$333.00</b></div>
+									</li>
+								</ul>
+								<ul class="totalBlock">
+									<li><div class="label">Subtotal</div><div class="priceCol">$5,919.00 </div></li>
+									<li><div class="label">Shipping &amp; Handling (Select Shipping Method - FedEx 2-Day)</div><div class="priceCol">$9.00 </div></li>
+									<li><div class="label"><b>Grand Total</b></div><div class="priceCol"><b>$939.00</b></div></li>
+								</ul>
+								<div class="continueRow">
+									<div class="extra"><span>Forgot an Item?</span><a href="#">Edit Your Cart</a></div>
+									<a class="continueButtton"  href="javascript:;">PLACE ORDER</a>
+								</div> 
+								<div class="loadingRow">
+									<img src="../../public_en/img/customer/loader.gif" />
+									<span>Loading next step... </span>
+								</div>
 							</div>
 						</li>
 						

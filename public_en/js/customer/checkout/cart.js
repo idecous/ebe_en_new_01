@@ -1,24 +1,32 @@
 var EBE_DeleteManager = function(delHandler){
-	var formEl = $(".common_pageContent form:eq(0)");
-	var inputEl = formEl.find("input");
 	
-	var idEls =  $(".common_centerBlock table tbody tr td[class=hidden] input");
 	var nameEls = $(".common_centerBlock table tbody tr td .descriptBlock h3");
 	var tableDelEls = $(".common_centerBlock table tbody tr td .delBtn"); 
 	var mobileDelEls = $(".common_centerBlock .mobileBlock li .delBtn"); 
 	
+	tableDelEls.each(function(index){
+		var btnEl = tableDelEls.eq(index);
+		btnEl.data("url",btnEl.attr("href"));
+		btnEl.attr("href","javascript:;");
+	});
 	tableDelEls.click(function(){
 		var tIndex = tableDelEls.index(this);
-		if( delHandler(nameEls.text()) ){
-			inputEl.val( $.trim(idEls.eq(tIndex).val()) );
-			formEl.submit();
+		var btnEl = tableDelEls.eq( tIndex );
+		if( delHandler(nameEls.eq(tIndex).text()) ){
+			window.location.href = btnEl.data("url");
 		};
+	});
+	
+	mobileDelEls.each(function(index){
+		var btnEl = mobileDelEls.eq(index);
+		btnEl.data("url",btnEl.attr("href"));
+		btnEl.attr("href","javascript:;");
 	});
 	mobileDelEls.click(function(){
 		var tIndex = mobileDelEls.index(this);
-		if( delHandler(nameEls.text()) ){
-			inputEl.val( $.trim(idEls.eq(tIndex).val()) );
-			formEl.submit();
+		var btnEl = mobileDelEls.eq( tIndex );
+		if( delHandler(nameEls.eq(tIndex).text()) ){
+			window.location.href = btnEl.data("url");
 		}
 	});
 };
@@ -103,48 +111,48 @@ var EBE_QuantityInputManager = function(){
 };
 
 var EBE_AddToWishList = function(addHandler){
-	var formEl = $(".common_pageContent form:eq(1)");
-	var inputEl = formEl.find("input");
-	
-	var idEls =  $(".common_centerBlock table tbody tr td[class=hidden] input");
 	var nameEls = $(".common_centerBlock table tbody tr td .descriptBlock h3");
 	var tableAddEls = $(".common_centerBlock table tbody tr td .toWish"); 
 	var mobileAddEls = $(".common_centerBlock .mobileBlock li .toWish"); 
 	
+	tableAddEls.each(function(index){
+		var btnEl = tableAddEls.eq(index);
+		btnEl.data("url",btnEl.attr("href"));
+		btnEl.attr("href","javascript:;");
+	});
 	tableAddEls.click(function(){
 		var tIndex = tableAddEls.index(this);
-		if( addHandler(nameEls.text()) ){
-			inputEl.val( $.trim(idEls.eq(tIndex).val()) );
-			formEl.submit();
+		var btnEl = tableAddEls.eq(tIndex);
+		if( addHandler(nameEls.eq(tIndex).text()) ){
+			window.location.href = btnEl.data("url");
 		};
+	});
+	mobileAddEls.each(function(index){
+		var btnEl = mobileAddEls.eq(index);
+		btnEl.data("url",btnEl.attr("href"));
+		btnEl.attr("href","javascript:;");
 	});
 	mobileAddEls.click(function(){
 		var tIndex = mobileAddEls.index(this);
-		if( addHandler(nameEls.text()) ){
-			inputEl.val( $.trim(idEls.eq(tIndex).val()) );
-			formEl.submit();
+		var btnEl = mobileAddEls.eq(tIndex);
+		if( addHandler(nameEls.eq(tIndex).text()) ){
+			window.location.href = btnEl.data("url");
 		}
 	});
 };
 
 var EBE_UpdateManager = function(){
-	var formEl = $(".common_mainPanel form:eq(0)");
-	var inputEl = formEl.find("input[type=hidden]:last");
-	var codeInputEl = $(".common_mainPanel .updateRow .codeGroup input[type=text]");
-	var codeSubmitEl = $(".common_mainPanel .updateRow .codeGroup input[type=submit]");
-	var updateSubmitEl= $(".common_mainPanel .updateRow .updateBtn");
-
-	codeSubmitEl.click(function(){
+	var codeFormEl = $(".common_mainPanel .updateRow form:eq(0)");
+	var codeInputEl = codeFormEl.find("input");
+	codeFormEl.submit(function(){
 		var code= $.trim( codeInputEl.val() );
 		if( code == "" ){
-			inputEl.val("");
 			codeInputEl.addClass("warn");
-			return;
+			return false;
 		}
-		codeInputEl.removeClass("warn");
-		inputEl.val(code);
-		formEl.submit();
 	});
+	var formEl = $(".common_mainPanel form:eq(0)");
+	var updateSubmitEl= $(".common_mainPanel .updateRow .updateBtn");
 	updateSubmitEl.click(function(){
 		formEl.submit();
 	});
@@ -186,8 +194,7 @@ var EBE_ShippingTaxManager = function(){
 		var tIndex = labelEls.index(this);
 		radioEls.prop("checked",false);
 		radioEls.eq(tIndex).prop("checked",true);
-	});
-	
+	});	
 };
 
 $(function(){
@@ -201,16 +208,5 @@ $(function(){
 	new EBE_UpdateManager();
 	new EBE_ShippingTaxManager();
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
