@@ -68,11 +68,11 @@ var EBE_ListItem = function(submitHandler,errorHandler,unit){
 			return false;
 		});
 		this.submitBtnEl.click(function(){
-			if( that.sizeIndex == -1 ){ 
+			if( that.sizeEl.length > 0 && that.sizeIndex == -1 ){ 
 				that.errorHandler();
 				return false;
 			}
-			that.submitHandler( that.id, that.sizeEl.eq(that.sizeIndex).text() , that.sizeEl.eq(that.sizeIndex).attr("iid")    );
+			that.submitHandler( that.id, that.sizeEl.eq(that.sizeIndex).text() , that.sizeEl.eq(that.sizeIndex).attr("iid")  );
 			return false;
 		});
 	};

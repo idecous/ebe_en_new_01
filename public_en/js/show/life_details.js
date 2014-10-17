@@ -162,7 +162,6 @@ var EVE_ShoppingCar = function(deleteHandler){
 	return {"addGoods":addGoods};
 };
 
-
 var EBE_GoodsPreviewNavigator = function(el,changeViewHandler){
 	var navEl = el.find(".switchPanel");
 	var ulEl = navEl.find("ul").show();
@@ -491,6 +490,7 @@ var EBE_GoodsParameter = function(sizeWarn,submitHandler,favoritesHandler){
 	el.find(".sizeGroup .toData a").click(function(){
 		html7BodyEl.animate({ scrollTop: sizeDataTitleEl.offset().top });	
 	});
+	
 	var contentIndex = 0;
 	var contentBtnEl = el.find(".messageBlock .tabBar li");
 	var contentLiEl = el.find(".messageBlock .contentBlock li");
@@ -553,7 +553,7 @@ var EBE_GoodsParameter = function(sizeWarn,submitHandler,favoritesHandler){
 	appendShoppingcarEl.click(appendGoodsHandler);
 
 	function appendGoodsHandler(){
-		if( sizeIndex == -1){
+		if(priceEls.length >0 && sizeIndex == -1){
 			alert( sizeWarn );
 		}else{
 			submitHandler( priceEls.eq(sizeIndex).text() ,priceEls.eq(sizeIndex).attr("iid")  );
