@@ -287,6 +287,17 @@
 	font-size: 16px;
 	font-weight: normal;
 }
+.common_mainPanel .mobileBlock ul li .listRow .toView{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	display: block;
+	width: 10px;
+	height: 17px;
+	background: url(../../../img/customer/icons.png) no-repeat -94px -14px;
+	margin-top: -9px;
+}
+
 .common_mainPanel .mobileBlock ul li .operationRow{
 	position:relative;
 	height: 60px;

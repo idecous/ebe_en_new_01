@@ -65,7 +65,18 @@
 }
 .common_rightPanel .totalRow{
 	line-height: 50px;
-	text-align: right;
+}
+.common_rightPanel .totalRow .again{
+	display:inline-block;
+	height: 30px;
+	line-height:30px;
+	width: 100px;
+	background-color: #df4140;
+	color: #fff;
+	text-align: center;
+	float: right;
+	margin-top: 15px;
+	border-radius: 3px;
 }
 .common_rightPanel .totalRow span{
 	margin-left: 20px;
@@ -173,9 +184,15 @@
 	}
 	.common_rightPanel .totalRow{
 		margin: 0 10px;
+		text-align: right;
 	}
 	.common_rightPanel .totalRow span{
 		white-space: nowrap;
+	}
+	.common_rightPanel .totalRow .again{
+		display: block;
+		float: none;
+		width: 100%;
 	}
 	.bottomSpace{
 		height: 80px;

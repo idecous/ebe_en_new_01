@@ -160,7 +160,7 @@ EBE_BillingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype);
 		var i,inputEl;
 		for(var i=0; i<this.inputEls.length;i++){
 			inputEl = this.inputEls.eq(i);
-			console.log( inputEl.attr("name") );
+			data[ inputEl.attr("name") ] = inputEl.val();
 		}
 		return data;
 	};
@@ -223,6 +223,7 @@ var EBE_ShippingModule_Unlogined = function(editClickFn,patterns){
 	EBE_ModuleBase.call(this,".shippingInformation");
 	this.editBtnClickFn = editClickFn;
 	this.patterns = patterns;
+	this.copyFn = null;
 	this.init();
 };
 EBE_ShippingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype);
@@ -231,13 +232,31 @@ EBE_ShippingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype)
 		this.build();
 		this.superInit();
 		var that = this;
-		
-		
-		
-		
+		this.useCheckboxLabelEl.click(function(){
+			that.useCheckboxEl.prop("checked", !that.useCheckboxEl.prop("checked") );
+			that.copyByBilling();
+		});
+		this.useCheckboxEl.change(function(){
+			that.copyByBilling();
+		});
 		this.continueEl.click(function(){
 			if( !that.verify() ){return;}
 		});
+		this.continueEl.click(function(){
+			//if( !that.verify() ){ return;}
+			that.nextFn();
+			
+		});
+	};
+	this.copyByBilling = function(){
+		if( this.useCheckboxEl.prop("checked") ){
+			var data = this.copyFn();
+			var i,inputEl;
+			for(i=0; i < this.inputEls.length ;i++ ){
+				inputEl = this.inputEls.eq(i);
+				inputEl.val( data[ inputEl.attr("name") ] );
+			}
+		}
 	};
 	this.verify = function(){
 		var i,index,result = true;
@@ -251,21 +270,16 @@ EBE_ShippingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype)
 				this.warnEls.eq(index).css("visibility","hidden");
 			}
 		}
-		
-		
 		return result;
 	};
-	
 	this.build = function(){
 		this.inputEls = this.el.find("input[type=text],select");
 		this.warnEls = this.el.find(".inputUnit .warn");
 		
 		this.useCheckboxEl = this.el.find("input[type=checkbox]");
 		this.useCheckboxLabelEl = this.el.find(".operationRow span");
-		console.log( this.useCheckboxLabelEl );
-		
+
 		this.continueEl = this.el.find(".continueButtton");
-		
 	};
 }).call(EBE_ShippingModule_Unlogined.prototype);
 var EBE_ShippingModule_Logined = function(editClickFn,patterns){};
@@ -315,8 +329,14 @@ var EBE_CheckOutManager = function(patterns){
 		}else{
 			changeModuleByEdit( currentIndex + 1);
 		}
+	};
+	shippingModule.nextFn = function(){
 		
 	};
+	shippingModule.copyFn = function(){
+		return billingModule.getData();
+	};
+	
 	
 	
 
