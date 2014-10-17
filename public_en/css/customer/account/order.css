@@ -236,95 +236,80 @@
 	color: #fff;
 }
 .common_mainPanel .mobileBlock ul{
-	margin: 10px;
+	margin: 10px 0;
 }
 .common_mainPanel .mobileBlock ul li{
-	border: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 	margin-bottom: 10px;
+	background-color: #fff;
+	font-size: 12px;
+	padding: 0 10px;
+}
+.common_mainPanel .mobileBlock ul li .row01{
+	line-height: 30px;
+}
+.common_mainPanel .mobileBlock ul li .row02{
+	position: relative;
+	line-height: 30px;
+}
+.common_mainPanel .mobileBlock ul li .row02 span{
+	color: #aaa;
+}
+.common_mainPanel .mobileBlock ul li .row02 b{
+	color: #df4140;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-weight: normal;
+}
+.common_mainPanel .mobileBlock ul li .separator{
+	height: 0;
+	border-bottom: 1px solid #ddd;
+}
+.common_mainPanel .mobileBlock ul li .listRow{
+	position: relative;
+	padding-bottom: 5px;
+}
+.common_mainPanel .mobileBlock ul li .listRow p{
+	line-height: 20px;
+	margin-right: 30px;
+	margin-top: 5px;
+}
+.common_mainPanel .mobileBlock ul li .listRow .receiver{
+	line-height: 30px;
+	margin-right: 30px;
+}
+.common_mainPanel .mobileBlock ul li .listRow .price{
+	margin-right: 30px;
+}
+.common_mainPanel .mobileBlock ul li .listRow .price b{
+	font-size: 16px;
+	font-weight: normal;
 }
 .common_mainPanel .mobileBlock ul li .operationRow{
 	position:relative;
-	height: 165px;
-	border-bottom: 1px solid #ddd;
+	height: 60px;
+	line-height: 60px;
+	font-size: 14px;
 }
-.common_mainPanel .mobileBlock ul li .operationRow img{
+.common_mainPanel .mobileBlock ul li .operationRow .highlight{
 	position:absolute;
-	top: 10px;
-	left: 10px;
-}
-.common_mainPanel .mobileBlock ul li .operationRow .paramCol{
-	margin: 0 90px 0 120px;
-	padding: 0 10px;
-	height:165px;
-}
-.common_mainPanel .mobileBlock ul li .operationRow .paramCol .textBlock{
+	right:0;
+	top:50%;
+	margin-top:-16px;
 	display: inline-block;
-	line-height: 24px;
-	margin-top: 50px;
-}
-.common_mainPanel .mobileBlock ul li .operationRow .paramCol .textBlock .count{
-	font-size: 12px;
-	color: #666;
-}
-.common_mainPanel .mobileBlock ul li .operationRow .operationCol{
-	position: absolute;
-	top:0;
-	right: 0;
-	width:90px;
-	height:165px;
-	font-size: 12px;
-	text-align: center;
-}
-.common_mainPanel .mobileBlock ul li .operationRow .operationCol a{
-	display:inline-block;
-	width: 70px;
-	height: 23px;
-	text-align: center;
-	line-height: 23px;
-	margin-top: 70px;
-	text-decoration: underline;
-}
-.common_mainPanel .mobileBlock ul li .operationRow .operationCol .toPay{
-	background-color: #df4141;
+	width: 100px;
+	height: 32px;
+	line-height:32px;
+	background-color: #df4140;
 	color: #fff;
-	border-radius: 4px;
-	text-decoration: none;
+	text-align: center;
+	border-radius: 3px;
 }
-.common_mainPanel .mobileBlock ul li .operationRow .operationCol .operationBlock{
-	margin-top: 25px;
-	line-height: 40px;
-}
-.common_mainPanel .mobileBlock ul li .operationRow .operationCol .operationBlock a{
-	margin-top:0;
-	display: inline-block;
-	height: 40px;
-	line-height:40px;
-}
-.common_mainPanel .mobileBlock ul li .NoRow{
-	height: 40px;
-	line-height:40px;
-	padding: 0 10px;
-}
-.common_mainPanel .mobileBlock ul li .viewRow{
-	position:relative;
-	height: 40px;
-	line-height:40px;
-	background-color:#eee; 
-	padding: 0 10px;
-	font-size: 12px;
-}
-.common_mainPanel .mobileBlock ul li .viewRow a{ 
-	position: absolute;
-	right: 10px;
-}
-.common_mainPanel .mobileBlock ul li .viewRow a i{ 
-	display: inline-block;
-	width: 14px;
-	height: 14px;
-	background: url(../../../img/customer/icons.png) no-repeat -56px -84px;
-	margin-left: 5px;
-	vertical-align: -4px;
-}
+
+
+
 .common_mainPanel .mobileBlock .pageBar{
 	height: 60px;
     line-height: 40px;

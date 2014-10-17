@@ -36,7 +36,7 @@ var EVE_DeleteOrderManager = function(delHandler){
 	});
 	mobileDelBtnEls.click(function(){
 		var btnEl = mobileDelBtnEls.eq( mobileDelBtnEls.index(this) );
-		var orderIDColEl =  btnEl.parents("li").children(".NoRow").find("span>span");
+		var orderIDColEl =  btnEl.parents("li").find(".row01  span");
 		if( delHandler( $.trim(orderIDColEl.text()) ) ){
 			window.location.href = btnEl.data("url");
 		}
@@ -64,7 +64,7 @@ var EVE_RemindManager = function(delHandler){
 	});
 	mobileDelBtnEls.click(function(){
 		var btnEl = mobileDelBtnEls.eq( mobileDelBtnEls.index(this) );
-		var orderIDColEl =  btnEl.parents("li").children(".NoRow").find("span>span");
+		var orderIDColEl =  btnEl.parents("li").find(".row01 span");
 		if( delHandler( $.trim(orderIDColEl.text()) ) ){
 			window.location.href = btnEl.data("url");
 		}
@@ -92,7 +92,7 @@ var EVE_ReceivingManager = function(delHandler){
 	});
 	mobileDelBtnEls.click(function(){
 		var btnEl = mobileDelBtnEls.eq( mobileDelBtnEls.index(this) );
-		var orderIDColEl =  btnEl.parents("li").children(".NoRow").find("span>span");
+		var orderIDColEl =  btnEl.parents("li").find(".row01 span");
 		if( delHandler( $.trim(orderIDColEl.text()) ) ){
 			window.location.href = btnEl.data("url");
 		}

@@ -294,6 +294,7 @@
 .common_mainPanel .checkoutProcessBlock .billingInformation .addressRow{
 	margin-top: 20px;
 	line-height: 30px;
+	clear: both;
 }
 .common_mainPanel .checkoutProcessBlock .billingInformation .addressRow input{
 	margin-right: 10px;
