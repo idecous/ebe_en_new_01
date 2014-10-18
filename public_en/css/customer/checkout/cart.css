@@ -130,6 +130,7 @@
 	font-size: 12px;
 	vertical-align: -1px;
 	cursor: pointer;
+	margin-right: 10px;
 }
 .common_mainPanel .updateRow .codeGroup input[type='submit']:hover{
 	background-color: #444;

@@ -1,5 +1,4 @@
-var EBE_DeleteManager = function(delHandler){
-	
+var EBE_DeleteManager = function(delHandler){	
 	var nameEls = $(".common_centerBlock table tbody tr td .descriptBlock h3");
 	var tableDelEls = $(".common_centerBlock table tbody tr td .delBtn"); 
 	var mobileDelEls = $(".common_centerBlock .mobileBlock li .delBtn"); 
@@ -143,8 +142,15 @@ var EBE_AddToWishList = function(addHandler){
 
 var EBE_UpdateManager = function(){
 	var codeFormEl = $(".common_mainPanel .updateRow form:eq(0)");
-	var codeInputEl = codeFormEl.find("input");
-	codeFormEl.submit(function(){
+	var codeInputEl = codeFormEl.find("input[type=text]");
+	var submitEls = codeFormEl.find("input[type=submit]");
+	var hiddenEl = codeFormEl.find("input[type=hidden]");
+
+	submitEls.click(function(){
+		var tIndex = submitEls.index(this);
+		hiddenEl.val(  tIndex==0?"0":"1" );
+	});
+	codeFormEl.submit(function(e){
 		var code= $.trim( codeInputEl.val() );
 		if( code == "" ){
 			codeInputEl.addClass("warn");
