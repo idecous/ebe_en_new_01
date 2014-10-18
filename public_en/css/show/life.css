@@ -17,7 +17,142 @@ header .top_logoBlock h1{
 	display: none;
 	font-size: 18px;
 }
+header .userGroup{
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	z-index: 500;
+}
+header .userGroup>li{
+	float: left;
+}
+header .userGroup .account a{
+	color: #fff;	
+	text-transform: uppercase;
+	font-size: 12px;
+}
+header .userGroup .shoppingcar>div>i{
+	display: inline-block;
+	width: 	22px;
+	height: 14px;
+	background: url(../../img/show/shoppingcar_icon01.png); 
+	vertical-align: -2px;
+	margin: 0 5px 0 15px;
+	cursor: pointer;
+}
+header .userGroup .shoppingcar .popWin{
+	position: absolute;
+	top:19px;
+	right:-6px;
+	width: 310px;	
+	color: #ccc;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.25s ease-out 0s;
+}
+header .userGroup .shoppingcar .popWin.open{
+	opacity: 1;
+	visibility: visible;
+}
+header .userGroup .shoppingcar .popWin .borderTop{
+	height:6px;
+	background: url(../../img/show/lifeList_shoppingcar_bg_top.png); 
+}
+header .userGroup .shoppingcar .popWin .borderContent{
+	background: url(../../img/show/lifeList_shoppingcar_bg_content.png);
+	padding: 4px 0 0 0;
+}
+header .userGroup .shoppingcar .popWin .borderContent .topInfoPanel{
+	border-bottom: 1px solid #666;
+	padding-bottom: 4px;
+	margin: 0 10px;
+}
+header .userGroup .shoppingcar .popWin .borderContent .topInfoPanel b{
+	font-weight: normal;
+}
+header .userGroup .shoppingcar .popWin .borderContent .topInfoPanel a{
+	float:right;
+	margin-top:4px;
+	margin-right:2px;
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: url(../../img/show/icons.png) no-repeat -60px -192px; 
+}
+header .userGroup .shoppingcar .popWin .borderContent .empty{
+	height: 56px;
+	line-height: 56px;
+	text-align: center;
+	display: none;
+}
+header .userGroup .shoppingcar .popWin .borderContent .listContainer{
+	margin: 0 10px;
+}
+header .userGroup .shoppingcar .popWin .borderContent .scroll{
+	overflow-y: scroll;
+}
+header .userGroup .shoppingcar .popWin .borderContent ul li{
+	padding-top:10px;
+	height: 105px;
+	border-top: 1px dotted #666;
+}
+header .userGroup .shoppingcar .popWin .borderContent ul li:first-child{
+	border-top:none;
+}
+header .userGroup .shoppingcar .popWin .borderContent ul li .imgBlock{
+	float: left;
+	margin-left: 5px;
+	width: 65px;
+}
+header .userGroup .shoppingcar .popWin .borderContent ul li .infoBlock{
+	position:relative;
+	float: left;
+	margin-left: 10px;
+	width: 190px;
+	font-size: 12px;
+	line-height: 20px;
+}
+header .userGroup .shoppingcar .popWin .borderContent ul li .infoBlock .price{
+	color: #fff;
+	margin-top: 10px;
+}
+header .userGroup .shoppingcar .popWin .borderContent ul li .infoBlock>div{
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+} 
+header .userGroup .shoppingcar .popWin .borderContent ul li .infoBlock a{
+	position: absolute;
+	right: 20px;
+	bottom: 0;
+	color: #ccc;
+}
 
+header .userGroup .shoppingcar .popWin .borderContent .statsRow{
+	margin: 0 10px;
+	height: 40px;
+	line-height:40px;
+	text-align: center;
+	border-top:1px solid #666; 
+	color: #fff;
+}
+header .userGroup .shoppingcar .popWin .borderContent .statsRow b{
+	color: #df4141;
+	font-weight: normal;
+}
+header .userGroup .shoppingcar .popWin .toPay{
+	display:block;
+	height: 40px;
+	line-height: 40px;
+	background-color: #df4141;
+	color: #fff;
+	text-align: center;
+}
+
+header .userGroup .shoppingcar .popWin .borderBottom{
+	height: 0;
+	border-bottom: 1px solid #666;
+}
 header .mainNavBar{
 	position:absolute;
 	top:150px;
@@ -215,10 +350,13 @@ header .withchNavPanel .selected{
 }
 .common_mainPanel .actionBlock{
 	position:relative;
-	margin: 20px 3px 0 3px;	
+	margin: 20px 2px 0 3px;	
 }
 .common_mainPanel .actionBlock .middle_placeholder{
 	width: 100%;
+}
+.common_mainPanel .actionBlock>div{
+	overflow: hidden;
 }
 .common_mainPanel .actionBlock a {
 	display: block;
@@ -230,7 +368,7 @@ header .withchNavPanel .selected{
 	position:absolute;
 	left:0;
 	top:0;
-	width: 33.37%;
+	width: 33.44%;
 	height: 66.50%;
 }
 .common_mainPanel .actionBlock .block01 a{
@@ -238,17 +376,129 @@ header .withchNavPanel .selected{
 }
 .common_mainPanel .actionBlock .block02{
 	position:absolute;
-	left:33.37%;
-	top:0;
-	width: 66.62%;
-	height: 33.49%;
+	left:33.44%;
+	top: 0;
+	width: 66.55%;
+	height: 33.2%;
 }
 
+.common_mainPanel .actionBlock .block03{
+	position:absolute;
+	left:33.44%;
+	top: 33.2%;
+	width:  33.44%;
+	height: 33.3%;
+}
+.common_mainPanel .actionBlock .block03 a{
+	margin: 3px 3px 0 0; 
+}
+.common_mainPanel .actionBlock .block04{
+	position:absolute;
+	left:0;
+	top: 66.50%;
+	width:  33.44%;
+	height: 33.49%;
+}
+.common_mainPanel .actionBlock .block04 a{
+	margin: 3px 3px 0 0; 
+}
+.common_mainPanel .actionBlock .block05{
+	position:absolute;
+	left:33.44%;
+	top: 66.50%;
+	width: 33.44%;
+	height: 33.49%;
+}
+.common_mainPanel .actionBlock .block05 a{
+	margin: 3px 3px 0 0; 
+}
+.common_mainPanel .actionBlock .block06{
+	position:absolute;
+	top: 33.2%;
+	left: 66.88%;
+	width: 33.11%;
+	height: 66.79%;
+}
+.common_mainPanel .actionBlock .block06 a{
+	margin: 3px 0 0 0;
+}
 
+.common_mainPanel .elementPanel{
+	margin: 20px;
+	text-align: justify;
+}
 
-
-
-
+.common_mainPanel .elementPanel li{
+	display: inline-block;	
+	width: 23.97%;
+	overflow: hidden;
+}
+.common_mainPanel .elementPanel li .container{
+	position:relative;
+	text-align: left;
+	width: 100%;
+	height: 100%;
+}
+.common_mainPanel .elementPanel li img{
+	width: 100%;
+}
+.common_mainPanel .elementPanel li .border{
+	border: 1px solid #999;
+	position:absolute;
+	left:0;
+	top:0;
+	right: 0;
+	bottom: 0;
+}
+.common_mainPanel .elementPanel .container:hover .descriptBlock{
+	bottom: 0;
+}
+.common_mainPanel .elementPanel li .descriptBlock{
+	height: 96px;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	left: 0;
+	bottom: -30px;
+	width: 100%;
+	height: 96px;
+	color: #fff;
+	transition: all 0.25s ease-out 0s;
+}
+.common_mainPanel .elementPanel .justifyFix{
+	border: none;
+}
+.common_mainPanel .elementPanel li .descriptBlock h3{
+	margin: 10px 12px 0 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 16px;
+	white-space: nowrap;
+}
+.common_mainPanel .elementPanel li .descriptBlock h2{
+	margin: 0 12px;
+	font-size: 18px;
+	white-space: nowrap;
+}
+.common_mainPanel .elementPanel li .descriptBlock h2 span{
+	display:inline-block;
+	max-width:100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-top: 1px solid #fff;
+}
+.common_mainPanel .elementPanel li .descriptBlock a{
+	display: inline-block;
+	margin: 5px 12px 0 12px;
+	color: #fff;
+	font-size: 12px;
+}
+.common_mainPanel .elementPanel li .descriptBlock a i{
+	display: inline-block;
+	width: 5px;
+	height: 9px;
+	background: url(../../img/show/icons.png) no-repeat -64px -122px;
+	margin-right: 4px;
+}
 
 @media only screen and (max-width: 1200px) {	
 	header .subNavListBlock .viewBlock .labelBlock{
@@ -316,7 +566,9 @@ header .withchNavPanel .selected{
 		width: 164px;
 		height: 26px;
 	}
-	
+	header .userGroup{
+		display: none;
+	}
 	header .subNavBar{
 		display: none;
 	}
@@ -332,7 +584,88 @@ header .withchNavPanel .selected{
 		display: inline-block;
 		margin-left: 47px;
 	}
-	
+	.common_mainPanel .actionBlock .middle_placeholder{
+		display: none;
+	}
+	.common_mainPanel .actionBlock {
+    	margin: 20px 0 0 0;
+	}
+	.common_mainPanel .actionBlock >div{
+	 	overflow: auto;
+	 	text-align: center;
+	 	margin-bottom: 10px;
+	}
+	.common_mainPanel .actionBlock .block01,
+	.common_mainPanel .actionBlock .block02,
+	.common_mainPanel .actionBlock .block03,
+	.common_mainPanel .actionBlock .block04,
+	.common_mainPanel .actionBlock .block05,
+	.common_mainPanel .actionBlock .block06 {
+	    height: auto;
+	    width: auto;
+	    position: static;
+	}
+	.common_mainPanel .actionBlock .block01 a,
+	.common_mainPanel .actionBlock .block02 a,
+	.common_mainPanel .actionBlock .block03 a,
+	.common_mainPanel .actionBlock .block04 a,
+	.common_mainPanel .actionBlock .block05 a,
+	.common_mainPanel .actionBlock .block06 a {
+	    margin: 0;
+	}
+	.common_mainPanel .actionBlock .block01 a img,
+	.common_mainPanel .actionBlock .block03 a img,
+	.common_mainPanel .actionBlock .block04 a img,
+	.common_mainPanel .actionBlock .block05 a img{
+		max-width: 497px;
+	}
+	.common_mainPanel .actionBlock .block02 a img{
+		max-width: 996px;
+	}
+	.common_mainPanel .actionBlock .block06 a img{
+		max-width: 496px;
+	}
+	.common_mainPanel .elementPanel{
+		text-align: center;
+		margin: 20px 0;
+	}
+	.common_mainPanel .elementPanel li {
+		display:block;
+		width: auto;	
+		margin-bottom: 10px;
+	}
+	.common_mainPanel .elementPanel li .container{
+		display:inline-block;
+		width: 100%;
+		max-width: 350px;
+		border: none;
+		overflow: hidden;
+	}
+	.common_mainPanel .elementPanel .empty{
+		display: none;
+	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

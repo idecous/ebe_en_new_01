@@ -534,7 +534,12 @@ EBE_PaymentModule.prototype = Object.create(EBE_ModuleBase.prototype);
 		var that = this;
 		this.continueEl.click(function(){
 			if( !that.verify() ){return;}
-			that.nextFn( that.getData() );
+			var typeEl = that.typeEls.filter(":checked");
+			var tData = that.getData();
+			if( typeEl.length > 0 ){
+				tData[typeEl.attr("name")] = typeEl.val();
+			}			
+			that.nextFn( tData );
 		});
 		this.winEl.mousedown(function(){
 			if( !that.isPop ){return;}
@@ -579,6 +584,9 @@ EBE_PaymentModule.prototype = Object.create(EBE_ModuleBase.prototype);
 	this.build = function(){
 		this.bodyEl = $("body");
 		this.winEl = $(window);
+		
+		this.typeEls = this.el.find("input[type=radio],select");
+		
 		this.inputEls = this.el.find("input[type=text],select");
 		this.warnEls = this.el.find(".inputUnit .warn");
 		this.continueEl = this.el.find(".continueButtton");
@@ -656,10 +664,8 @@ var EBE_CheckOutManager = function(patterns){
 	shippingModule.copyFn = function(){
 		return billingModule.getData({"value":"7","name":"FedEx","label":"FedEx Ground $7.00"  });
 	};
-
 	function changeModuleByEdit(index){
 		currentIndex = index;
-	
 		for(var i=0; i < modules.length;i++){
 			if( i < currentIndex){
 				modules[i].setAllow();
@@ -675,11 +681,7 @@ var EBE_CheckOutManager = function(patterns){
 			billingModule.setRole( loginModule.role );
 		}
 		changeModuleByEdit( currentIndex + 1);
-		
-		
 	}
-	
-	
 	function setError(err01){
 		loginModule.leftErrMessage = err01;
 	}
@@ -712,7 +714,6 @@ var EBE_CheckOutManager = function(patterns){
 	function setReviewData(data){
 		reviewModule.setData(data);
 	}
-	
 	return {
 		"setError":setError,
 		"setLoginError":setLoginError,
@@ -767,8 +768,6 @@ $(function(){
 	
 	checkOutManager.setError("请选择地区或以来宾身份结账!");
 	
-	
-	
 	checkOutManager.setUnloginedHandler(function(role){
 		console.log( "未登录访问方式", role);
 		//
@@ -777,11 +776,8 @@ $(function(){
 	checkOutManager.setBillingHandler(function(data,sameddress,isSave){
 		console.log( "账单信息(数据/是否送货到同一地方/是否保存)", data,sameddress,isSave);
 		//请求服务器
-		/*
-		 *
-		 */
 		if( sameddress ){
-			checkOutManager.setShippingMethodData(shippingMethodData);
+			checkOutManager.setShippingMethodData("Fixed US$5.00");
 			checkOutManager.nextModule();		
 			checkOutManager.nextModule();		
 		}else{
@@ -791,9 +787,7 @@ $(function(){
 	checkOutManager.setShippingHandler(function(data,isSave){
 		console.log("送货地址信息(数据/是否保存)", data,isSave);
 		//请求服务器
-		/*
-		 *
-		 */
+
 		checkOutManager.setShippingMethodData("Fixed US$5.00");
 		checkOutManager.nextModule();
 	});
