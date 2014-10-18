@@ -50,6 +50,7 @@
 					</li>
 				</ul>
 			</header>
+			<div class="popWindow"></div>	
 			<div class="common_mainPanel">
 				<div class="common_centerBlock normolBlock">
 					<div class="topSpace"></div>
@@ -366,9 +367,6 @@
 							<div class="operationBlock">
 								<h3>Select Shipping Method</h3>
 								<ul>
-									<li><input type="radio" /><span>FedEx Ground $7.00</span></li>
-									<li><input type="radio" /><span>FedEx 2-Day $20.00</span></li>
-									<li><input type="radio" /><span>FedEx Next Day $26.00</span></li>
 								</ul>
 								<div class="continueRow">
 									<a class="continueButtton"  href="javascript:;">CONTINUE</a>
@@ -390,7 +388,7 @@
 								<div class="inputUnit">
 									<div class="label"><i>*</i>Credit Card Type</div>
 									<div class="selectBorder">
-										<select>
+										<select name="cardType">
 	                						<option value="">-- 请选择 --</option>
 	                                        <option value="AE">American Express</option>
 						                    <option value="VI">Visa</option>
@@ -398,17 +396,17 @@
 						                    <option value="DI">Discover</option>
 										</select>
 									</div>
-									<div class="warn">&nbsp;</div>
+									<div class="warn">请选择支付卡</div>
 								</div>
 								<div class="inputUnit">
 									<div class="label"><i>*</i>Credit Card Number</div>
-									<div class="inputBorder"><input type="text"/></div>
+									<div class="inputBorder"><input name="carNumber" type="text"/></div>
 									<div class="warn">请输入卡号!</div>
 								</div>
 								<div class="inputUnit halfLeft">
 									<div class="label"><i>*</i>Expiration Date </div>
 									<div class="selectBorder">
-										<select>
+										<select name="month">
                                             <option value="" selected="selected">月</option>
 		                                    <option value="1">01 - 1月</option>
 		                                    <option value="2">02 - 2月</option>
@@ -429,7 +427,7 @@
 								<div class="inputUnit halfRight">
 									<div class="label"></div>
 									<div class="selectBorder">
-										<select>
+										<select name="year">
 				                            <option value="" selected="selected">年</option>
 				                            <option value="2014">2014</option>
 				                            <option value="2015">2015</option>
@@ -448,7 +446,7 @@
 								</div>
 								<div class="inputUnit halfLeft">
 									<div class="label"><i>*</i>Card Verification Number </div>
-									<div class="inputBorder"><input type="text"/></div>
+									<div class="inputBorder"><input name="verificationNum" type="text"/></div>
 									<div class="warn">不要留空!</div>
 								</div>
 								<div class="inputUnit halfRight descript">
@@ -462,7 +460,6 @@
 									<span>Loading next step... </span>
 								</div>
 							</div>
-							<div class="popBlock"></div>	
 						</li>
 						<li class="orderReview">
 							<div class="titleBar">
@@ -477,31 +474,11 @@
 										<div class="quantityCol">QTY</div>
 										<div class="price">SUBTOTAL</div>
 									</li>
-									<li>
-										<div class="paramCol">
-											<h1>ABBY DEEP V TOP</h1>
-											<div>Color BLACK</div>
-											<div>Size S</div>
-											<div>$1,333.00</div>
-										</div>
-										<div class="quantityCol">999</div>
-										<div class="price"><b>$888,333.00</b></div>
-									</li>
-									<li>
-										<div class="paramCol">
-											<h1>ABBY DEEP V TOP</h1>
-											<div>Color BLACK</div>
-											<div>Size S</div>
-											<div>$1,333.00</div>
-										</div>
-										<div class="quantityCol">999</div>
-										<div class="price"><b>$333.00</b></div>
-									</li>
 								</ul>
 								<ul class="totalBlock">
-									<li><div class="label">Subtotal</div><div class="priceCol">$5,919.00 </div></li>
-									<li><div class="label">Shipping &amp; Handling (Select Shipping Method - FedEx 2-Day)</div><div class="priceCol">$9.00 </div></li>
-									<li><div class="label"><b>Grand Total</b></div><div class="priceCol"><b>$939.00</b></div></li>
+									<li><div class="label"></div><div class="priceCol"></div></li>
+									<li><div class="label"></div><div class="priceCol"></div></li>
+									<li><div class="label"><b></b></div><div class="priceCol"><b></b></div></li>
 								</ul>
 								<div class="continueRow">
 									<div class="extra"><span>Forgot an Item?</span><a href="#">Edit Your Cart</a></div>
