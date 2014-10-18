@@ -945,6 +945,8 @@ header .bg{
 		float: none;
 		width: auto;
 	}
+	
+	.common_mainPanel .filterPanel .bySeries ,
 	.common_mainPanel .filterPanel .byCategory,
 	.common_mainPanel .filterPanel .byBrand,
 	.common_mainPanel .filterPanel .byPrice,

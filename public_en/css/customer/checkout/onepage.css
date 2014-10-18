@@ -276,6 +276,10 @@
 }
 .common_mainPanel .checkoutProcessBlock .login .loginBlock .continueButtton{
 	margin-top: 25px;
+	border: none;
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 20px;
 } 
 
 .common_mainPanel .checkoutProcessBlock .login .registerBlock{

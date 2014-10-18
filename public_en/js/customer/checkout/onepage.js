@@ -80,7 +80,7 @@ EBE_LoginModule.prototype = Object.create(EBE_ModuleBase.prototype);
 				that.nextFn( that.role );
 			}
 		});
-		this.rightContinueEl.click(function(){
+		this.loginFormEl.submit(function(){
 			var result = true;
 			var name = $.trim( that.loginInputEls.eq(0).val() );
 			var password = $.trim( that.loginInputEls.eq(1).val() );
@@ -96,9 +96,7 @@ EBE_LoginModule.prototype = Object.create(EBE_ModuleBase.prototype);
 			}else{
 				that.loginWarnEls.eq(1).css("visibility","hidden");
 			}
-			if( result ){
-				that.loginFn(name,password);
-			}
+			return result;
 		});
 	};
 	this.setLoginError = function(err){
@@ -112,8 +110,9 @@ EBE_LoginModule.prototype = Object.create(EBE_ModuleBase.prototype);
 		
 		this.errEl = this.el.find(".loginBlock .error");
 		this.errTextEl = this.el.find(".loginBlock .error span");
-		this.rightContinueEl = this.el.find(".loginBlock  .continueButtton");
+
 		
+		this.loginFormEl = this.el.find("form");
 		this.loginInputEls = this.el.find(".inputUnit input");
 		this.loginWarnEls = this.el.find(".inputUnit .warn");
 		
@@ -687,9 +686,6 @@ var EBE_CheckOutManager = function(patterns){
 	function setLoginError(err){
 		loginModule.setLoginError(err);
 	};
-	function setLoginHandler(fn){
-		loginModule.loginFn = fn;
-	};
 	
 	function setUnloginedHandler(fn){
 		loginModule.nextFn = fn;
@@ -720,7 +716,6 @@ var EBE_CheckOutManager = function(patterns){
 	return {
 		"setError":setError,
 		"setLoginError":setLoginError,
-		"setLoginHandler":setLoginHandler,
 		"setUnloginedHandler":setUnloginedHandler,
 		"setBillingHandler":setBillingHandler,
 		"setShippingHandler":setShippingHandler,
@@ -773,14 +768,7 @@ $(function(){
 	checkOutManager.setError("请选择地区或以来宾身份结账!");
 	
 	
-	checkOutManager.setLoginHandler(function(name,password){
-		console.log("登陆(用户名/密码)",name,password);
-		//请求服务器
-		//成功刷新页面
-		//window.location.reload();
-		//失败
-		checkOutManager.setLoginError("无效的登录名或密码。");
-	});
+	
 	checkOutManager.setUnloginedHandler(function(role){
 		console.log( "未登录访问方式", role);
 		//
