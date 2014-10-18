@@ -41,7 +41,7 @@ var EBE_ModuleBase = function(clazzname){
 var EBE_LoginModule = function(editClickFn,patterns){
 	EBE_ModuleBase.call(this,".login");
 	this.editBtnClickFn = editClickFn;
-	this.role = "";//Guest Register
+	this.role = "";//guest register
 	this.leftErrMessage = "";
 	this.loginFn = null;
 	this.patterns = patterns;
@@ -57,20 +57,20 @@ EBE_LoginModule.prototype = Object.create(EBE_ModuleBase.prototype);
 		this.build();
 		this.superInit();
 		if( this.leftInputEls.eq(0).prop("checked") ){
-			this.role = "Guest";
+			this.role = "guest";
 		}
 		if( this.leftInputEls.eq(1).prop("checked") ){
-			this.role = "Register";
+			this.role = "register";
 		}
 		var that = this;
 		this.leftInputEls.change(function(){
 			var tIndex = that.leftInputEls.index(this);
-			that.role = tIndex==0?"Guest":"Register";
+			that.role = tIndex==0?"guest":"register";
 		});
 		this.leftInputLabelEls.click(function(){
 			var tIndex = that.leftInputLabelEls.index(this);
 			that.leftInputEls.eq(tIndex).prop("checked",true);
-			that.role = tIndex==0?"Guest":"Register";
+			that.role = tIndex==0?"guest":"register";
 		});
 		this.leftContinueEl.click(function(){
 			if( that.role == ""){
@@ -152,13 +152,15 @@ EBE_BillingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype);
 		
 		this.continueEl.click(function(){
 			if( !that.verify() ){ return;}
-			that.nextFn( that.getData(), that.shipRadioEls.eq(0).prop("checked")  ,false );
+			var tData = that.getData();
+			tData[ that.shipRadioEls.attr("name") ] = that.shipRadioEls.filter(":checked").val();
+			that.nextFn( tData , that.shipRadioEls.eq(0).prop("checked")  ,false );
 		});
 	};
 	this.getData = function(){
 		var data = {};
 		var i,inputEl;
-		var length = this.inputEls.length - (this.role=="Register"?0:2);
+		var length = this.inputEls.length - (this.role=="register"?0:2);
 		for(var i=0; i< length;i++){
 			inputEl = this.inputEls.eq(i);
 			data[ inputEl.attr("name") ] = inputEl.val();
@@ -183,7 +185,7 @@ EBE_BillingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype);
 		}else{
 			this.warnEls.eq(3).css("visibility","hidden");
 		}
-		if( this.role == "Guest"){ return result;}
+		if( this.role == "guest"){ return result;}
 		var pw = true;
 		if( !this.patterns.password.test( this.inputEls.eq(11).val())  ){
 			pw = false;
@@ -201,7 +203,7 @@ EBE_BillingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype);
 	};
 	this.setRole = function(role){
 		this.role = role;
-		if(this.role == "Guest"){
+		if(this.role == "guest"){
 			this.registerEls.hide();
 		}else{
 			this.registerEls.show();
@@ -236,10 +238,10 @@ EBE_BillingModule_Logined.prototype = Object.create(EBE_ModuleBase.prototype);
 		this.continueEl.click(function(){
 			if( that.addressSelectorEl.val() == "" ){
 				if( !that.verify() ){ return;}
-				that.nextFn( that.getData(), that.shipRadioEls.eq(0).prop("checked"),
+				that.nextFn( that.getAllData() , that.shipRadioEls.eq(0).prop("checked"),
 				that.saveInputEl.prop("checked") );
 			}else{
-				that.nextFn( that.getData(), that.shipRadioEls.eq(0).prop("checked"),false );
+				that.nextFn( that.getAllData(), that.shipRadioEls.eq(0).prop("checked"),false );
 			}
 		});
 	};
@@ -255,6 +257,18 @@ EBE_BillingModule_Logined.prototype = Object.create(EBE_ModuleBase.prototype);
 			return data;
 		}
 		return selectValue;	
+	};
+	this.getAllData = function(){
+		var data = {};
+		var i,inputEl;
+		for( i=0; i< this.inputEls.length;i++){
+			inputEl = this.inputEls.eq(i);
+			data[ inputEl.attr("name") ] = inputEl.val();
+		}
+		data[this.addressSelectorEl.attr("name")]= this.addressSelectorEl.val();
+		data[this.saveInputEl.attr("name")]= this.saveInputEl.prop("checked");
+		data[this.shipRadioEls.attr("name") ] = this.shipRadioEls.filter(":checked").val();
+		return data;
 	};
 	this.verify = function(){
 		var i,index,result = true;
@@ -316,12 +330,12 @@ EBE_ShippingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype)
 		this.useCheckboxEl.change(function(){
 			that.copyByBilling();
 		});
-		this.continueEl.click(function(){
-			if( !that.verify() ){return;}
-		});
+
 		this.continueEl.click(function(){
 			if( !that.verify() ){ return;}
-			that.nextFn( that.getData(),false );			
+			var tData =  that.getData();
+			tData[that.useCheckboxEl.attr("name")] = that.useCheckboxEl.prop("checked");
+			that.nextFn( tData,false );			
 		});
 	};
 	this.copyByBilling = function(){
@@ -391,9 +405,9 @@ EBE_ShippingModule_Logined.prototype = Object.create(EBE_ModuleBase.prototype);
 		this.continueEl.click(function(){
 			if( that.addressSelectorEl.val() == "" ){
 				if( !that.verify() ){ return;}
-				that.nextFn( that.getData(),that.saveInputEl.prop("checked") );
+				that.nextFn( that.getAllData(),that.saveInputEl.prop("checked") );
 			}else{
-				that.nextFn( that.getData(),false );
+				that.nextFn( that.getAllData(),false );
 			}
 		});
 	};
@@ -435,6 +449,18 @@ EBE_ShippingModule_Logined.prototype = Object.create(EBE_ModuleBase.prototype);
 			return data;
 		}
 		return selectValue;	
+	};
+	this.getAllData = function(){
+		var data = {};
+		var i,inputEl;
+		for( i=0; i< this.inputEls.length;i++){
+			inputEl = this.inputEls.eq(i);
+			data[ inputEl.attr("name") ] = inputEl.val();
+		}
+		data[this.addressSelectorEl.attr("name")]= this.addressSelectorEl.val();
+		data[this.saveInputEl.attr("name")]= this.saveInputEl.prop("checked");
+		data[this.copyInputEl.attr("name")] = this.copyInputEl.prop("checked");
+		return data;
 	};
 	this.verify = function(){
 		var i,index,result = true;
@@ -482,24 +508,15 @@ EBE_ShippingMethodModule.prototype = Object.create(EBE_ModuleBase.prototype);
 		this.superInit();
 		var that = this;
 		this.continueEl.click(function(){
-			var value = that.ulEl.find("input:checked").val();
-			that.nextFn( that.data[value] );
+			that.nextFn( that.data );
 		});
 	};
 	this.setData = function( data ){
-		this.ulEl.empty();
-		this.data = {};
-		var i,itemData,str;
-		for( i=0;i < data.length;i++ ){
-			itemData = data[i];
-			this.data[ itemData.value ] = itemData;
-			$("<li><input type='radio' name='"+itemData.name+"' value='"+itemData.value
-			+"' /><span>"+ itemData.label +"</span></li>").appendTo(this.ulEl);
-		}
-		this.ulEl.find("input:eq(0)").prop("checked",true);
+		this.data = data;
+		this.descriptEl.text( data );
 	};
 	this.build = function(){
-		this.ulEl = this.el.find("ul");
+		this.descriptEl = this.el.find(".descript");
 		this.continueEl = this.el.find(".continueButtton");
 	};	
 }).call(EBE_ShippingMethodModule.prototype);
@@ -773,7 +790,7 @@ $(function(){
 		console.log( "账单信息(数据/是否送货到同一地方/是否保存)", data,sameddress,isSave);
 		//请求服务器
 		/*
-		 * 根据 $.type(data) === "string" 来判断是否为 地址ID
+		 *
 		 */
 		if( sameddress ){
 			checkOutManager.setShippingMethodData(shippingMethodData);
@@ -787,9 +804,9 @@ $(function(){
 		console.log("送货地址信息(数据/是否保存)", data,isSave);
 		//请求服务器
 		/*
-		 * 根据 $.type(data) === "string" 来判断是否为 地址ID
+		 *
 		 */
-		checkOutManager.setShippingMethodData(shippingMethodData);
+		checkOutManager.setShippingMethodData("Fixed US$5.00");
 		checkOutManager.nextModule();
 	});
 	checkOutManager.setShippingMethodHandler(function(value){

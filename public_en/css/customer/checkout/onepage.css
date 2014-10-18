@@ -160,6 +160,10 @@
 .common_mainPanel .checkoutProcessBlock li .operationBlock h3{
 	font-size: 14px;
 }
+.common_mainPanel .checkoutProcessBlock li .operationBlock .descript{
+	color: #666;
+	line-height: 30px;
+}
 .common_mainPanel .checkoutProcessBlock li .operationBlock .error{
 	border: 1px solid #f00;
 	background-color: #faebe7;
