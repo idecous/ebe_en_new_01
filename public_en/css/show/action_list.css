@@ -1,0 +1,489 @@
+header .top_logoBlock{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:150px;
+	text-align: center;
+	background:rgba(0,0,0,0.5);
+	line-height: 107px;
+	z-index: 10;
+}
+header .top_logoBlock img{
+	width: auto;
+	height: auto;
+}
+header .top_logoBlock h1{
+	display: none;
+	font-size: 18px;
+}
+header .mainNavBar{
+	position:absolute;
+	top:150px;
+	left:0;
+	width: 100%;
+	border-top: 1px solid #999999;
+	border-bottom: 1px solid #666;
+	height: 30px;
+	text-align: center;
+	background:rgba(0,0,0,0.3);
+	z-index: 10;
+}
+header .mainNavBar li{
+	display: inline-block;
+	width: 125px;
+}
+header .mainNavBar a{
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	line-height: 28px;
+	font-size: 15px;
+}
+header .mainNavBar li .checked{
+	border-bottom: 2px solid #fff;
+	cursor: default;
+}
+header .actionBlock{
+	position:absolute;
+	top:182px;
+	left:0;
+	width:100%;
+	background-color: rgba(0,0,0,0.5);	
+	z-index: 10;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.25s ease-out 0s;
+}
+header .actionBlock.show{
+	visibility: visible;
+	opacity: 1;
+}
+
+header .actionBlock .contentBlock{
+	position:relative;
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+header .actionBlock .contentBlock .holder{
+	width: 100%;
+}
+header .actionBlock .contentBlock .border{
+	position:absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+header .actionBlock .contentBlock .border .block{
+	position:relative;
+	float:left;
+	width: 33.33%;
+	height:100%;
+}
+header .actionBlock .contentBlock .border .separator{
+	position: absolute;
+	top: 15px;
+	bottom: 5px;
+	right:0;
+	width: 0;
+	border-left: 1px solid #fff; 
+}
+
+header .actionBlock .contentBlock .border .block h3{
+	margin: 20px 20px 0 20px;
+	font-size: 14px;
+}
+header .actionBlock .contentBlock .border .imgList ul{
+	margin: 10px 20px 0 20px;
+}
+header .actionBlock .contentBlock .border .imgList ul li{
+	display:inline-block;
+	position: relative;
+	width: 50%;
+	margin-bottom: 10px;
+}
+header .actionBlock .contentBlock .border .imgList ul li a{
+	position:relative;
+	display: block;
+}
+header .actionBlock .contentBlock .border .imgList ul li a .timeBlock{
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	height: 25px;
+	line-height:25px;
+	font-size:12px;
+	text-align: center;
+	background-color: rgba(0,0,0,0.8);
+	color: #fff;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+header .actionBlock .contentBlock .border .imgList ul li:nth-child(odd) a{
+	margin-right: 10px;
+}
+header .actionBlock .contentBlock .border .imgList ul li:nth-child(even) a{
+	margin-left: 10px;
+}
+
+header .actionBlock .contentBlock .border .imgList ul li img{
+	width: 100%;
+}
+header .actionBlock .contentBlock .border .textList ul{
+	position:absolute;
+	top: 46px;
+	left:20px;
+	right:20px;
+	bottom:20px;
+	overflow:hidden;
+}
+header .actionBlock .contentBlock .border .textList ul li{
+	width: 50%;
+	float: left;
+	height: 30px;
+}
+header .actionBlock .contentBlock .border .textList ul li a{
+	display: block;
+	margin-right: 10px;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	color: #fff;
+}
+header .actionBlock .contentBlock .border .textList .more{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	color: #fff;
+	font-size: 12px;
+}
+header .actionBlock .contentBlock .border .textList .more a{
+	color: #fff;
+}
+header .bg{
+	width: 100%;
+}
+header .currentPanel{
+	position: absolute;
+	top: 46%;
+	width:100%;
+	text-align: center;
+	color: #fff;
+}
+header .currentPanel h1{
+	display:inline-block;
+	font-size: 60px;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px #333;
+	border-bottom: 1px solid #fff;
+	text-transform: uppercase;
+}
+header .currentPanel h3{
+	font-size: 24px;
+	line-height: 40px;
+}
+header .currentPanel a{
+	display:inline-block;
+	width: 103px;
+	height: 30px;
+	line-height: 30px;
+	background-color: rgba(0,0,0,0.3);
+	text-align: center;
+	color: #fff;
+	border: 1px solid #fff;
+	margin-top: 35px;
+}
+.common_mainPanel .subTitlePanel{
+	height: 67px;
+	text-align: center;
+	color: #eee;
+	border-bottom: 1px solid #333;
+	padding-top: 63px;
+}
+.common_mainPanel .subTitlePanel h1{
+	font-size: 28px;
+	text-transform :uppercase;
+}
+.common_mainPanel .subTitlePanel span{
+	font-size: 18px;
+}
+
+.common_mainPanel .actionBlock{
+	position: relative;
+	margin-top: 20px;
+}
+.common_mainPanel .actionBlock .block{
+	width: 50%;
+}
+.common_mainPanel .actionBlock .block img{
+	width: 100%;
+}
+.common_mainPanel .actionBlock .block .border{
+	position: relative;
+	display: block;
+}
+.common_mainPanel .actionBlock .first .border{
+	margin: 0 2px 0 4px;
+}
+.common_mainPanel .actionBlock .last {
+	position: absolute;
+	left: 50%;
+	top: 0;
+}
+.common_mainPanel .actionBlock .last .border{
+	margin: 0 4px 0 2px;
+}
+.common_mainPanel .actionBlock .block .descriptBlock{
+	position:absolute;
+	left:0;
+	bottom:0;
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height:100px;
+	text-align: center;
+	color: #fff;
+}
+.common_mainPanel .actionBlock .block .descriptBlock h1{
+	font-size: 36px;
+	display: inline-block;
+	border-bottom: 1px solid #fff;
+	text-transform: uppercase;
+	margin-top: 5px;
+	line-height: 50px;
+	max-width:100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.common_mainPanel .actionBlock .block .descriptBlock h3{
+	font-size: 18px;
+	margin-top: 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.common_mainPanel .pastBlock {
+	margin: 20px 0 0 4px;
+}
+.common_mainPanel .pastBlock li{
+	width: 25%;
+	float: left;
+	margin-bottom: 3px;
+}
+.common_mainPanel .pastBlock li a{
+	position:relative;
+	display: block;
+	margin-left: 3px;
+}
+.common_mainPanel .pastBlock li a img{
+	width: 100%;
+}
+.common_mainPanel .pastBlock li a .descriptBlock{
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	left:0;
+	bottom:0;
+	width: 100%;
+	height: 70px;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+}
+.common_mainPanel .pastBlock li a .descriptBlock h1{
+	font-size: 18px;
+	margin: 5px 10px;
+	line-height:30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+}
+.common_mainPanel .pastBlock li a .descriptBlock  .separator{
+	height:0;
+	border-bottom: 1px solid #fff;
+	margin: 0 10px;
+}
+.common_mainPanel .pastBlock li a .descriptBlock h3{
+	font-size: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 5px 10px;
+}
+
+.bottomSpace{
+	height: 90px;
+}
+
+@media only screen and (min-width: 784px) and (max-width: 1020px) {	
+	header .top_logoBlock{
+		position: static;
+		background: #000;
+		height: 100px;
+		line-height: 78px;
+	}	
+	header .top_logoBlock img {
+		width: 287px;
+		height: 45px;
+	}
+	header .mainNavBar {
+		position: static;
+		background: #000;
+	}
+	header .actionBlock{
+		top:132px;
+	}
+	header .currentPanel h1{
+		font-size: 40px;
+	}
+	header .currentPanel h3{
+		font-size: 20px;
+	}
+	.common_mainPanel .actionBlock .block .descriptBlock h1{
+		font-size: 28px;
+	}
+	.common_mainPanel .actionBlock .block .descriptBlock h3{
+		font-size: 16px;
+	}	
+}
+@media only screen and (max-width: 785px) {
+	header .top_logoBlock {
+		position:static;
+		height: 40px;
+		line-height:40px;
+		background-color: #000;
+		text-align: center;
+	}
+	header .actionBlock,
+	header .top_logoBlock img{
+		display: none;
+	}
+	header .top_logoBlock h1{
+		display: inline-block;
+		margin-left: 47px;
+	}
+	header .mainNavBar {
+		position: static;
+	}
+	header .mainNavBar{
+		position:static;
+		height: 30px;
+		top: 41px;
+		background:rgba(0,0,0,0.7);
+		line-height:20px;
+		font-size: 12px;
+		border-bottom: none;
+	}
+	header .mainNavBar li {
+		width: 20%;
+		font-size: 12px;
+		white-space: nowrap;
+	}
+	header .currentPanel {
+		position: static;
+	}
+	header .currentPanel h1{
+		line-height:32px;
+		font-size: 18px;
+		display: block;
+		font-weight: normal;
+	}
+	header .currentPanel h3{
+		font-size: 14px;
+	}
+	header .currentPanel a{
+		display: none;
+	}
+	.common_mainPanel .subTitlePanel{
+		height: 50px;
+	}
+	.common_mainPanel .subTitlePanel h1{
+		font-size: 18px;
+	}
+	.common_mainPanel .subTitlePanel span {
+		font-size: 12px;
+	}
+	.common_mainPanel .actionBlock .block{
+		width: auto;
+		text-align: center;
+		margin-bottom: 5px;
+	}
+	.common_mainPanel .actionBlock .last {
+		position: static;	
+	}
+	.common_mainPanel .actionBlock .first .border,
+	.common_mainPanel .actionBlock .last .border{
+		width:100%;
+		max-width:745px;
+		display:inline-block;
+		margin: auto;
+	}
+	.common_mainPanel .actionBlock .block .descriptBlock{
+		text-align: left;
+		height: 60px;
+		left: 20%;
+		width: 80%;
+		bottom: 6.25%;
+	}
+	.common_mainPanel .actionBlock .block .descriptBlock h1{
+		font-size: 14px;
+		border: none;
+		line-height: 20px;
+		margin: 10px 0 0 10px;
+	}
+	.common_mainPanel .actionBlock .block .descriptBlock h3{
+		font-size: 12px;
+		margin: 0 0 0 10px;
+	}	
+	.common_mainPanel .pastBlock {
+		margin: 20px 0;
+	}
+	.common_mainPanel .pastBlock li {
+		float: none;
+		margin-bottom: 5px;
+		width: auto;
+		text-align: center;
+	}
+	.common_mainPanel .pastBlock li a{
+		display: inline-block;
+		width: 100%;
+		max-width: 371px;
+	}
+	.common_mainPanel .pastBlock li a .descriptBlock{
+		text-align: left;
+		height: 60px;
+		left: 20%;
+		width: 80%;
+		bottom: 6.25%;
+	}
+	.common_mainPanel .pastBlock li a .descriptBlock h1{
+		font-size: 14px;
+		border: none;
+		line-height: 20px;
+		margin: 10px 0 0 10px;
+	}
+	.common_mainPanel .pastBlock li a .descriptBlock h3{
+		font-size: 12px;
+		margin: 0 0 0 10px;
+	}	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

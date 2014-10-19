@@ -935,7 +935,9 @@ header .bg{
 	header .userGroup{
 		display: none;
 	}
-	header .subNavBar,header .mainNavBar,header .common_centerBlock{
+	header .subNavBar,
+	header .mainNavBar,
+	header .common_centerBlock{
 		display: none;
 	}
 	.mobileSide{
