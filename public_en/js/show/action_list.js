@@ -1,13 +1,14 @@
 var EBE_TopActionManager = function(){
 	var isOpen = false;
-	var btnEl = $("header .currentPanel a");
+	var popBtnEl = $("header .mainNavBar .checked");
 	var actionBlock = $("header .actionBlock");
-	
-	btnEl.click(function(){
+
+	popBtnEl.mouseenter(function(){
 		if(isOpen){return;}
 		actionBlock.addClass("show");
 		isOpen = true;
 	});
+	
 	actionBlock.mouseleave(function(){
 		isOpen = false;
 		actionBlock.removeClass("show");

@@ -40,10 +40,14 @@ header .mainNavBar a{
 	line-height: 28px;
 	font-size: 15px;
 }
+header .mainNavBar li{
+	position: relative;
+}
 header .mainNavBar li .checked{
 	border-bottom: 2px solid #fff;
 	cursor: default;
 }
+
 header .actionBlock{
 	position:absolute;
 	top:182px;
@@ -165,38 +169,12 @@ header .actionBlock .contentBlock .border .textList .more a{
 	color: #fff;
 }
 header .bg{
+	display:block;
+}
+header .bg img{
 	width: 100%;
 }
-header .currentPanel{
-	position: absolute;
-	top: 46%;
-	width:100%;
-	text-align: center;
-	color: #fff;
-}
-header .currentPanel h1{
-	display:inline-block;
-	font-size: 60px;
-	font-weight: bold;
-	text-shadow: 1px 1px 2px #333;
-	border-bottom: 1px solid #fff;
-	text-transform: uppercase;
-}
-header .currentPanel h3{
-	font-size: 24px;
-	line-height: 40px;
-}
-header .currentPanel a{
-	display:inline-block;
-	width: 103px;
-	height: 30px;
-	line-height: 30px;
-	background-color: rgba(0,0,0,0.3);
-	text-align: center;
-	color: #fff;
-	border: 1px solid #fff;
-	margin-top: 35px;
-}
+
 .common_mainPanel .subTitlePanel{
 	height: 67px;
 	text-align: center;
@@ -336,12 +314,6 @@ header .currentPanel a{
 	header .actionBlock{
 		top:132px;
 	}
-	header .currentPanel h1{
-		font-size: 40px;
-	}
-	header .currentPanel h3{
-		font-size: 20px;
-	}
 	.common_mainPanel .actionBlock .block .descriptBlock h1{
 		font-size: 28px;
 	}
@@ -381,21 +353,6 @@ header .currentPanel a{
 		width: 20%;
 		font-size: 12px;
 		white-space: nowrap;
-	}
-	header .currentPanel {
-		position: static;
-	}
-	header .currentPanel h1{
-		line-height:32px;
-		font-size: 18px;
-		display: block;
-		font-weight: normal;
-	}
-	header .currentPanel h3{
-		font-size: 14px;
-	}
-	header .currentPanel a{
-		display: none;
 	}
 	.common_mainPanel .subTitlePanel{
 		height: 50px;
