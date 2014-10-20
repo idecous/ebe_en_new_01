@@ -157,7 +157,7 @@
 	color: #333;
 	overflow: hidden;
 }
-.common_mainPanel .checkoutProcessBlock li .operationBlock ul{
+.common_mainPanel .checkoutProcessBlock .paymentInformation  .operationBlock ul{
 	display: none;
 }
 .common_mainPanel .checkoutProcessBlock li .operationBlock h3{

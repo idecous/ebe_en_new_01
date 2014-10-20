@@ -611,7 +611,7 @@ EBE_ReviewModule.prototype = Object.create(EBE_ModuleBase.prototype);
 			that.nextFn();
 		});
 	};
-	this.setData = function(data){
+	this.setData = function(data){console.log("->",data);
 		this.listEls.find("li:gt(0)").remove();
 		var i,itemData;
 		for( var i = 0 ; i < data.list.length ;i++ ){
