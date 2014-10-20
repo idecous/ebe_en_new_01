@@ -157,9 +157,6 @@
 	color: #333;
 	overflow: hidden;
 }
-.common_mainPanel .checkoutProcessBlock .paymentInformation  .operationBlock ul{
-	display: none;
-}
 .common_mainPanel .checkoutProcessBlock li .operationBlock h3{
 	font-size: 14px;
 }
@@ -348,8 +345,22 @@
 .common_mainPanel .checkoutProcessBlock .shippingMethod .continueRow{
 	margin-top: 10px;
 }
-.common_mainPanel .checkoutProcessBlock .paymentInformation{
-	z-index: 2;
+.common_mainPanel .checkoutProcessBlock .paymentInformation .paypal{
+	padding-left: 20px;
+}
+.common_mainPanel .checkoutProcessBlock .paymentInformation .credit{
+	padding-top: 10px;
+}
+.common_mainPanel .checkoutProcessBlock .paymentInformation .typeBlock{
+	line-height: 30px;
+	height: 30px;
+}
+.common_mainPanel .checkoutProcessBlock .paymentInformation .typeBlock input{
+	vertical-align: -2px;
+	margin-right: 4px;
+}
+.common_mainPanel .checkoutProcessBlock .paymentInformation .paramBlock.credit{
+	display: none;
 }
 
 .common_mainPanel .checkoutProcessBlock .paymentInformation .descript a{

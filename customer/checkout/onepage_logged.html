@@ -356,77 +356,87 @@
 							</div>
 							<div class="operationBlock">
 								<ul>
-									<li><input type="radio" name="group03" value="paypal" /><span>paypal</span></li>
-									<li><input type="radio" name="group03" value="checkmo" /><span>Check / Money order</span></li>
-									<li><input checked="true" type="radio" name="group03" value="ccsave" /><span>ccsave</span></li>
+									<li>
+										<div class="typeBlock"><input type="radio" name="group03" value="paypal" /><span>paypal</span></div>
+										<div class="paramBlock paypal">
+											<img src="../../public_en/img/customer/checkout/payPal.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="typeBlock"><input type="radio" name="group03" value="credit" /><span>Credit Card</span></div>
+										<div class="paramBlock credit">
+	 										<div class="inputUnit">
+												<div class="label"><i>*</i>Credit Card Type</div>
+												<div class="selectBorder">
+													<select name="cardType">
+				                						<option value="">-- 请选择 --</option>
+				                                        <option value="AE">American Express</option>
+									                    <option value="VI">Visa</option>
+									                    <option value="MC">MasterCard</option>
+									                    <option value="DI">Discover</option>
+													</select>
+												</div>
+												<div class="warn">请选择支付卡</div>
+											</div>
+											<div class="inputUnit">
+												<div class="label"><i>*</i>Credit Card Number</div>
+												<div class="inputBorder"><input name="carNumber" type="text"/></div>
+												<div class="warn">请输入卡号!</div>
+											</div>
+											<div class="inputUnit halfLeft">
+												<div class="label"><i>*</i>Expiration Date </div>
+												<div class="selectBorder">
+													<select name="month">
+			                                            <option value="" selected="selected">月</option>
+					                                    <option value="1">01 - 1月</option>
+					                                    <option value="2">02 - 2月</option>
+					                                    <option value="3">03 - 3月</option>
+					                                    <option value="4">04 - 4月</option>
+					                                    <option value="5">05 - 5月</option>
+					                                    <option value="6">06 - 6月</option>
+					                                    <option value="7">07 - 7月</option>
+					                                    <option value="8">08 - 8月</option>
+					                                    <option value="9">09 - 9月</option>
+					                                    <option value="10">10 - 10月</option>
+					                                    <option value="11">11 - 11月</option>
+					                                    <option value="12">12 - 12月</option>
+													</select>
+												</div>
+												<div class="warn">请选择月</div>
+											</div>
+											<div class="inputUnit halfRight">
+												<div class="label"></div>
+												<div class="selectBorder">
+													<select name="year">
+							                            <option value="" selected="selected">年</option>
+							                            <option value="2014">2014</option>
+							                            <option value="2015">2015</option>
+							                            <option value="2016">2016</option>
+							                            <option value="2017">2017</option>
+							                            <option value="2018">2018</option>
+							                            <option value="2019">2019</option>
+							                            <option value="2020">2020</option>
+							                            <option value="2021">2021</option>
+							                            <option value="2022">2022</option>
+							                            <option value="2023">2023</option>
+							                            <option value="2024">2024</option>
+													</select>
+												</div>
+												<div class="warn">请选择年</div>
+											</div>
+											<div class="inputUnit halfLeft">
+												<div class="label"><i>*</i>Card Verification Number </div>
+												<div class="inputBorder"><input name="verificationNum" type="text"/></div>
+												<div class="warn">不要留空!</div>
+											</div>
+											<div class="inputUnit halfRight descript">
+												<a class="descript" href="javascript:;"><span>What is this?</span></a>
+											</div>
+											
+										</div>
+									</li>
 								</ul>
-								<div class="inputUnit">
-									<div class="label"><i>*</i>Credit Card Type</div>
-									<div class="selectBorder">
-										<select name="cardType">
-	                						<option value="">-- 请选择 --</option>
-	                                        <option value="AE">American Express</option>
-						                    <option value="VI">Visa</option>
-						                    <option value="MC">MasterCard</option>
-						                    <option value="DI">Discover</option>
-										</select>
-									</div>
-									<div class="warn">请选择支付卡</div>
-								</div>
-								<div class="inputUnit">
-									<div class="label"><i>*</i>Credit Card Number</div>
-									<div class="inputBorder"><input name="carNumber" type="text"/></div>
-									<div class="warn">请输入卡号!</div>
-								</div>
-								<div class="inputUnit halfLeft">
-									<div class="label"><i>*</i>Expiration Date </div>
-									<div class="selectBorder">
-										<select name="month">
-                                            <option value="" selected="selected">月</option>
-		                                    <option value="1">01 - 1月</option>
-		                                    <option value="2">02 - 2月</option>
-		                                    <option value="3">03 - 3月</option>
-		                                    <option value="4">04 - 4月</option>
-		                                    <option value="5">05 - 5月</option>
-		                                    <option value="6">06 - 6月</option>
-		                                    <option value="7">07 - 7月</option>
-		                                    <option value="8">08 - 8月</option>
-		                                    <option value="9">09 - 9月</option>
-		                                    <option value="10">10 - 10月</option>
-		                                    <option value="11">11 - 11月</option>
-		                                    <option value="12">12 - 12月</option>
-										</select>
-									</div>
-									<div class="warn">请选择月</div>
-								</div>
-								<div class="inputUnit halfRight">
-									<div class="label"></div>
-									<div class="selectBorder">
-										<select name="year">
-				                            <option value="" selected="selected">年</option>
-				                            <option value="2014">2014</option>
-				                            <option value="2015">2015</option>
-				                            <option value="2016">2016</option>
-				                            <option value="2017">2017</option>
-				                            <option value="2018">2018</option>
-				                            <option value="2019">2019</option>
-				                            <option value="2020">2020</option>
-				                            <option value="2021">2021</option>
-				                            <option value="2022">2022</option>
-				                            <option value="2023">2023</option>
-				                            <option value="2024">2024</option>
-										</select>
-									</div>
-									<div class="warn">请选择年</div>
-								</div>
-								<div class="inputUnit halfLeft">
-									<div class="label"><i>*</i>Card Verification Number </div>
-									<div class="inputBorder"><input name="verificationNum" type="text"/></div>
-									<div class="warn">不要留空!</div>
-								</div>
-								<div class="inputUnit halfRight descript">
-									<a class="descript" href="javascript:;"><span>What is this?</span></a>
-								</div>
+
 								<div class="continueRow">
 									<a class="continueButtton"  href="javascript:;">CONTINUE</a>
 								</div>

@@ -1,6 +1,6 @@
 if(!Object.create){
     Object.create = function(o){
-        function F() {}
+        function F(){}
         F.prototype = o;
         return new F();
     };
@@ -8,6 +8,7 @@ if(!Object.create){
 var EBE_ModuleBase = function(clazzname){
 	this.el = $(".common_mainPanel .checkoutProcessBlock "+clazzname );
 	this.editBtnEl = this.el.find(".titleBar a");
+	this.loadingEl = this.el.find(".operationBlock .loadingRow");
 	this.index = -1;
 	this.enable = true;
 	this.editBtnClickFn = null;
@@ -32,6 +33,7 @@ var EBE_ModuleBase = function(clazzname){
 		this.el.removeClass("allow");
 	};
 	this.setAction = function(){
+		this.loadingEl.css("visibility","hidden");
 		this.el.removeClass("allow");
 		this.el.addClass("action");
 	};
@@ -77,7 +79,9 @@ EBE_LoginModule.prototype = Object.create(EBE_ModuleBase.prototype);
 				alert( that.leftErrMessage );
 				return;
 			}else{
+				that.loadingEl.show();
 				that.nextFn( that.role );
+				that.loadingEl.css("visibility","visible");
 			}
 		});
 		this.loginFormEl.submit(function(){
@@ -148,12 +152,12 @@ EBE_BillingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype);
 			that.shipRadioEls.eq(tIndex).prop("checked",true);
 			that.shipTo = tIndex==0?"billing":"different";
 		});
-		
 		this.continueEl.click(function(){
 			if( !that.verify() ){ return;}
 			var tData = that.getData();
 			tData[ that.shipRadioEls.attr("name") ] = that.shipRadioEls.filter(":checked").val();
 			that.nextFn( tData , that.shipRadioEls.eq(0).prop("checked")  ,false );
+			that.loadingEl.css("visibility","visible");
 		});
 	};
 	this.getData = function(){
@@ -238,9 +242,11 @@ EBE_BillingModule_Logined.prototype = Object.create(EBE_ModuleBase.prototype);
 			if( that.addressSelectorEl.val() == "" ){
 				if( !that.verify() ){ return;}
 				that.nextFn( that.getAllData() , that.shipRadioEls.eq(0).prop("checked"),
-				that.saveInputEl.prop("checked") );
+				that.saveInputEl.prop("checked") );	
+				that.loadingEl.css("visibility","visible");	
 			}else{
 				that.nextFn( that.getAllData(), that.shipRadioEls.eq(0).prop("checked"),false );
+				that.loadingEl.css("visibility","visible");
 			}
 		});
 	};
@@ -334,7 +340,8 @@ EBE_ShippingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype)
 			if( !that.verify() ){ return;}
 			var tData =  that.getData();
 			tData[that.useCheckboxEl.attr("name")] = that.useCheckboxEl.prop("checked");
-			that.nextFn( tData,false );			
+			that.nextFn( tData,false );		
+			that.loadingEl.css("visibility","visible");	
 		});
 	};
 	this.copyByBilling = function(){
@@ -405,8 +412,10 @@ EBE_ShippingModule_Logined.prototype = Object.create(EBE_ModuleBase.prototype);
 			if( that.addressSelectorEl.val() == "" ){
 				if( !that.verify() ){ return;}
 				that.nextFn( that.getAllData(),that.saveInputEl.prop("checked") );
+				that.loadingEl.css("visibility","visible");
 			}else{
 				that.nextFn( that.getAllData(),false );
+				that.loadingEl.css("visibility","visible");
 			}
 		});
 	};
@@ -493,7 +502,6 @@ EBE_ShippingModule_Logined.prototype = Object.create(EBE_ModuleBase.prototype);
 	};
 }).call(EBE_ShippingModule_Logined.prototype);
 
-
 var EBE_ShippingMethodModule = function(editClickFn){
 	EBE_ModuleBase.call(this,".shippingMethod");
 	this.editBtnClickFn = editClickFn;
@@ -508,6 +516,7 @@ EBE_ShippingMethodModule.prototype = Object.create(EBE_ModuleBase.prototype);
 		var that = this;
 		this.continueEl.click(function(){
 			that.nextFn( that.data );
+			that.loadingEl.css("visibility","visible");
 		});
 	};
 	this.setData = function( data ){
@@ -524,6 +533,7 @@ var EBE_PaymentModule = function(editClickFn){
 	EBE_ModuleBase.call(this,".paymentInformation");
 	this.editBtnClickFn = editClickFn;
 	this.isPop = false;
+	this.typeIndex = -1;
 	this.init();
 };
 EBE_PaymentModule.prototype = Object.create(EBE_ModuleBase.prototype);
@@ -531,15 +541,40 @@ EBE_PaymentModule.prototype = Object.create(EBE_ModuleBase.prototype);
 	this.init = function(){
 		this.build();
 		this.superInit();
+		for(var i=0; i < this.typeEls.length;i++){
+			if(  this.typeEls.eq(i).is(":checked") ){
+				this.typeIndex = i;
+				break;
+			}
+		}
+		this.updateParamBlock();
+
 		var that = this;
+		this.typeLabelEls.click(function(){
+			var tIndex = that.typeLabelEls.index(this);
+			if(tIndex == that.typeIndex){return;}
+			that.typeIndex = tIndex;
+			that.typeEls.eq(tIndex).prop("checked",true);
+			that.updateParamBlock();
+		});
+		this.typeEls.change(function(){
+			that.typeIndex = that.typeEls.index(this);
+			that.updateParamBlock();
+		});
+
 		this.continueEl.click(function(){
-			if( !that.verify() ){return;}
+			if( that.typeIndex == -1 ){
+				alert( that.errMessage );
+				return;
+			}
+			if( that.typeIndex ==1 && !that.verify() ){return;}
 			var typeEl = that.typeEls.filter(":checked");
 			var tData = that.getData();
 			if( typeEl.length > 0 ){
 				tData[typeEl.attr("name")] = typeEl.val();
 			}			
 			that.nextFn( tData );
+			that.loadingEl.css("visibility","visible");
 		});
 		this.winEl.mousedown(function(){
 			if( !that.isPop ){return;}
@@ -558,6 +593,14 @@ EBE_PaymentModule.prototype = Object.create(EBE_ModuleBase.prototype);
 			that.popWindowEl.show().css({"top":top,"left":left});
 			that.isPop = true;
 		});
+	};
+	this.updateParamBlock = function(){
+		if( this.typeIndex == -1){return;}
+		if( this.typeIndex == 0){
+			this.creditParamEl.hide();
+		}else{
+			this.creditParamEl.show();
+		}
 	};
 	this.getData = function(){
 		var data = {};
@@ -585,10 +628,13 @@ EBE_PaymentModule.prototype = Object.create(EBE_ModuleBase.prototype);
 		this.bodyEl = $("body");
 		this.winEl = $(window);
 		
-		this.typeEls = this.el.find("input[type=radio],select");
+		this.typeEls = this.el.find(".typeBlock input[type=radio]");
+		this.typeLabelEls = this.el.find(".typeBlock span");
 		
-		this.inputEls = this.el.find("input[type=text],select");
-		this.warnEls = this.el.find(".inputUnit .warn");
+		this.creditParamEl = this.el.find(".credit");
+		this.inputEls = this.el.find(".paramBlock input[type=text],select");
+		this.warnEls = this.el.find(".paramBlock .inputUnit .warn");
+		
 		this.continueEl = this.el.find(".continueButtton");
 		
 		this.popBtnEl = this.el.find(".inputUnit .descript");
@@ -609,14 +655,15 @@ EBE_ReviewModule.prototype = Object.create(EBE_ModuleBase.prototype);
 		var that = this;
 		this.continueEl.click(function(){
 			that.nextFn();
+			that.loadingEl.css("visibility","visible");
 		});
 	};
-	this.setData = function(data){console.log("->",data);
+	this.setData = function(data){
 		this.listEls.find("li:gt(0)").remove();
 		var i,itemData;
 		for( var i = 0 ; i < data.list.length ;i++ ){
 			itemData = data.list[i];
-			$("<li><div class='paramCol'>h1>"+itemData.name+"</h1><div>"+ itemData.color+"</div>"+
+			$("<li><div class='paramCol'><h1>"+itemData.name+"</h1><div>"+ itemData.color+"</div>"+
 			"<div>"+itemData.size+"</div><div>"+itemData.price+
 			"</div></div><div class='quantityCol'>"+itemData.QTY+"</div>"+
 			"<div class='price'><b>"+itemData.subtotal+"</b></div></li>").appendTo(this.listEls);
@@ -682,8 +729,9 @@ var EBE_CheckOutManager = function(patterns){
 		}
 		changeModuleByEdit( currentIndex + 1);
 	}
-	function setError(err01){
+	function setError(err01,err02){
 		loginModule.leftErrMessage = err01;
+		paymentModule.errMessage = err02;
 	}
 	function setLoginError(err){
 		loginModule.setLoginError(err);
@@ -729,14 +777,7 @@ var EBE_CheckOutManager = function(patterns){
 	};
 };
 
-
-
-var countID = 600;
-var shippingMethodData = [
-	{"value":"1","name":"FedEx","label":"FedEx Ground $1.00"  },
-	{"value":"2","name":"FedEx","label":"FedEx Ground $2.00"  },
-	{"value":"3","name":"FedEx","label":"FedEx Ground $3.00"  }
-];
+var countID =600;
 function getReviewData( size ){
 	var i,arr = [];
 	for( i=0; i < size;i++ ){
@@ -758,15 +799,13 @@ function getReviewData( size ){
 	return {"list":arr,"total":totalData};
 }
 
-
-
 $(function(){
 	var checkOutManager = new EBE_CheckOutManager({
 		"email":/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
 		"password": /^[a-zA-Z0-9!@#$%^&*]{1,16}$/i
 	});
 	
-	checkOutManager.setError("请选择地区或以来宾身份结账!");
+	checkOutManager.setError("请选择地区或以来宾身份结账!","请选择支付方式");
 	
 	checkOutManager.setUnloginedHandler(function(role){
 		console.log( "未登录访问方式", role);

@@ -1,0 +1,97 @@
+header{
+	background-color: #fff;
+}
+header .common_centerBlock{
+	width: 1200px;
+}
+header .top_logoBlock{
+	height:150px;
+	text-align: center;
+	background:#7f7f7f;
+	line-height: 107px;
+}
+header .top_logoBlock img{
+	width: auto;
+	height: auto;
+}
+header .top_logoBlock h1{
+	display: none;
+	font-size: 18px;
+}
+header .mainNavBar{
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	height: 30px;
+	text-align: center;
+	background:#b2b2b2;
+}
+header .mainNavBar li{
+	display: inline-block;
+	width: 125px;
+}
+header .mainNavBar a{
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	line-height: 28px;
+	font-size: 15px;
+}
+header .mainNavBar li .checked{
+	border-bottom: 2px solid #fff;
+	cursor: default;
+}
+header .top_switchPlaceholder{
+	width: 100%;
+	height: auto;
+}
+header .topSwitchViewBlock{
+	position: absolute;
+	width:100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+header .topSwitchViewBlock ul{
+	position:absolute;
+	left: 0;
+	top: 0;
+}
+header .topSwitchViewBlock ul li{
+	position:relative;
+	float: left;
+}
+header .topSwitchViewBlock ul li a{
+	display: block;
+}
+header .topSwitchViewBlock ul li img{
+	width: 100%;
+}
+header .withchNavPanel{
+	position:absolute;
+	left:0;
+	bottom: -14px;
+	width:100%;
+	height: 4px;
+	text-align: center;
+	line-height: 4px;
+}
+header .withchNavPanel a{
+	display: inline-block;
+	width: 80px;
+	height: 4px;
+	background-color: #fff;
+	margin-left: 10px;
+}
+header .withchNavPanel a:first-child{
+	margin-left: 0;
+}
+header .withchNavPanel .selected{
+	background-color: #ff9999;
+}
+
+
+
+
+
+
+
