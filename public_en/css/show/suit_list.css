@@ -1,0 +1,167 @@
+header .top_logoBlock{
+	height:150px;
+	text-align: center;
+	background:rgba(0,0,0,0.5);
+	line-height: 107px;
+	z-index: 10;
+}
+header .top_logoBlock img{
+	width: auto;
+	height: auto;
+}
+header .top_logoBlock h1{
+	display: none;
+	font-size: 18px;
+}
+header .mainNavBar{
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	height: 30px;
+	text-align: center;
+	background:rgba(0,0,0,0.3);
+	z-index: 10;
+}
+header .mainNavBar li{
+	display: inline-block;
+	width: 125px;
+}
+header .mainNavBar a{
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	line-height: 28px;
+	font-size: 15px;
+}
+header .mainNavBar li{
+	position: relative;
+}
+header .mainNavBar li .checked{
+	border-bottom: 2px solid #fff;
+	cursor: default;
+}
+
+.common_mainPanel .listBlock{
+	margin: 30px 0 0 20px;
+}
+.common_mainPanel .listBlock li{
+	position:relative;
+	width: 25%;
+	float: left;
+	margin-bottom: 20px;
+}
+.common_mainPanel .listBlock li a{
+	display: block;
+	margin-right: 19px;
+}
+.common_mainPanel .listBlock li a img{
+	width: 100%;
+}
+
+.common_mainPanel .loadingRow{
+	text-align: center;
+	color: #fff;
+	visibility: hidden;
+}
+
+.bottomSpace{
+	height: 120px;
+}
+@media only screen and (min-width: 784px) and (max-width: 1150px) {
+	.common_mainPanel .listBlock li {
+		width: 33.33%;
+	}
+}
+
+@media only screen and (min-width: 784px) and (max-width: 1020px) {	
+	header .top_logoBlock{
+		position: static;
+		background: #000;
+		height: 100px;
+		line-height: 78px;
+	}
+	header .top_logoBlock img {
+		width: 287px;
+		height: 45px;
+	}
+	header .mainNavBar {
+		position: static;
+		background: #000;
+	}
+}
+
+@media only screen and (max-width: 785px) {
+	header .top_logoBlock{
+		position:static;
+		height:40px;
+		text-align: center;
+		background:rgba(0,0,0,0.8);
+		line-height: 34px;
+		border-bottom: 1px solid #999;
+	}
+	header .top_logoBlock img{
+		margin-left: 60px;
+		width: 164px;
+		height: 26px;
+	}
+	header .mainNavBar{
+		position:static;
+		height: 30px;
+		top: 41px;
+		border: none;
+		background:rgba(0,0,0,0.7);
+		line-height:20px;
+		font-size: 12px;
+	}
+	header .mainNavBar li {
+		width: 20%;
+		font-size: 12px;
+		white-space: nowrap;
+	}
+	.common_mainPanel .listBlock {
+		margin: 20px 0;
+	}
+	.common_mainPanel .listBlock li {
+		float: none;
+		margin-bottom: 5px;
+		width: auto;
+		text-align: center;
+	}
+	.common_mainPanel .listBlock li a{
+		display: inline-block;
+		margin: 0;
+		max-width: 351px;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
