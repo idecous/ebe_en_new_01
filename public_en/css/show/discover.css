@@ -49,7 +49,7 @@ header .mainNavBar li .checked{
 }
 header .keywordGroup{
 	position: absolute;
-	top: 230px;
+	top: 210px;
 	left: 0;
 	width: 100%;
 	z-index: 50;
@@ -75,13 +75,28 @@ header .keywordGroup .border ul li{
 	height: 20%;
 }
 header .keywordGroup .border ul li a{
+	position:relative;
 	display: block;
 	color: #000;
-	text-align: center;
 	height: 100%;
-	line-height: 100%;
-	
 }
+header .keywordGroup .border ul li a span{
+	display:block;
+	text-align: center;
+	position: absolute;	
+	top: 50%;
+	left:0;
+	font-size: 18px;
+	width: 100%;
+	margin-top: -10px;
+}
+header .keywordGroup .border ul .current .current{
+	background-color: rgba(255,135,135,0.7);
+}
+header .keywordGroup .border ul  .current .current span{
+	color: #fff;
+}
+
 header .keywordGroup .border ul li:nth-child(3n+1) a{
 	background-color: rgba(255,255,255,0.3);
 }
@@ -98,7 +113,7 @@ header .bg{
 	width: 100%;
 }
 
-@media only screen and (min-width: 784px) and (max-width: 1020px) {	
+@media only screen and (min-width: 784px) and (max-width: 1320px) {	
 	header .top_logoBlock{
 		position: static;
 		background: #000;
@@ -112,6 +127,13 @@ header .bg{
 	header .mainNavBar {
 		position: static;
 		background: #000;
+	}
+	header .keywordGroup{
+		top: 190px;
+	}
+	header .keywordGroup .border ul li a span {
+		font-size: 14px;
+		margin-top: -10px;
 	}
 }
 @media only screen and (max-width: 785px) {

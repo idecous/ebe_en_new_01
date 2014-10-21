@@ -811,6 +811,7 @@ var EBE_CheckOutManager = function(patterns){
 	}
 	function copyBillingToShipping(){
 		shippingModule.setCopyData(billingModule.getCopyData());
+		shippingModule.copyInputEl.prop("checked",true);
 	}
 	function shippingGetData(){
 		return shippingModule.getAllData();
