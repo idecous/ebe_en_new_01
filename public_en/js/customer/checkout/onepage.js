@@ -697,9 +697,13 @@ EBE_ReviewModule.prototype = Object.create(EBE_ModuleBase.prototype);
 		this.superInit();
 		var that = this;
 		this.continueEl.click(function(){
-			that.nextFn();
 			that.loadingEl.css("visibility","visible");
+			that.nextFn();
 		});
+	};
+	this.stop = function(){
+		console.log( this.loadingEl );
+		this.loadingEl.css("visibility","hidden");
 	};
 	this.setData = function(data){
 		this.listEls.find("li:gt(0)").remove();
@@ -820,6 +824,9 @@ var EBE_CheckOutManager = function(patterns){
 	function shippingGetData(){
 		return shippingModule.getAllData();
 	}
+	function reviewStop(){
+		reviewModule.stop();
+	}
 	
 	return {
 		"setError":setError,
@@ -834,7 +841,8 @@ var EBE_CheckOutManager = function(patterns){
 		"setShippingMethodData":setShippingMethodData,
 		"setReviewData":setReviewData,
 		"copyBillingToShipping":copyBillingToShipping,
-		"shippingGetData":shippingGetData
+		"shippingGetData":shippingGetData,
+		"reviewStop":reviewStop
 	};
 };
 
@@ -918,6 +926,7 @@ $(function(){
 	checkOutManager.setSaveHandler(function(){
 		console.log("流程完成");
 		//
+		checkOutManager.reviewStop();
 	});
 	
 	

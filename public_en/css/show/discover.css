@@ -89,6 +89,9 @@ header .keywordGroup .border ul li a span{
 	font-size: 18px;
 	width: 100%;
 	margin-top: -10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 header .keywordGroup .border ul .current .current{
 	background-color: rgba(255,135,135,0.7);
@@ -106,12 +109,25 @@ header .keywordGroup .border ul li:nth-child(3n+2) a{
 header .keywordGroup .border ul li:nth-child(3n+3) a{
 	background-color: rgba(255,255,255,0.7);
 }
-
-
-
 header .bg{
 	width: 100%;
 }
+.common_mainPanel .keywordPanel{
+	text-align: center;
+}
+.common_mainPanel .keywordPanel i{
+	display: inline-block;
+	width: 21px;
+	height: 11px;
+	background: url(../../img/show/icons.png) no-repeat 0 -233px;
+}
+.common_mainPanel .keywordPanel div{
+	color: #333;
+	font-size: 18px;
+	margin-top: 5px;
+}
+
+
 
 @media only screen and (min-width: 784px) and (max-width: 1320px) {	
 	header .top_logoBlock{
@@ -164,7 +180,43 @@ header .bg{
 		font-size: 12px;
 		white-space: nowrap;
 	}
+	header .keywordGroup{
+		position: static;
+		width: auto;
+	}
+	header .keywordGroup .border ul {
+		position:static;
+		height: auto;
+		width: auto;
+		border-top:1px solid #cfcfcf; 
+		border-left:1px solid #cfcfcf; 
+	}
+	header .keywordGroup .border ul li{
+		width: 25%;
+		height: 29px;
+		line-height: 29px;
+	}
+	header .keywordGroup .border ul li a span {
+		position:static;
+		width:auto;
+		font-size: 12px;
+		color: #666;
+		margin: 0;
+		height:28px;
+		border-right:1px solid #cfcfcf; 
+		border-bottom:1px solid #cfcfcf; 
+	}
+	header .keywordGroup .border ul li:nth-child(3n+1) a,
+	header .keywordGroup .border ul li:nth-child(3n+2) a,
+	header .keywordGroup .border ul li:nth-child(3n+3) a{
+		background-color: #fff;
+	}
 	
+	
+	header .keywordGroup .border img,
+	header .bg{
+		display: none;
+	}
 	
 	
 }
