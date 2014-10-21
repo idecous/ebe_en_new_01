@@ -346,12 +346,14 @@ EBE_ShippingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype)
 	};
 	this.copyByBilling = function(){
 		if( this.useCheckboxEl.prop("checked") ){
-			var data = this.copyFn();
-			var i,inputEl;
-			for(i=0; i < this.inputEls.length ;i++ ){
-				inputEl = this.inputEls.eq(i);
-				inputEl.val( data[ inputEl.attr("name") ] );
-			}
+			setData.setData( this.copyFn() );
+		}
+	};
+	this.setData = function(data){
+		var i,inputEl;
+		for(i=0; i < this.inputEls.length ;i++ ){
+			inputEl = this.inputEls.eq(i);
+			inputEl.val( data[ inputEl.attr("name") ] );
 		}
 	};
 	this.getData = function(){
@@ -421,20 +423,21 @@ EBE_ShippingModule_Logined.prototype = Object.create(EBE_ModuleBase.prototype);
 	};
 	this.copyByBilling = function(){
 		if( this.copyInputEl.prop("checked") ){
-			var data = this.copyFn();
-			
-			if( $.type(data) === "string" ){
-				this.addressSelectorEl.val(data);
-			}else{
-				this.addressSelectorEl.val("");
-				var i,inputEl;
-				for(i=0; i < this.inputEls.length ;i++ ){
-					inputEl = this.inputEls.eq(i);
-					inputEl.val( data[ inputEl.attr("name") ] );
-				}
-			}
-			this.updateStatus();
+			this.setData( this.copyFn() );
 		}
+	};
+	this.setData = function(data){
+		if( $.type(data) === "string" ){
+			this.addressSelectorEl.val(data);
+		}else{
+			this.addressSelectorEl.val("");
+			var i,inputEl;
+			for(i=0; i < this.inputEls.length ;i++ ){
+				inputEl = this.inputEls.eq(i);
+				inputEl.val( data[ inputEl.attr("name") ] );
+			}
+		}
+		this.updateStatus();
 	};
 	this.updateStatus = function(){
 		if( this.addressSelectorEl.val() == "" ){
@@ -521,7 +524,7 @@ EBE_ShippingMethodModule.prototype = Object.create(EBE_ModuleBase.prototype);
 	};
 	this.setData = function( data ){
 		this.data = data;
-		this.descriptEl.text( data );
+		this.descriptEl.html( data );
 	};
 	this.build = function(){
 		this.descriptEl = this.el.find(".descript");
@@ -709,7 +712,7 @@ var EBE_CheckOutManager = function(patterns){
 		modules[i].index = i;
 	}
 	shippingModule.copyFn = function(){
-		return billingModule.getData({"value":"7","name":"FedEx","label":"FedEx Ground $7.00"  });
+		return billingModule.getData(); 
 	};
 	function changeModuleByEdit(index){
 		currentIndex = index;
@@ -762,6 +765,10 @@ var EBE_CheckOutManager = function(patterns){
 	function setReviewData(data){
 		reviewModule.setData(data);
 	}
+	function copyBillingToShipping(){
+		shippingModule.setData(billingModule.getData());
+	}
+	
 	return {
 		"setError":setError,
 		"setLoginError":setLoginError,
@@ -773,7 +780,8 @@ var EBE_CheckOutManager = function(patterns){
 		"setSaveHandler":setSaveHandler,
 		"nextModule":nextModule,
 		"setShippingMethodData":setShippingMethodData,
-		"setReviewData":setReviewData
+		"setReviewData":setReviewData,
+		"copyBillingToShipping":copyBillingToShipping
 	};
 };
 
@@ -816,8 +824,9 @@ $(function(){
 		console.log( "账单信息(数据/是否送货到同一地方/是否保存)", data,sameddress,isSave);
 		//请求服务器
 		if( sameddress ){
-			checkOutManager.setShippingMethodData("Fixed US$5.00");
+			checkOutManager.setShippingMethodData("<h3>Flat Rate</h3><div>Fixed US$5.01</div>");
 			checkOutManager.nextModule();		
+			checkOutManager.copyBillingToShipping();
 			checkOutManager.nextModule();		
 		}else{
 			checkOutManager.nextModule();		
@@ -827,7 +836,7 @@ $(function(){
 		console.log("送货地址信息(数据/是否保存)", data,isSave);
 		//请求服务器
 
-		checkOutManager.setShippingMethodData("Fixed US$5.00");
+		checkOutManager.setShippingMethodData("<h3>Flat Rate</h3><div>Fixed US$5.01</div>");
 		checkOutManager.nextModule();
 	});
 	checkOutManager.setShippingMethodHandler(function(value){
