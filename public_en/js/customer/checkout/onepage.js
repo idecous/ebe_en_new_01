@@ -160,6 +160,18 @@ EBE_BillingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype);
 			that.loadingEl.css("visibility","visible");
 		});
 	};
+	this.getCopyData = function(){
+		var data = {};
+		var i,name,inputEl;
+		var length = this.inputEls.length - (this.role=="register"?0:2);
+		for(var i=0; i< length;i++){
+			inputEl = this.inputEls.eq(i);
+			name = inputEl.attr("name");
+			name = name.substring( name.indexOf("[")+1, name.lastIndexOf("]")  );
+			data[ name ] = inputEl.val();
+		}
+		return data;
+	};
 	this.getData = function(){
 		var data = {};
 		var i,inputEl;
@@ -275,6 +287,21 @@ EBE_BillingModule_Logined.prototype = Object.create(EBE_ModuleBase.prototype);
 		data[this.shipRadioEls.attr("name") ] = this.shipRadioEls.filter(":checked").val();
 		return data;
 	};
+	this.getCopyData = function(){
+		var selectValue = this.addressSelectorEl.val();
+		if( selectValue == ""){
+			var data = {};
+			var i,name,inputEl;
+			for( i=0; i< this.inputEls.length;i++){
+				inputEl = this.inputEls.eq(i);
+				name = inputEl.attr("name");
+				name = name.substring( name.indexOf("[")+1, name.lastIndexOf("]")  );
+				data[ name ] = inputEl.val();
+			}
+			return data;
+		}
+		return selectValue;
+	};
 	this.verify = function(){
 		var i,index,result = true;
 		var inputIndexs = [0,1,3,4,5,6,7,8];
@@ -346,14 +373,16 @@ EBE_ShippingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype)
 	};
 	this.copyByBilling = function(){
 		if( this.useCheckboxEl.prop("checked") ){
-			setData.setData( this.copyFn() );
+			this.setCopyData( this.copyFn() );
 		}
 	};
-	this.setData = function(data){
-		var i,inputEl;
+	this.setCopyData = function(data){
+		var i,name,inputEl;
 		for(i=0; i < this.inputEls.length ;i++ ){
 			inputEl = this.inputEls.eq(i);
-			inputEl.val( data[ inputEl.attr("name") ] );
+			name = inputEl.attr("name");
+			name = name.substring( name.indexOf("[")+1, name.lastIndexOf("]") );
+			inputEl.val( data[name ] );
 		}
 	};
 	this.getData = function(){
@@ -382,11 +411,9 @@ EBE_ShippingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype)
 	};
 	this.build = function(){
 		this.inputEls = this.el.find("input[type=text],select");
-		this.warnEls = this.el.find(".inputUnit .warn");
-		
+		this.warnEls = this.el.find(".inputUnit .warn");	
 		this.useCheckboxEl = this.el.find("input[type=checkbox]");
 		this.useCheckboxLabelEl = this.el.find(".operationRow span");
-
 		this.continueEl = this.el.find(".continueButtton");
 	};
 }).call(EBE_ShippingModule_Unlogined.prototype);
@@ -423,18 +450,20 @@ EBE_ShippingModule_Logined.prototype = Object.create(EBE_ModuleBase.prototype);
 	};
 	this.copyByBilling = function(){
 		if( this.copyInputEl.prop("checked") ){
-			this.setData( this.copyFn() );
+			this.setCopyData( this.copyFn() );
 		}
 	};
-	this.setData = function(data){
+	this.setCopyData = function(data){
 		if( $.type(data) === "string" ){
 			this.addressSelectorEl.val(data);
 		}else{
 			this.addressSelectorEl.val("");
-			var i,inputEl;
+			var i,name,inputEl;
 			for(i=0; i < this.inputEls.length ;i++ ){
 				inputEl = this.inputEls.eq(i);
-				inputEl.val( data[ inputEl.attr("name") ] );
+				name = inputEl.attr("name");
+				name = name.substring( name.indexOf("[")+1, name.lastIndexOf("]") );
+				inputEl.val( data[ name ] );
 			}
 		}
 		this.updateStatus();
@@ -518,7 +547,14 @@ EBE_ShippingMethodModule.prototype = Object.create(EBE_ModuleBase.prototype);
 		this.superInit();
 		var that = this;
 		this.continueEl.click(function(){
-			that.nextFn( that.data );
+			var inputEl = that.descriptEl.find("input[type=radio]:checked");
+			if( inputEl.length == 0){
+				alert( that.errMessage);
+				return;
+			}
+			var data = {};
+			data[ inputEl.attr("name") ] = inputEl.val();
+			that.nextFn( data );
 			that.loadingEl.css("visibility","visible");
 		});
 	};
@@ -663,20 +699,27 @@ EBE_ReviewModule.prototype = Object.create(EBE_ModuleBase.prototype);
 	};
 	this.setData = function(data){
 		this.listEls.find("li:gt(0)").remove();
-		var i,itemData;
-		for( var i = 0 ; i < data.list.length ;i++ ){
-			itemData = data.list[i];
-			$("<li><div class='paramCol'><h1>"+itemData.name+"</h1><div>"+ itemData.color+"</div>"+
-			"<div>"+itemData.size+"</div><div>"+itemData.price+
-			"</div></div><div class='quantityCol'>"+itemData.QTY+"</div>"+
-			"<div class='price'><b>"+itemData.subtotal+"</b></div></li>").appendTo(this.listEls);
+		var i,tdEls,tdEl;		
+		var tabelEl = $(data);	
+		var trEls = tabelEl.find("tbody tr"); 
+		for( i=0; i < trEls.length;i++ ){
+			tdEls = trEls.eq(i).find("td");
+			$("<li><div class='paramCol'><h1>"+ tdEls.eq(0).text() +"</h1>"+
+			"<div>"+tdEls.eq(1).text()+"</div></div><div class='quantityCol'>"+ tdEls.eq(2).text() +"</div>"+
+			"<div class='price'><b>"+tdEls.eq(3).text()+"</b></div></li>").appendTo(this.listEls);			
 		}
+		trEls =  tabelEl.find("tfoot tr"); 
+		tdEls = trEls.eq(0).find("td");
+		this.totalLabelEls.eq(0).text(  tdEls.eq(0).text() );
+		this.totalPriceEls.eq(0).text(  tdEls.eq(1).text() );
 		
-		for(i=0; i < data.total.length;i++){
-			itemData = data.total[i];
-			this.totalLabelEls.eq(i).text(  itemData[0]);
-			this.totalPriceEls.eq(i).text(  itemData[1]);
-		}
+		tdEls = trEls.eq(1).find("td");
+		this.totalLabelEls.eq(1).text(  tdEls.eq(0).text() );
+		this.totalPriceEls.eq(1).text(  tdEls.eq(1).text() );
+		
+		tdEls = trEls.eq(2).find("td");
+		this.totalLabelEls.eq(2).text(  tdEls.eq(0).text() );
+		this.totalPriceEls.eq(2).text(  tdEls.eq(1).text() );
 	};
 	this.build = function(){
 		this.listEls = this.el.find(".listBlock");
@@ -712,7 +755,7 @@ var EBE_CheckOutManager = function(patterns){
 		modules[i].index = i;
 	}
 	shippingModule.copyFn = function(){
-		return billingModule.getData(); 
+		return billingModule.getCopyData(); 
 	};
 	function changeModuleByEdit(index){
 		currentIndex = index;
@@ -732,9 +775,10 @@ var EBE_CheckOutManager = function(patterns){
 		}
 		changeModuleByEdit( currentIndex + 1);
 	}
-	function setError(err01,err02){
+	function setError(err01,err02,err03){
 		loginModule.leftErrMessage = err01;
-		paymentModule.errMessage = err02;
+		shippingMethodModule.errMessage = err02;
+		paymentModule.errMessage = err03;
 	}
 	function setLoginError(err){
 		loginModule.setLoginError(err);
@@ -766,7 +810,10 @@ var EBE_CheckOutManager = function(patterns){
 		reviewModule.setData(data);
 	}
 	function copyBillingToShipping(){
-		shippingModule.setData(billingModule.getData());
+		shippingModule.setCopyData(billingModule.getCopyData());
+	}
+	function shippingGetData(){
+		return shippingModule.getAllData();
 	}
 	
 	return {
@@ -781,11 +828,17 @@ var EBE_CheckOutManager = function(patterns){
 		"nextModule":nextModule,
 		"setShippingMethodData":setShippingMethodData,
 		"setReviewData":setReviewData,
-		"copyBillingToShipping":copyBillingToShipping
+		"copyBillingToShipping":copyBillingToShipping,
+		"shippingGetData":shippingGetData
 	};
 };
 
 var countID =600;
+
+var rateData = "<dl class='sp-methods'><dt>Flat Rate</dt><dd><ul><li><span class='no-display'><input name='shipping_method' type='radio' value='flatrate_flatrate' id='s_method_flatrate_flatrate' checked='checked'></span><label for='s_method_flatrate_flatrate'>Fixed<span class='price'>US$5.00</span></label></li></ul></dd></dl>";
+var reviewData = "<table id = 'checkout-review-table' class = 'data-table'><colgroup><col><col width = '1'><col width = '1'><col width = '1'></colgroup><thead><tr class = 'first last'><th rowspan = '1'> 产品名 </th><th class = 'a-center' colspan = '1'> 价格 </th><th class = 'a-center' rowspan = '1'> 数量 </th><th class = 'a-center' colspan = '1'> 小计 </th></tr></thead><tfoot><tr class = 'first'><td colspan = '3' class = 'a-right' style = ''> 小计 </td><td class = 'a-right last' style = ''><span class = 'price'> US$2, 600.00 </span></td></tr><tr><td colspan = '3' class = 'a-right' style = ''> 运费和手续费 (Flat Rate - Fixed) </td><td class = 'a-right last' style = ''><span class = 'price'> US$5.00 </span></td></tr><tr class = 'last'><td colspan = '3' class = 'a-right' style = ''><strong> 总计 </strong></td><td class = 'a-right last' style = ''><strong> <span class = 'price'> US$2, 605.00 </span></strong></td></tr></tfoot><tbody><tr class = 'first last odd'><td><h3 class = 'product-name'> 绿野仙踪组连体泳衣 </h3></td><td class = 'a-right'><span class = 'cart-price'> <span class = 'price'> US$2, 600.00 </span> </span></td><td class = 'a-center'> 1 </td><td class = 'a-right last'><span class = 'cart-price'> <span class = 'price'> US$2, 600.00 </span> </span></td></tr></tbody></table>";
+
+
 function getReviewData( size ){
 	var i,arr = [];
 	for( i=0; i < size;i++ ){
@@ -813,7 +866,7 @@ $(function(){
 		"password": /^[a-zA-Z0-9!@#$%^&*]{1,16}$/i
 	});
 	
-	checkOutManager.setError("请选择地区或以来宾身份结账!","请选择支付方式");
+	checkOutManager.setError("请选择地区或以来宾身份结账!","请选择税率!","请选择支付方式!");
 	
 	checkOutManager.setUnloginedHandler(function(role){
 		console.log( "未登录访问方式", role);
@@ -824,9 +877,12 @@ $(function(){
 		console.log( "账单信息(数据/是否送货到同一地方/是否保存)", data,sameddress,isSave);
 		//请求服务器
 		if( sameddress ){
-			checkOutManager.setShippingMethodData("<h3>Flat Rate</h3><div>Fixed US$5.01</div>");
+			checkOutManager.setShippingMethodData(rateData);
 			checkOutManager.nextModule();		
 			checkOutManager.copyBillingToShipping();
+
+			console.log("获取送货地址数据",checkOutManager.shippingGetData());
+			//请求服务器
 			checkOutManager.nextModule();		
 		}else{
 			checkOutManager.nextModule();		
@@ -836,7 +892,7 @@ $(function(){
 		console.log("送货地址信息(数据/是否保存)", data,isSave);
 		//请求服务器
 
-		checkOutManager.setShippingMethodData("<h3>Flat Rate</h3><div>Fixed US$5.01</div>");
+		checkOutManager.setShippingMethodData(rateData);
 		checkOutManager.nextModule();
 	});
 	checkOutManager.setShippingMethodHandler(function(value){
@@ -851,7 +907,7 @@ $(function(){
 	checkOutManager.setPaymentHandler(function(data){
 		console.log("支付方式",data);
 		//
-		checkOutManager.setReviewData( getReviewData(2) );
+		checkOutManager.setReviewData( reviewData );
 		checkOutManager.nextModule();		
 	});
 	checkOutManager.setSaveHandler(function(){
