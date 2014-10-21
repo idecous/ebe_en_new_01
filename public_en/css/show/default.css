@@ -84,7 +84,9 @@ header{
 	background: url(../../img/show/mobile_top_meun_return.png); 
 	display: none;
 }
-
+header .common_fixedWidth{
+	left:260px;
+}
 .common_moblieNav{
 	position: absolute;
 	top: 0;

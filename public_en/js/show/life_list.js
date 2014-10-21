@@ -3,6 +3,7 @@ var EBE_NormalFilter = function(){
 	var groupBtnsIconEl = groupBtnsEl.children("i");
 	var contentBlockEl = $(".common_mainPanel .filterPanel .groupBar+ul");
 	
+	
 	groupBtnsEl.click(function(){
 		var tIndex = groupBtnsEl.index(this);
 		var iconEl = groupBtnsIconEl.eq(tIndex);
@@ -48,6 +49,60 @@ var EBE_NormalFilter = function(){
 		el.val( val.toFixed(2) );
 	});
 };
+var EBE_SideSearchManager = function(){
+	var formEl = $(".common_mainPanel .filterPanel .bySearch li form");
+	var borderEl = formEl.find(".border");
+	var inputEl = formEl.find("input[type=text]");
+	var infoEl =  formEl.find(".border span");
+	inputEl.focus(function(){
+		infoEl.hide();
+	}).blur(function(){
+		var val = $.trim( inputEl.val() );
+		if( val == ""){
+			infoEl.show();
+		}
+	});
+	formEl.submit(function(){
+		if( $.trim( inputEl.val() ) == ""){
+			borderEl.addClass("warn");
+			return false;
+		}else{
+			borderEl.removeClass("warn");
+		}
+	});
+};
+var EBE_TopSearchManager = function(){
+	var formEl = $(".top_logoBlock form");
+	var openBtnEl = $("header .top_logoBlock .searchBtn");
+	var searchGroupEl = $("header .top_logoBlock .searchBlock");
+	var inputEl = $("header .top_logoBlock .searchBlock .border input"); 
+	var clearEl = $("header .top_logoBlock .searchBlock .border i"); 
+	var returnBtnEl =  $("header .top_logoBlock .searchBlock a"); 
+	var borderEl = $("header .top_logoBlock .searchBlock .border");
+	
+	openBtnEl.click(function(){
+		openBtnEl.css("visibility","hidden");
+		searchGroupEl.css("visibility","visible");
+	});
+	clearEl.click(function(){
+		inputEl.val("");
+	});
+	returnBtnEl.click(function(){
+		openBtnEl.css("visibility","visible");
+		searchGroupEl.css("visibility","hidden");
+	});
+	formEl.submit(function(){
+		if( $.trim( inputEl.val() ) == ""){
+			borderEl.addClass("warn");
+			return false;
+		}else{
+			borderEl.removeClass("warn");
+		}
+	});
+};
+
+
+
 var EBE_ListItem = function(submitHandler,errorHandler,unit){
 	this.submitHandler = submitHandler;
 	this.errorHandler = errorHandler;
@@ -424,6 +479,8 @@ $(function(){
 	}
 	//--
 	new EBE_NormalFilter();
+	new EBE_SideSearchManager();
+	new EBE_TopSearchManager();
 	new EVE_MobileFilter();
 	var shoppingCar = new EVE_ShoppingCar(function(id,size){
 		console.log("删除购物车商品(商品ID/尺寸)",id,size);
@@ -448,5 +505,9 @@ $(function(){
 		//请求服务器
 		list.appendData( getPageData(4) , page++ );		
 	});
+	
+	
+	
+	
 	
 });

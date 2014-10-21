@@ -483,7 +483,7 @@ var EBE_GoodsPreview = function(levelCount){
 	}	
 };
 
-var EBE_GoodsParameter = function(sizeWarn,submitHandler,favoritesHandler){
+var EBE_GoodsParameter = function(sizeWarn,submitHandler,favoritesHandler,appendText){
 	var html7BodyEl = $("html, body");
 	var sizeDataTitleEl = $(".common_mainPanel .sizeDataPanel h3");
 	var el = $(".common_mainPanel .detailPanel .rightBlock .paramPanel");
@@ -549,7 +549,8 @@ var EBE_GoodsParameter = function(sizeWarn,submitHandler,favoritesHandler){
 		contentEl.append( messageContentEls.eq(i).children().clone() );
 	}
 	
-	var appendShoppingcarEl = $("<a class='appendShopping' href='javascript:;'>加入购物袋</a>").appendTo(mobileMessageEl);
+	var tEl = $("<div class='mobileAppendBtn'></div>").appendTo(mobileMessageEl);
+	var appendShoppingcarEl = $("<a class='appendShopping' href='javascript:;'>"+appendText+"</a>").appendTo(tEl);
 	appendShoppingcarEl.click(appendGoodsHandler);
 
 	function appendGoodsHandler(){
@@ -755,7 +756,7 @@ $(function(){
 	},function(){
 		console.log("添加到收藏");
 		
-	});
+	},"加入购物袋");
 	var shoppingCar = new EVE_ShoppingCar(function(id,size){
 		console.log("删除购物车商品(商品ID/尺寸)",id,size);
 		//请求服务器

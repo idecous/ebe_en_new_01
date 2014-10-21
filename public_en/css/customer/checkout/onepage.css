@@ -1,3 +1,11 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
 .popWindow{
 	position: absolute;
 	top: 320px;
@@ -456,6 +464,9 @@
 
 
 @media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder{
+		display: block;
+	}
 	.common_mainPanel .cartListBlock {
 		display: none;
 	}
@@ -501,6 +512,14 @@
 		height: 20px;
 	}
 	
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		background: #000;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
 }
 
 

@@ -1,3 +1,7 @@
+header .top_logoBlockHolder{
+	height: 70px;
+	display: none;
+}
 header .top_switchPlaceholder{
 	width: 100%;
 	height: auto;
@@ -568,11 +572,15 @@ header .mainNavBar li .checked{
 }
 
 @media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder{
+		display: block;
+	}
 	header .top_logoBlock{
-		position:static;
+		position:fixed;
+		left:auto;
+		background-color:#000;
 		height:40px;
 		text-align: center;
-		background:rgba(0,0,0,0.8);
 		line-height: 34px;
 		border-bottom: 1px solid #999;
 	}
@@ -582,11 +590,12 @@ header .mainNavBar li .checked{
 		height: 26px;
 	}
 	header .mainNavBar{
-		position:static;
+		position:fixed;
+		left:auto;
+		background-color:#000;
 		height: 30px;
 		top: 41px;
 		border: none;
-		background:rgba(0,0,0,0.7);
 		line-height:20px;
 		font-size: 12px;
 	}

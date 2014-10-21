@@ -1,3 +1,7 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
 .common_rightPanel .categoryBar{
 	position:relative;
 	margin-top: 5px;
@@ -222,6 +226,17 @@
 	}
 	.common_mainPanel .mobileBlock{
 		display: block;
+	}
+	header .top_logoBlockHolder{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		background: #000;
+		top:0;
+		width: 100%;
+		z-index: 100;
 	}
 }
 

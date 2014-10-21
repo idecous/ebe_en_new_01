@@ -1,6 +1,10 @@
 header{
 	text-align: center;
 }
+header .top_logoBlockHolder{
+	height: 70px;
+	display: none;
+}
 header .top_logoBlock{
 	position:absolute;
 	top:0;
@@ -126,8 +130,100 @@ header .bg{
 	font-size: 18px;
 	margin-top: 5px;
 }
+.common_mainPanel .listBlock{
+	width: 1200px;
+	margin: 20px auto;
+	border-top: 1px solid #ddd;
+}
+.common_mainPanel .listBlock ul{
+	margin-top:20px;
+}
+.common_mainPanel .listBlock ul li{
+	display:inline-block;
+	position: relative;
+	width: 25%;
+	overflow: hidden;
+}
+.common_mainPanel .listBlock ul li .bg{
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.25s ease-out 0s;
+}
+.common_mainPanel .listBlock ul li:hover .bg{
+	visibility: visible;
+	opacity: 1;
+}
 
+.common_mainPanel .listBlock ul li a{
+	display: block;
+	position: absolute;
+	left:0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.common_mainPanel .listBlock ul li .border{
+	position: absolute;
+	top: 5px;
+	left:5px;
+	right: 5px;
+	bottom: 5px;
+}
+.common_mainPanel .listBlock ul li .border img{
+	width: 100%;
+}
+.common_mainPanel .listBlock ul li .descriptBlock{
+	position:absolute;
+	bottom: -79px;
+	left:0;
+	width: 100%;
+	height: 79px;
+	background-color: rgba(255,255,255,0.8);
+	text-align: center;
+	transition: all 0.25s ease-out 0s;
+}
+.common_mainPanel .listBlock ul li:hover .descriptBlock{
+	bottom: 0;
+}
+.common_mainPanel .listBlock ul li .descriptBlock h3{
+	font-size: 14px;
+	margin-top: 5px;
+}
+.common_mainPanel .listBlock ul li .descriptBlock h4{
+	font-size: 14px;
+	line-height: 24px;
+}
+.common_mainPanel .listBlock ul li .descriptBlock h1{
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.common_mainPanel .listBlock ul li .descriptBlock h1 b{
+	font-weight: normal;
+	color: #cc0000;
+}
 
+.common_mainPanel .loadingRow{
+	clear: both;
+	text-align: center;
+	color: #999;
+	visibility: hidden;
+}
+.common_mainPanel .loadingRow .text{
+	font-size: 12px;
+	padding: 15px 0 ;
+}
+
+@media only screen and (max-width: 1220px) {
+	.common_mainPanel .listBlock{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 890px) {
+	.common_mainPanel .listBlock ul li{
+		width: 33.33%;
+	}
+}
 
 @media only screen and (min-width: 784px) and (max-width: 1320px) {	
 	header .top_logoBlock{
@@ -153,13 +249,17 @@ header .bg{
 	}
 }
 @media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder{
+		display: block;
+	}
 	header .top_logoBlock{
-		position:static;
+		position: fixed;
 		height:40px;
 		text-align: center;
-		background:rgba(0,0,0,0.8);
+		background:#000;
 		line-height: 34px;
 		border-bottom: 1px solid #999;
+		left: auto;
 	}
 	header .top_logoBlock img{
 		margin-left: 60px;
@@ -167,11 +267,12 @@ header .bg{
 		height: 26px;
 	}
 	header .mainNavBar{
-		position:static;
+		position:fixed;
 		height: 30px;
 		top: 41px;
+		left: auto;
 		border: none;
-		background:rgba(0,0,0,0.7);
+		background:#000;
 		line-height:20px;
 		font-size: 12px;
 	}
@@ -212,28 +313,19 @@ header .bg{
 		background-color: #fff;
 	}
 	
-	
 	header .keywordGroup .border img,
 	header .bg{
 		display: none;
 	}
-	
-	
+	.common_mainPanel .listBlock ul {
+		text-align: center;
+	}
+	.common_mainPanel .listBlock ul li {
+		width: 100%;
+		max-width: 292px;
+	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

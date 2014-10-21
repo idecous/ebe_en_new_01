@@ -1,3 +1,7 @@
+header .top_logoBlockHolder{
+	height: 70px;
+	display: none;
+}
 header .top_logoBlock{
 	position:absolute;
 	top:0;
@@ -550,11 +554,15 @@ header .withchNavPanel .selected{
 }
 
 @media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder{
+		display: block;
+	}
 	header .top_logoBlock{
-		position:static;
+		position: fixed;
+		left:auto;
+		background: #000;
 		height:40px;
 		text-align: center;
-		background:rgba(0,0,0,0.8);
 		line-height: 34px;
 		border-bottom: 1px solid #999;
 	}
@@ -570,7 +578,10 @@ header .withchNavPanel .selected{
 		display: none;
 	}
 	header .mainNavBar{
-		position: static;
+		position: fixed;
+		left:auto;
+		background: #000;
+		top: 40px;
 	}
 	header .mainNavBar li {
 		width: 20%;

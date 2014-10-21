@@ -1,3 +1,7 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
 header .top_logoBlock{
 	position:absolute;
 	top:0;
@@ -17,6 +21,64 @@ header .top_logoBlock h1{
 	display: none;
 	font-size: 18px;
 }
+header .top_logoBlock .searchBtn{
+	position:absolute;
+	top:0;
+	right:0;
+	display: none;
+	width: 40px;
+	height: 40px;
+	background: url(../../img/show/icons.png) no-repeat -144px 0; 
+}
+header .top_logoBlock .searchBlock{
+	display: none;
+	position:absolute;
+	top:0;
+	left: 48px;
+	right:0;
+	height:40px;
+	visibility: hidden;
+}
+header .top_logoBlock .searchBlock .border{
+	position:relative;
+	margin: 6px 60px 0 10px;
+	height: 26px;
+	line-height:26px;
+	background-color: #eee;
+	border-radius: 4px; 
+	padding: 0 30px 0 10px;
+	border: 1px solid #eee;
+}
+header .top_logoBlock .searchBlock .warn{
+	border-color: #f00;
+}
+header .top_logoBlock .searchBlock .border input{
+	width: 100%;
+	color: #333;
+	border: none;
+	background: none;
+}
+header .top_logoBlock .searchBlock .border i{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 19px;
+	height: 18px;
+	background: url(../../img/show/icons.png) no-repeat -47px -221px; 
+}
+header .top_logoBlock .searchBlock a{
+	display:block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 40px;
+	background-color: #000;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+}
+
 
 header .userGroup{
 	position: absolute;
@@ -547,6 +609,68 @@ header .bg{
 	width: 28px;
 	height: 28px;
 }
+
+.common_mainPanel .filterPanel .bySearch{
+	margin-top: 50px;
+}
+.common_mainPanel .filterPanel .bySearch>.close{ 
+	height: 0;
+	overflow: hidden;
+}
+.common_mainPanel .filterPanel .bySearch li{
+	position: relative;
+	padding-top: 10px;
+}
+.common_mainPanel .filterPanel .bySearch .border{
+	position: relative;
+	border: 1px solid #ccc;
+	margin-right: 50px;
+	padding: 1px 4px 0 30px;
+	height: 21px;
+}
+.common_mainPanel .filterPanel .bySearch .warn{
+	border-color: #f00;
+}
+.common_mainPanel .filterPanel .bySearch .close {
+    background-position: -90px -132px;
+}
+.common_mainPanel .filterPanel .bySearch .border span{
+	position: absolute;
+	left:30px;
+	top:2px;
+	color: #aaa;
+	font-size: 12px;
+}
+.common_mainPanel .filterPanel .bySearch .border input{
+	position:relative;
+	color: #333;
+	width: 100%;
+	background: none;
+	border: none;
+}
+.common_mainPanel .filterPanel .bySearch input[type='submit']{
+	position: absolute;
+	right: 0;
+	top:10px;
+	width: 48px;
+	height:24px;
+	border: none;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	line-height: 20px;
+}
+.common_mainPanel .filterPanel .bySearch ul li i{
+	display:block;
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 24px;
+	height: 22px;
+	background: url(../../img/show/icons.png) no-repeat -23px -224px; 
+}
+
+
 .common_mainPanel .filterPanel  .bottomSpace{
 	height: 100px;
 }
@@ -608,31 +732,52 @@ header .bg{
 	cursor: default;
 }
 .common_mainPanel .listPanel .topSpace{
-	height: 20px;
+	height: 45px;
 }
-.common_mainPanel .listPanel ul li{
+.common_mainPanel .listPanel .topSpace ul{
+	margin-top: 6px;
+}
+.common_mainPanel .listPanel .topSpace ul li{
+	float: left;
+}
+.common_mainPanel .listPanel .topSpace ul .current{
+	background-color: #666;
+}
+.common_mainPanel .listPanel .topSpace ul .current a{
+	color: #fff;
+}
+.common_mainPanel .listPanel .topSpace ul li a{
+	display: block;
+	height: 23px;
+	line-height: 23px;
+	padding: 0 15px;
+	color: #666;
+	font-size: 12px;
+}
+
+.common_mainPanel .listPanel>ul li{
 	width: 33.33%;
 	float: left;
 	margin-bottom: 30px;
 	text-align: center;
 }
-.common_mainPanel .listPanel ul li .contentBlock{
+.common_mainPanel .listPanel>ul li .contentBlock{
 	margin: 0 18px;
 	max-width: 280px;
 	display: inline-block;
 }
-.common_mainPanel .listPanel ul li .contentBlock .imgBlock{
+.common_mainPanel .listPanel>ul li .contentBlock .imgBlock{
 	position: relative;
 	overflow: hidden;
 }
-.common_mainPanel .listPanel ul li .contentBlock .imgBlock img{
+.common_mainPanel .listPanel>ul li .contentBlock .imgBlock img{
 	width: 100%;
 }
 
-.common_mainPanel .listPanel ul li:hover .contentBlock .imgBlock .shoppingcar{
+.common_mainPanel .listPanel>ul li:hover .contentBlock .imgBlock .shoppingcar{
 	bottom:0;
 }
-.common_mainPanel .listPanel ul li .contentBlock .imgBlock .shoppingcar{
+.common_mainPanel .listPanel>ul li .contentBlock .imgBlock .shoppingcar{
 	position: absolute;
 	left:0;
 	bottom:-105px;
@@ -642,11 +787,11 @@ header .bg{
 	padding-top: 10px;
 	transition: all 0.25s ease-out 0s;
 }
-.common_mainPanel .listPanel ul li .contentBlock .imgBlock .shoppingcar .size{
+.common_mainPanel .listPanel>ul li .contentBlock .imgBlock .shoppingcar .size{
 	text-align: left;
 	margin-left: 15px;
 }
-.common_mainPanel .listPanel ul li .contentBlock .imgBlock .shoppingcar .size span{
+.common_mainPanel .listPanel>ul li .contentBlock .imgBlock .shoppingcar .size span{
 	display: inline-block;
 	width: 36px;
 	height: 22px;
@@ -657,16 +802,16 @@ header .bg{
 	background-color: #fff;
 	color: #666;
 }
-.common_mainPanel .listPanel ul li .contentBlock .imgBlock .shoppingcar .size .checked{
+.common_mainPanel .listPanel>ul li .contentBlock .imgBlock .shoppingcar .size .checked{
 	background-color: #ccc;
 }
-.common_mainPanel .listPanel ul li .contentBlock .imgBlock .shoppingcar .submitRow{
+.common_mainPanel .listPanel>ul li .contentBlock .imgBlock .shoppingcar .submitRow{
 	position: absolute;
 	left: 0;
 	bottom: 10px;
 	width: 100%;
 }
-.common_mainPanel .listPanel ul li .contentBlock .imgBlock .shoppingcar .submitRow input{
+.common_mainPanel .listPanel>ul li .contentBlock .imgBlock .shoppingcar .submitRow input{
 	width: 125px;
 	height: 26px;
 	vertical-align:4px;
@@ -676,44 +821,44 @@ header .bg{
 	border: none;
 }
 
-.common_mainPanel .listPanel ul li .contentBlock .descriptBlock{
+.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock{
 	padding-top:10px;
 	color: #333;
 	white-space: nowrap;	
 	overflow: hidden;
 	text-align: left;
 }
-.common_mainPanel .listPanel ul li .contentBlock .descriptBlock h3{
+.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock h3{
 	font-size: 14px;
 	text-transform: uppercase;
 }
-.common_mainPanel .listPanel ul li .contentBlock .descriptBlock h2{
+.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock h2{
 	font-size: 14px;
 	line-height: 28px;
 }
-.common_mainPanel .listPanel ul li .contentBlock .descriptBlock .price {
+.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock .price {
 	position:relative;
 }
-.common_mainPanel .listPanel ul li .contentBlock .descriptBlock .price h1{
+.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock .price h1{
 	font-size: 18px;
 	text-transform: uppercase;
 }
-.common_mainPanel .listPanel ul li .contentBlock .descriptBlock .price i{
+.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock .price i{
 	font-style: normal;
 }
-.common_mainPanel .listPanel ul li .contentBlock .descriptBlock .price h1 b{
+.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock .price h1 b{
 	color: #cc0000;
 	margin-left: 8px;
 	font-weight: normal;
 }
-.common_mainPanel .listPanel ul li .contentBlock .descriptBlock .price span{
+.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock .price span{
 	position:absolute;
 	bottom:0;
 	right:0;
 	font-size: 12px;
 	color: #666;
 }
-.common_mainPanel .listPanel ul li .contentBlock .descriptBlock .price span b{
+.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock .price span b{
 	font-weight: normal;
 	margin-left: 4px;
 }
@@ -883,16 +1028,16 @@ header .bg{
 }
 
 @media only screen and (min-width: 784px) and (max-width: 1100px) {	
-	.common_mainPanel .listPanel ul li .contentBlock .descriptBlock{
+	.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock{
 		text-align: center;
 	}
-	.common_mainPanel .listPanel ul li .contentBlock .descriptBlock .price span{
+	.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock .price span{
 		position: static;
 	}
 }
 
 @media only screen and (min-width: 784px) and (max-width: 1020px) {	
-	.common_mainPanel .listPanel ul li {
+	.common_mainPanel .listPanel>ul li {
 		  width: 50%;
 	}
 	header .top_logoBlock{
@@ -918,11 +1063,17 @@ header .bg{
 }
 
 @media only screen and (max-width: 785px) {
+	header .top_logoBlock .searchBlock,
+	header .top_logoBlock .searchBtn,
+	header .top_logoBlockHolder{
+		display: block;
+	}
 	header .top_logoBlock {
-		position:static;
+		position: fixed;
+		left:auto;
+		background: #000;
 		height: 40px;
 		line-height:40px;
-		background-color: #000;
 		text-align: center;
 	}
 	header .top_logoBlock img{
@@ -940,6 +1091,7 @@ header .bg{
 	header .common_centerBlock{
 		display: none;
 	}
+	.header .top_logoBlock .searchBtn,
 	.mobileSide{
 		display: block;
 	}
@@ -953,6 +1105,8 @@ header .bg{
 	.common_mainPanel .filterPanel .byBrand,
 	.common_mainPanel .filterPanel .byPrice,
 	.common_mainPanel .filterPanel .byColor,
+	.common_mainPanel .filterPanel .bySearch,
+	.common_mainPanel .listPanel .topSpace ul,
 	.common_mainPanel .filterPanel .bottomSpace{
 		display: none;
 	}
@@ -962,23 +1116,26 @@ header .bg{
 	.common_mainPanel .listPanel {
 		margin: 0;
 	}
+	.common_mainPanel .listPanel .topSpace {
+		height: 20px;
+	}
 	.common_mainPanel .listPanel .subTitlePanel{
 		display: none;
 	}
-	.common_mainPanel .listPanel ul li {
+	.common_mainPanel .listPanel>ul li {
 		width: 50%;
 		margin-bottom: 10px;
 	}
-	.common_mainPanel .listPanel ul li .contentBlock{
+	.common_mainPanel .listPanel>ul li .contentBlock{
 		margin: 0 5px;
 	}
-	.common_mainPanel .listPanel ul li .contentBlock .descriptBlock .price span{
+	.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock .price span{
 		position: static;
 	}
-	.common_mainPanel .listPanel ul li .contentBlock .descriptBlock h3{
+	.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock h3{
 		font-size: 12px;
 	}
-	.common_mainPanel .listPanel ul li .contentBlock .descriptBlock h2{
+	.common_mainPanel .listPanel>ul li .contentBlock .descriptBlock h2{
 		line-height: 20px;
 	}
 	
@@ -990,7 +1147,7 @@ header .bg{
 	}
 }
 @media only screen and (max-width: 520px) {
-	.common_mainPanel .listPanel ul li {
+	.common_mainPanel .listPanel>ul li {
 		width: 100%;
 		margin-bottom: 20px;
 	}

@@ -34,7 +34,7 @@ var EBE_TopSwitchView = function(holderEl,el){
 		if( !isInit || el.length == 0 ){return;}
 		clearTimeout( timer );
 		ulEl.stop();
-		liWidth = holderEl.width();console.log(holderEl);
+		liWidth = holderEl.width();
 		var allHeigth = holderEl.height();
 		liHeight = allHeigth ;
 		el.height(allHeigth);

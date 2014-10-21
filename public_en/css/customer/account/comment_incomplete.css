@@ -1,3 +1,7 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
 .common_rightPanel .categoryBar{
 	margin-top: 5px;
 	margin-bottom: 10px;
@@ -308,7 +312,17 @@
 	.common_mainPanel .bottomSpace{
 		height: 20px;
 	}
-	
+	header .top_logoBlockHolder{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		background: #000;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
 	
 }
 

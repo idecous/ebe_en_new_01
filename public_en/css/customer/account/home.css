@@ -1,3 +1,8 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+
 .common_rightPanel .messagePanel{
 	border-top:  2px solid #666;
 	height: 175px;
@@ -465,13 +470,23 @@
 
 
 @media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder{
+		display: block;
+	}
 	.common_mainPanel .normolBlock{
 		display: none;
 	}
 	.common_mainPanel .mobileBlock{
 		display: block;
 	}
-	
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		background: #000;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
 	
 }
 
