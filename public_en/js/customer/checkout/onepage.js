@@ -115,7 +115,6 @@ EBE_LoginModule.prototype = Object.create(EBE_ModuleBase.prototype);
 		this.errEl = this.el.find(".loginBlock .error");
 		this.errTextEl = this.el.find(".loginBlock .error span");
 
-		
 		this.loginFormEl = this.el.find("form");
 		this.loginInputEls = this.el.find(".inputUnit input");
 		this.loginWarnEls = this.el.find(".inputUnit .warn");
@@ -356,23 +355,23 @@ EBE_ShippingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype)
 		this.superInit();
 		var that = this;
 		this.useCheckboxLabelEl.click(function(){
-			that.useCheckboxEl.prop("checked", !that.useCheckboxEl.prop("checked") );
+			that.copyInputEl.prop("checked", !that.copyInputEl.prop("checked") );
 			that.copyByBilling();
 		});
-		this.useCheckboxEl.change(function(){
+		this.copyInputEl.change(function(){
 			that.copyByBilling();
 		});
 
 		this.continueEl.click(function(){
 			if( !that.verify() ){ return;}
 			var tData =  that.getData();
-			tData[that.useCheckboxEl.attr("name")] = that.useCheckboxEl.prop("checked");
+			tData[that.copyInputEl.attr("name")] = that.copyInputEl.prop("checked");
 			that.nextFn( tData,false );		
 			that.loadingEl.css("visibility","visible");	
 		});
 	};
 	this.copyByBilling = function(){
-		if( this.useCheckboxEl.prop("checked") ){
+		if( this.copyInputEl.prop("checked") ){
 			this.setCopyData( this.copyFn() );
 		}
 	};
@@ -395,6 +394,11 @@ EBE_ShippingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype)
 		}
 		return data;
 	};
+	this.getAllData = function(){
+		var tData =  this.getData();
+		tData[this.copyInputEl.attr("name")] = this.copyInputEl.prop("checked");
+		return tData;
+	};
 	this.verify = function(){
 		var i,index,result = true;
 		var inputIndexs = [0,1,3,4,5,6,7,8];
@@ -412,7 +416,7 @@ EBE_ShippingModule_Unlogined.prototype = Object.create(EBE_ModuleBase.prototype)
 	this.build = function(){
 		this.inputEls = this.el.find("input[type=text],select");
 		this.warnEls = this.el.find(".inputUnit .warn");	
-		this.useCheckboxEl = this.el.find("input[type=checkbox]");
+		this.copyInputEl = this.el.find("input[type=checkbox]");
 		this.useCheckboxLabelEl = this.el.find(".operationRow span");
 		this.continueEl = this.el.find(".continueButtton");
 	};
