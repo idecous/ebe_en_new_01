@@ -85,7 +85,7 @@ header{
 	display: none;
 }
 header .common_fixedWidth{
-	left:260px;
+	left:260px !important;
 }
 .common_moblieNav{
 	position: absolute;
