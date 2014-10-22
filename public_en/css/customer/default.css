@@ -128,9 +128,6 @@ header{
 	font-size: 16px;
 	line-height: 40px;
 }
-header .common_fixedWidth{
-	left:260px !important;
-}
 .common_moblieNav{
 	position: absolute;
 	top: 0;
@@ -686,6 +683,9 @@ footer .mobilFooter .copyright{
 	}
 }
 @media only screen and (max-width: 785px) {
+	header .common_fixedWidth{
+		left:260px !important;
+	}
 	.common_topNavigationBlock .common_mobile_topMenuBtn,
 	.common_topNavigationBlock h1,
 	.common_moblie_toTop,
