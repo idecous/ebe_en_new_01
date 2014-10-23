@@ -36,7 +36,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .common_centerBlock{
 	position:relative;
-	width: 1500px;
+	width: 100%;
 	margin: 0 auto;
 }
 .common_whiteBG{
@@ -126,8 +126,6 @@ header{
 	display: inline-block;
 	padding: 0 4px;
 }
-
-
 .common_pageContent{
 	position:relative;
 	transition: all 0.25s ease-out 0s;
@@ -320,7 +318,6 @@ footer .mobilFooter .copyright{
 	white-space: nowrap;
 	font-size: 12px;
 }
-
 
 @media only screen and (max-width: 1520px) {
 	.common_centerBlock{

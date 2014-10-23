@@ -336,7 +336,7 @@ header .withchNavPanel .selected{
 }
 
 .common_mainPanel .subTitlePanel{
-	height: 67px;
+	min-height: 67px;
 	text-align: center;
 	color: #eee;
 	border-bottom: 1px solid #333;
