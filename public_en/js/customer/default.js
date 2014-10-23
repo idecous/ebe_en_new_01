@@ -212,6 +212,26 @@ var EVE_ShoppingCar = function(deleteHandler){
 	update();
 	return {"addGoods":addGoods};
 };
+
+
+var EBE_mobileHeightPlaceholderManager = function(){
+	var winEl = $(window);
+	var bodyEl = $("body");
+	var screenHeightPlaceholderEl = $("<div class='common_screenHeightPlaceholder'></div>");
+	$("footer").before(screenHeightPlaceholderEl);
+	
+	function resizeHandler(){
+		var tH = winEl.height() - (bodyEl.height()-screenHeightPlaceholderEl.height());
+		if(tH < 0){
+            screenHeightPlaceholderEl.height(0);
+        }else{
+            screenHeightPlaceholderEl.height(tH);
+        }
+	}
+	winEl.resize( resizeHandler );
+	resizeHandler();
+};
+
 var G_shoppingCar;
 $(function(){
 	new EVE_MobileMenu();
@@ -220,4 +240,5 @@ $(function(){
 		console.log("删除购物车商品(商品ID/尺寸)",id,size);
 		//请求服务器
 	});
+	new EBE_mobileHeightPlaceholderManager();
 });
