@@ -51,6 +51,128 @@ header .mainNavBar li .checked{
 	border-bottom: 2px solid #fff;
 	cursor: default;
 }
+
+header .actionBlock{
+	position:absolute;
+	top:182px;
+	left:0;
+	width:100%;
+	background-color: rgba(0,0,0,0.5);	
+	z-index: 10;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.25s ease-out 0s;
+}
+header .actionBlock.show{
+	visibility: visible;
+	opacity: 1;
+}
+
+header .actionBlock .contentBlock{
+	position:relative;
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+header .actionBlock .contentBlock .holder{
+	width: 100%;
+}
+header .actionBlock .contentBlock .border{
+	position:absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+header .actionBlock .contentBlock .border .block{
+	position:relative;
+	float:left;
+	width: 33.33%;
+	height:100%;
+}
+header .actionBlock .contentBlock .border .separator{
+	position: absolute;
+	top: 15px;
+	bottom: 5px;
+	right:0;
+	width: 0;
+	border-left: 1px solid #fff; 
+}
+
+header .actionBlock .contentBlock .border .block h3{
+	margin: 20px 20px 0 20px;
+	font-size: 14px;
+}
+header .actionBlock .contentBlock .border .imgList ul{
+	margin: 10px 20px 0 20px;
+}
+header .actionBlock .contentBlock .border .imgList ul li{
+	display:inline-block;
+	position: relative;
+	width: 50%;
+	margin-bottom: 10px;
+}
+header .actionBlock .contentBlock .border .imgList ul li a{
+	position:relative;
+	display: block;
+}
+header .actionBlock .contentBlock .border .imgList ul li a .timeBlock{
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	height: 25px;
+	line-height:25px;
+	font-size:12px;
+	text-align: center;
+	background-color: rgba(0,0,0,0.8);
+	color: #fff;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+header .actionBlock .contentBlock .border .imgList ul li:nth-child(odd) a{
+	margin-right: 10px;
+}
+header .actionBlock .contentBlock .border .imgList ul li:nth-child(even) a{
+	margin-left: 10px;
+}
+
+header .actionBlock .contentBlock .border .imgList ul li img{
+	width: 100%;
+}
+header .actionBlock .contentBlock .border .textList ul{
+	position:absolute;
+	top: 46px;
+	left:20px;
+	right:20px;
+	bottom:20px;
+	overflow:hidden;
+}
+header .actionBlock .contentBlock .border .textList ul li{
+	width: 50%;
+	float: left;
+	height: 30px;
+}
+header .actionBlock .contentBlock .border .textList ul li a{
+	display: block;
+	margin-right: 10px;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	color: #fff;
+}
+header .actionBlock .contentBlock .border .textList .more{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	color: #fff;
+	font-size: 12px;
+}
+header .actionBlock .contentBlock .border .textList .more a{
+	color: #fff;
+}
+
 header .bg{
 	display:block;
 }
@@ -375,7 +497,6 @@ header .bg img{
 	background-color: rgba(0,0,0,0.3);
 }
 
-
 .common_mainPanel .historyPanel .popBlock{
 	position: absolute;
 	left: 0;
@@ -494,7 +615,6 @@ header .bg img{
 	}
 }
 
-
 @media only screen and (max-width: 1070px) {
 	.common_mainPanel .actionElementBlock .borderBlock .itemPanel .itemBlock .item .border h3 {
 		line-height: 14px;
@@ -525,6 +645,9 @@ header .bg img{
 	header .mainNavBar {
 		position: static;
 		background: #000;
+	}
+	header .actionBlock{
+		top:132px;
 	}
 }
 @media only screen and (max-width: 950px) {

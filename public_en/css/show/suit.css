@@ -132,6 +132,75 @@ header .switchNavBg a i{
 	margin-right: 4px;
 	vertical-align: 1px;
 }
+
+
+header .popBlock{
+	position: absolute;
+	top:182px;
+	left:0;
+	width:100%;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 10;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.25s ease-out 0s;
+}
+header .popBlock.show{
+	visibility: visible;
+	opacity: 1;
+}
+header .popBlock .contentBlock{
+	position:relative;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+header .popBlock .contentBlock .holder{
+	width: 100%;
+}
+header .popBlock .contentBlock .border{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+header .popBlock .contentBlock .border .more{
+	position:absolute;
+	font-size: 12px;
+	color: #fff;
+	right: 0;
+	bottom: 5px;
+}
+header .popBlock .contentBlock .border ul li{
+	width: 16.66%;
+	float: left;
+}	
+header .popBlock .contentBlock .border ul li a{
+	position:relative;
+	display: block;
+	margin-right: 10px;
+}
+header .popBlock .contentBlock .border ul li a img{
+	width: 100%;
+	max-width: 165px;
+}
+header .popBlock .contentBlock .border ul li a i{
+	position:absolute;
+	display: block;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	max-width: 165px;
+	background: #000;
+	opacity: 0.7;
+	transition: opacity 0.25s ease-out 0s;
+}
+header .popBlock .contentBlock .border ul li a:hover i{
+	opacity: 0;
+}
+
 .common_mainPanel {
 	text-align: center;
 }
@@ -162,6 +231,9 @@ header .switchNavBg a i{
 		width: 287px;
 		height: 45px;
 	}		
+	header .popBlock{
+		top: 132px;
+	}
 }
 @media only screen and (max-width: 785px) {
 	header .top_logoBlockHolder{
@@ -197,6 +269,9 @@ header .switchNavBg a i{
 	}
 	.common_mainPanel .suitBlock{
 		margin-top: 30px;
+	}
+	header .popBlock{
+		display: none;
 	}
 }
 
