@@ -103,7 +103,7 @@ header .popBlock .contentBlock .border ul li a i{
 	max-width: 165px;
 	height: 100%;
 	background: #000;
-	opacity: 0.7;
+	opacity: 0.2;
 	transition: opacity 0.25s ease-out 0s;
 }
 header .popBlock .contentBlock .border ul li a:hover i{
