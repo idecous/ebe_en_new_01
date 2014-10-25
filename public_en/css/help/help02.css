@@ -1,0 +1,126 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+.common_help_rightPanel .common_help_contentBlock h1{
+	font-size: 20px;
+	line-height: 40px;
+
+}
+.common_help_rightPanel .common_help_contentBlock .img01{
+	width: 100%;
+	margin-top: 15px;
+}
+.common_help_rightPanel .common_help_contentBlock .img02{
+	text-align: center;
+	margin: 25px 0;
+}
+.common_help_rightPanel .common_help_contentBlock .img02 img{
+	width: 100%;
+	max-width: 608px;
+}
+
+.common_help_rightPanel .common_help_contentBlock .memberBlock img{
+	width: 23.55%;
+}
+.common_help_rightPanel .common_help_contentBlock .memberBlock .border{
+	position:absolute;
+	top:0px;
+	left:1px;
+	right:0px;
+	bottom:0px;
+	border: 1px solid #ddd;
+	text-align: left;
+	overflow: hidden;
+}	
+.common_help_rightPanel .common_help_contentBlock .memberBlock h2{
+	padding: 20px 30px 0 40px;
+	font-size: 16px;
+	color: #333;
+}
+.common_help_rightPanel .common_help_contentBlock .memberBlock p{
+	padding: 15px 30px 0 40px;
+}
+
+.common_help_rightPanel .common_help_contentBlock  .memberBlockL {
+	position: relative;
+	margin-top: 10px;
+}
+.common_help_rightPanel .common_help_contentBlock  .memberBlockL .descriptBlock{
+	position:absolute;
+	top:0;
+	left: 23.55%;
+	width: 76.45%;
+	height:100%;
+}
+.common_help_rightPanel .common_help_contentBlock  .memberBlockR {
+	position: relative;
+	margin-top: 15px;
+	text-align: right;
+}
+.common_help_rightPanel .common_help_contentBlock  .memberBlockR .descriptBlock{
+	position:absolute;
+	top:0;
+	left: 0;
+	width: 76.45%;
+	height:100%;
+}
+.common_help_rightPanel .common_help_contentBlock .memberBlockR .border{
+	left:0px;
+	right:1px;
+}
+
+.common_help_rightPanel .common_help_contentBlock .blockSpace {
+    height: 20px;
+}
+
+.bottomSpace{
+	height: 120px;
+}
+
+@media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.common_help_rightPanel .common_help_contentBlock h1 {
+		display: none;
+	}
+	
+	.common_help_rightPanel .common_help_contentBlock .normal{
+		display: none;
+	}
+	.common_help_rightPanel .common_help_contentBlock  .mobile h3{
+		line-height: 50px;
+		padding: 0 10px;
+	}
+	.common_help_rightPanel .common_help_contentBlock  .mobile img{
+		margin: 0 0 15px 0;
+	}
+	.common_help_rightPanel .common_help_contentBlock  .mobile p{
+		margin: 0 10px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

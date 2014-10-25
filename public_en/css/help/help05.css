@@ -1,0 +1,54 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+
+.common_help_rightPanel .common_help_contentBlock b{
+	display:block;
+	margin-top: 25px;
+}
+.common_help_rightPanel .common_help_contentBlock .blockSpace{
+	height: 20px;
+}
+.common_help_rightPanel .common_help_contentBlock h2{
+	font-size: 14px;
+	margin-top: 16px;
+}
+.bottomSpace{
+	height: 120px;
+}
+
+
+@media only screen and (max-width: 785px) {
+	
+	header .top_logoBlockHolder{
+		display: block;
+	}
+	.mobileHide{
+		display: none;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.common_help_rightPanel .common_help_contentBlock{
+		padding: 20px 10px;
+	}
+	.common_help_rightPanel .common_help_contentBlock h3,
+	.common_help_rightPanel .common_help_contentBlock b{
+		font-size: 14px;
+		display: block;
+		text-align: center;
+		font-weight: normal;
+		color: #333;
+	}
+	.common_help_rightPanel .common_help_contentBlock h2{
+		color: #333;
+	}
+	.bottomSpace{
+		height: 40px;
+	}
+}

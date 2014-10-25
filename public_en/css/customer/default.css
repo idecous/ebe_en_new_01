@@ -84,6 +84,7 @@ header{
 	position: relative;
 }
 .common_topNavigationBlock{
+	position:relative;
 	height: 130px;
 	background-color: #fff;
 	text-align: center;
@@ -166,6 +167,7 @@ header{
 	text-align: center;
 }
 .common_moblieNav ul .account a{
+	display:inline-block;
 	padding-left: 0;
 }
 
@@ -412,7 +414,9 @@ header .userGroup .shoppingcar .popWin .borderBottom{
 .common_pageContent .common_rightPanel{
 	margin-left: 170px;
 }
-
+.common_screenHeightPlaceholder{
+	background-color: #fff;
+}
 footer {
 	background-color: #000;
 }
@@ -621,8 +625,6 @@ footer .mobilFooter .copyright{
 	}
 }
 
-
-
 @media only screen and (min-width: 960px) and (max-width: 1200px) {
 	footer .servicesPanel{
 		height: 165px;
@@ -714,7 +716,109 @@ footer .mobilFooter .copyright{
 		left: 260px;
 		width: 100%;
 	}
+	
 }
+
+
+/*------------*/
+.common_topNavigationBlock .common_mobile_top_share{
+	position: absolute;
+	top:0;
+	right:40px;
+	display:block;
+	width:40px;
+	height:40px;
+	background: url(../../img/customer/icons.png) no-repeat -155px 0; 
+	display: none;	
+}
+.common_topNavigationBlock .common_mobile_top_shoppingcar{
+	position: absolute;
+	top:0;
+	right:0;
+	display:block;
+	width:40px;
+	height:40px;
+	background: url(../../img/customer/icons.png) no-repeat -116px 0; 
+	display: none;	
+}
+
+
+.common_help_topTitlePanel{
+	font-size: 16px;
+	border-bottom: 1px solid #666;
+	color: #333;
+	line-height: 30px;
+	text-transform: uppercase;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+.common_help_leftPanel{
+	float: left;
+	width: 130px;
+}
+.common_help_leftPanel a{
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	color: #666;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+.common_help_leftPanel .current{
+	background-color: #df4141;
+	color: #fff;
+	border-bottom: none;
+}
+.common_help_rightPanel{
+	margin-left: 130px;
+}
+.common_help_rightPanel .common_help_contentBlock{
+	position:relative;
+	margin-left: 45px; 
+	color: #666;
+}
+.common_help_rightPanel .common_help_contentBlock h3{
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+}
+.common_help_rightPanel .common_help_contentBlock h4{
+	font-size: 14px;
+	margin-top: 15px;
+}
+.common_help_rightPanel .common_help_contentBlock p{
+	font-size: 12px;
+	margin-top: 5px;
+	line-height: 20px;
+}
+.common_help_rightPanel .common_help_contentBlock .separator{
+	height: 0;
+	border-bottom: 1px solid #ddd;
+}
+.common_help_rightPanel .common_help_contentBlock h6{
+	font-size: 12px;
+	color: #333;
+	line-height: 30px;
+}
+@media only screen and (max-width: 785px) {
+	.common_topNavigationBlock .common_mobile_top_share,
+	.common_topNavigationBlock .common_mobile_top_shoppingcar{
+		display: block;
+	}
+	.common_help_topTitlePanel ,
+	.common_mainPanel .common_subNavBar,
+	.common_help_leftPanel {
+		display: none;
+	}
+	.common_help_rightPanel,
+	.common_help_rightPanel .common_help_contentBlock {
+		margin-left: 0;
+	}
+
+}
+
+
+
 
 
 

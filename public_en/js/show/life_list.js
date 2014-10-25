@@ -112,6 +112,9 @@ var EBE_ListItem = function(submitHandler,errorHandler,unit){
 (function(){
 	this.init = function(){
 		var that = this;
+		if( this.sizeEl.length ==0){
+			this.el.find(".submitRow").css("bottom",34);
+		}
 		this.sizeEl.click(function(){
 			var index = that.sizeEl.index( this );
 			if( index == that.sizeIndex ){return;}
@@ -133,6 +136,7 @@ var EBE_ListItem = function(submitHandler,errorHandler,unit){
 	};
 	this.buildWithEl = function(el){
 		this.id = el.attr("iid");
+		this.el = el;
 		this.imgEl = el.find(".imgBlock>img");
 		this.sizeEl = el.find(".size>span");
 		this.submitBtnEl = el.find("input:button");

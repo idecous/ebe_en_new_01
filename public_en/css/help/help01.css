@@ -1,0 +1,81 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+
+
+.common_help_rightPanel .common_help_contentBlock .blockSpace{
+	height: 20px;
+}
+.common_help_rightPanel .common_help_contentBlock .separator{
+	margin: 18px 0;
+}
+.common_help_rightPanel .common_help_contentBlock img{
+	width: 100%;
+}
+.bottomSpace{
+	height: 90px;
+}
+
+.common_mainPanel .mobileBlock {
+	background-color: #f8f8f8;
+}
+.common_mainPanel .mobileBlock .serviceTelPanel{
+	text-align: center;
+	font-size: 16px;
+	height: 44px;
+	line-height: 44px;
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	background-color: #fff;
+}
+.common_mainPanel .mobileBlock .serviceTelPanel i{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url(../../img/customer/icons.png) no-repeat -115px -40px; 
+	margin-right: 10px;
+	vertical-align: -6px;
+}
+.common_mainPanel .mobileBlock ul{
+	background-color: #fff;
+	margin-top: 14px;
+	border-top:1px solid #dedede; 
+}
+.common_mainPanel .mobileBlock ul li{
+	line-height: 43px;
+	border-bottom: 1px solid #dedede;
+}
+.common_mainPanel .mobileBlock ul li a{
+	display: block;
+	position:relative;
+	height: 43px;
+	padding-left: 25px;
+}
+.common_mainPanel .mobileBlock ul li i{
+	position: absolute;
+	right:20px;
+	top:14px;
+	width: 10px;
+	height: 16px;
+	background: url(../../img/customer/icons.png) no-repeat -139px -40px; 
+}
+
+
+
+@media only screen and (max-width: 785px) {
+	.normolBlock{
+		display: none;
+	}	
+	header .top_logoBlockHolder{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+}
+

@@ -1,0 +1,41 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+
+.common_help_rightPanel .common_help_contentBlock b{
+	font-weight: normal;
+}
+.common_help_rightPanel .common_help_contentBlock b i{
+	font-style: normal;
+}
+.bottomSpace{
+	height: 120px;
+}
+@media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.common_help_rightPanel .common_help_contentBlock{
+		padding: 20px 10px;
+	}
+	.bottomSpace{
+		height: 50px;
+	}
+	.common_help_rightPanel .common_help_contentBlock b{
+		display: block;
+		text-align: center;
+		font-size: 14px;
+		line-height: 30px;
+	}
+	.common_help_rightPanel .common_help_contentBlock b i{
+		display: none;
+	}
+}

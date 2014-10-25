@@ -1,0 +1,141 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+.common_help_contentBlock{
+	overflow: hidden;
+}
+.common_help_rightPanel .common_help_contentBlock ul {
+	margin-top: 5px;
+}
+.common_help_rightPanel .common_help_contentBlock ul li{
+	position:relative;
+	width: 16.6%;
+	float:left;
+	text-align: center;
+}
+.common_help_rightPanel .common_help_contentBlock ul li img{
+	width: 100%;
+	
+}
+.common_help_rightPanel .common_help_contentBlock ul li a{
+	position:relative;
+	width: 100%;
+	border: 1px solid #efefef;
+	display: inline-block;
+	max-width: 135px;
+	margin-top: -1px;
+}
+.common_help_rightPanel .common_help_contentBlock ul li a i{
+	display: none;
+}
+
+.common_help_rightPanel .common_help_contentBlock .blockSpace{
+	height: 25px;
+}
+
+.common_help_rightPanel .common_help_contentBlock .popWindow{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	max-width: 767px;
+	background-color: #fff;
+	transition: opacity 0.25s ease-out 0s;
+	opacity: 0;
+	visibility: hidden;
+}
+.common_help_rightPanel .common_help_contentBlock .popWindow.show{
+	opacity: 1;
+	visibility: visible;;
+}
+
+.common_help_rightPanel .common_help_contentBlock .popWindow i{
+	position:absolute;
+	top:-5px;
+	left:0;
+	display:block;
+	width: 11px;
+	height: 6px;
+	background: url(../../img/customer/icons.png) no-repeat -115px -64px; 
+}
+.common_help_rightPanel .common_help_contentBlock .popWindow .outerBorder{
+	border: 1px solid #666;
+}
+.common_help_rightPanel .common_help_contentBlock .popWindow .innerBorder{
+	margin: 20px;
+}
+.common_help_rightPanel .common_help_contentBlock .popWindow .innerBorder img{
+	width: 100%;
+}
+.common_help_rightPanel .common_help_contentBlock .popWindow .innerBorder div{
+	font-size: 12px;
+	margin-top: 10px;
+	padding: 0 4px;
+}
+
+.bottomSpace{
+	height: 320px;
+}
+
+
+@media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.common_help_rightPanel .common_help_contentBlock .popWindow{
+		display: none;
+	}
+	.common_help_rightPanel .common_help_contentBlock ul li a{
+		border:none;
+	}
+	.common_help_rightPanel .common_help_contentBlock ul li a i{
+		display: block;
+		position: absolute;
+		top: 1px;
+		left: 1px;
+		bottom:1px;
+		right:1px;
+		background-color: rgba(0,0,0,0.02);
+		
+	}
+	.bottomSpace{
+		height: 120px;
+	}
+}
+@media only screen and (max-width: 675px) {
+	.common_help_rightPanel .common_help_contentBlock ul li{
+		width: 20%;
+	}
+}
+@media only screen and (max-width: 540px) {
+	.common_help_rightPanel .common_help_contentBlock ul li{
+		width: 25%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
