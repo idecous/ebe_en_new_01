@@ -2,7 +2,9 @@ header .top_logoBlockHolder{
 	height: 40px;
 	display: none;
 }
-
+.common_mainPanel .mobileBlock{
+	display: none;
+}
 
 .common_help_rightPanel .common_help_contentBlock .blockSpace{
 	height: 20px;
@@ -67,7 +69,8 @@ header .top_logoBlockHolder{
 	.normolBlock{
 		display: none;
 	}	
-	header .top_logoBlockHolder{
+	header .top_logoBlockHolder,
+	.common_mainPanel .mobileBlock{
 		display: block;
 	}
 	.common_topNavigationBlock{
