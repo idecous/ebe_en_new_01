@@ -241,4 +241,14 @@ $(function(){
 		//请求服务器
 	});
 	new EBE_mobileHeightPlaceholderManager();
+	
+	
+	if( window.isCommon_footer ){
+		var footerDiv = $("footer>div").removeClass("common_centerBlock");
+		footerDiv.eq(0).addClass("common_footerCenterBlock");
+		footerDiv.eq(2).addClass("common_footerCenterBlock");
+	}
+	
+	
+	
 });
