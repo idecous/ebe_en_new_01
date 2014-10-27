@@ -20,12 +20,11 @@ header .top_logoBlockHolder{
 
 
 @media only screen and (max-width: 785px) {
-	
-	header .top_logoBlockHolder{
-		display: block;
-	}
 	.mobileHide{
 		display: none;
+	}
+	header .top_logoBlockHolder{
+		display: block;
 	}
 	.common_topNavigationBlock{
 		position: fixed;

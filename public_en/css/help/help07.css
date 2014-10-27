@@ -1,0 +1,42 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+.common_help_rightPanel .common_help_contentBlock .blockSpace{
+	height: 20px;
+}
+.common_help_rightPanel .common_help_contentBlock u{
+	text-decoration: none;
+	color: #e0183f;
+}
+
+.common_help_rightPanel .common_help_contentBlock img{
+	width: 100%;
+	margin: 10px 0 20px 0;
+}
+.bottomSpace{
+	height: 120px
+}
+
+@media only screen and (max-width: 785px) {
+	.mobileHide{
+		display: none;
+	}
+	header .top_logoBlockHolder{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.common_help_rightPanel .common_help_contentBlock{
+		padding: 20px 10px;
+	}
+	.bottomSpace{
+		height: 80px
+	}
+	
+}

@@ -90,6 +90,9 @@ header .top_logoBlockHolder{
 		width: 100%;
 		z-index: 100;
 	}
+	.common_help_rightPanel, .common_help_rightPanel {
+		padding: 20px 10px;
+	}
 	.common_help_rightPanel .common_help_contentBlock .popWindow{
 		display: none;
 	}
