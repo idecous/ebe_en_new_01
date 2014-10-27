@@ -93,9 +93,6 @@ header .top_logoBlockHolder{
 	.common_help_rightPanel, .common_help_rightPanel {
 		padding: 20px 10px;
 	}
-	.common_help_rightPanel .common_help_contentBlock .popWindow{
-		display: none;
-	}
 	.common_help_rightPanel .common_help_contentBlock ul li a{
 		border:none;
 	}
@@ -106,8 +103,7 @@ header .top_logoBlockHolder{
 		left: 1px;
 		bottom:1px;
 		right:1px;
-		background-color: rgba(0,0,0,0.02);
-		
+		background-color: rgba(0,0,0,0.02);	
 	}
 	.bottomSpace{
 		height: 120px;
