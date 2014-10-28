@@ -1,0 +1,292 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+header .top_logoBlock{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:150px;
+	text-align: center;
+	background:rgba(0,0,0,0.5);
+	line-height: 107px;
+	z-index: 10;
+}
+header .top_logoBlock img{
+	width: auto;
+	height: auto;
+}
+header .top_logoBlock h1{
+	display: none;
+	font-size: 18px;
+}
+header .userGroup{
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	z-index: 500;
+}
+header .userGroup>li{
+	float: left;
+}
+header .userGroup .account a{
+	color: #fff;	
+	text-transform: uppercase;
+	font-size: 12px;
+}
+header .userGroup .shoppingcar>div>i{
+	display: inline-block;
+	width: 	22px;
+	height: 14px;
+	background: url(../../img/show/shoppingcar_icon01.png); 
+	vertical-align: -2px;
+	margin: 0 5px 0 15px;
+	cursor: pointer;
+}
+header .userGroup .shoppingcar .popWin{
+	position: absolute;
+	top:19px;
+	right:-6px;
+	width: 310px;	
+	color: #ccc;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.25s ease-out 0s;
+}
+header .userGroup .shoppingcar .popWin.open{
+	opacity: 1;
+	visibility: visible;
+}
+header .userGroup .shoppingcar .popWin .borderTop{
+	height:6px;
+	background: url(../../img/show/lifeList_shoppingcar_bg_top.png); 
+}
+header .userGroup .shoppingcar .popWin .borderContent{
+	background: url(../../img/show/lifeList_shoppingcar_bg_content.png);
+	padding: 4px 0 0 0;
+}
+header .userGroup .shoppingcar .popWin .borderContent .topInfoPanel{
+	border-bottom: 1px solid #666;
+	padding-bottom: 4px;
+	margin: 0 10px;
+}
+header .userGroup .shoppingcar .popWin .borderContent .topInfoPanel b{
+	font-weight: normal;
+}
+header .userGroup .shoppingcar .popWin .borderContent .topInfoPanel a{
+	float:right;
+	margin-top:4px;
+	margin-right:2px;
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: url(../../img/show/icons.png) no-repeat -60px -192px; 
+}
+header .userGroup .shoppingcar .popWin .borderContent .empty{
+	height: 56px;
+	line-height: 56px;
+	text-align: center;
+	display: none;
+}
+header .userGroup .shoppingcar .popWin .borderContent .listContainer{
+	margin: 0 10px;
+}
+header .userGroup .shoppingcar .popWin .borderContent .scroll{
+	overflow-y: scroll;
+}
+header .userGroup .shoppingcar .popWin .borderContent ul li{
+	padding-top:10px;
+	height: 105px;
+	border-top: 1px dotted #666;
+}
+header .userGroup .shoppingcar .popWin .borderContent ul li:first-child{
+	border-top:none;
+}
+header .userGroup .shoppingcar .popWin .borderContent ul li .imgBlock{
+	float: left;
+	margin-left: 5px;
+	width: 65px;
+}
+header .userGroup .shoppingcar .popWin .borderContent ul li .infoBlock{
+	position:relative;
+	float: left;
+	margin-left: 10px;
+	width: 190px;
+	font-size: 12px;
+	line-height: 20px;
+}
+header .userGroup .shoppingcar .popWin .borderContent ul li .infoBlock .price{
+	color: #fff;
+	margin-top: 10px;
+}
+header .userGroup .shoppingcar .popWin .borderContent ul li .infoBlock>div{
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+} 
+header .userGroup .shoppingcar .popWin .borderContent ul li .infoBlock a{
+	position: absolute;
+	right: 20px;
+	bottom: 0;
+	color: #ccc;
+}
+header .userGroup .shoppingcar .popWin .borderContent .statsRow{
+	margin: 0 10px;
+	height: 40px;
+	line-height:40px;
+	text-align: center;
+	border-top:1px solid #666; 
+	color: #fff;
+}
+header .userGroup .shoppingcar .popWin .borderContent .statsRow b{
+	color: #df4141;
+	font-weight: normal;
+}
+header .userGroup .shoppingcar .popWin .toPay{
+	display:block;
+	height: 40px;
+	line-height: 40px;
+	background-color: #df4141;
+	color: #fff;
+	text-align: center;
+}
+header .userGroup .shoppingcar .popWin .borderBottom{
+	height: 0;
+	border-bottom: 1px solid #666;
+}
+header .mainNavBar{
+	position:absolute;
+	top:150px;
+	left:0;
+	width: 100%;
+	border-top: 1px solid #999999;
+	border-bottom: 1px solid #666;
+	height: 30px;
+	text-align: center;
+	background:rgba(0,0,0,0.5);
+	z-index: 10;
+}
+header .mainNavBar li{
+	display: inline-block;
+	width: 125px;
+}
+header .mainNavBar a{
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	line-height: 28px;
+	font-size: 15px;
+}
+header .mainNavBar li .checked{
+	border-bottom: 2px solid #fff;
+	cursor: default;
+}
+header{
+	height: 212px;
+}
+header .common_centerBlock{
+	overflow: hidden;
+	height: 212px;
+}
+header .bg{
+	position: absolute;
+	left: 50%;
+	margin-left: -750px;
+}
+
+.common_mainPanel{
+	margin: 0 auto;
+	width:100%;
+	max-width: 1200px;
+}
+.common_mainPanel .navPathPanel{
+	color: #333;
+	line-height: 46px;
+	height: 40px;
+	border-bottom: 1px solid #ddd;
+}
+.common_mainPanel h1{
+	font-size: 16px;
+	border-bottom: 1px solid #ddd;
+	line-height: 40px;
+	color: #333;
+	padding-top: 15px;
+}
+.common_mainPanel .urlGroup{
+	margin-left: -30px;
+	padding: 15px 0;
+}
+.common_mainPanel .urlGroup a{
+	display: inline-block;
+	margin-left: 30px;
+	line-height: 24px;
+}
+.common_mainPanel div a:hover{
+	color: #df4141;
+}
+
+.common_mainPanel .bottomSpace{
+	height: 120px;
+}
+
+@media only screen and (min-width: 784px) and (max-width: 1020px) {		
+	header .top_logoBlock img {
+		width: 287px;
+		height: 45px;
+	}
+}
+@media only screen and (max-width: 785px) {
+	header{
+		height: auto;
+	}
+	header .top_logoBlockHolder{
+		display: block;
+	}
+	header .top_logoBlock {
+		position: fixed;
+		left:auto;
+		background: #000;
+		height: 40px;
+		line-height:40px;
+		text-align: center;
+	}
+	
+	.common_mainPanel .navPathPanel,
+	header .top_logoBlock img{
+		display: none;
+	}
+	header .top_logoBlock h1{
+		display: inline-block;
+		margin-left: 47px;
+	}
+	header .userGroup{
+		display: none;
+	}
+	header .mainNavBar,header .common_centerBlock{
+		display: none;
+	}
+	
+	.common_mainPanel h1 {
+		padding: 0 10px;
+	}
+	.common_mainPanel .urlGroup{
+		padding: 15px 10px;
+	}
+	.common_mainPanel .bottomSpace{
+		height: 40px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
