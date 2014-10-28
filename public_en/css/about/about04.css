@@ -1,0 +1,80 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+
+.common_help_rightPanel .common_help_contentBlock .map{
+	width: 100%;
+}
+.common_help_rightPanel .common_help_contentBlock ul{
+	text-align: justify;
+	margin-left: -6px;
+	margin-top: 10px;
+}
+.common_help_rightPanel .common_help_contentBlock ul li{
+	display: inline-block;
+	width: 25%;
+}
+.common_help_rightPanel .common_help_contentBlock ul li .border{
+	display:block;
+	border: 1px solid #ddd;
+	margin-left: 6px;
+	padding: 7px 9px;
+}
+.common_help_rightPanel .common_help_contentBlock ul li .border img{
+	width: 100%;
+}
+.common_help_rightPanel .common_help_contentBlock ul li .border h1{
+	white-space: nowrap;
+	text-align: center;
+	font-size: 16px;
+	line-height: 40px;
+}
+
+.bottomSpace{
+	height: 120px;
+}
+
+
+
+@media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder,
+	.common_mainPanel .mobileBlock{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.common_help_rightPanel .common_help_contentBlock h3 {
+		padding: 20px 10px;
+	}
+	.common_help_rightPanel .common_help_contentBlock ul li{
+		display: block;
+		text-align: center;
+		width: auto;
+		margin-bottom: 10px;
+	}
+	.common_help_rightPanel .common_help_contentBlock ul li .border{
+		margin-right: 0;
+		display: inline-block;
+		width: 100%;
+		max-width: 194px;
+	}
+	.bottomSpace{
+		height: 40px;
+	}
+}
+
+
+
+
+
+
+
+
+
+

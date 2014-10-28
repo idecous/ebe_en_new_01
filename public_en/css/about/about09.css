@@ -1,0 +1,85 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+
+
+.common_help_contentBlock .webSite{
+	margin-top: 20px;
+	font-size: 12px;
+}
+.common_help_contentBlock .webSite li{
+	margin-bottom: 20px;
+}
+.common_help_contentBlock .webSite li b{
+	font-weight: normal;
+	color: #333;
+}
+
+.common_help_contentBlock .entity{
+	margin-top: 20px;
+	font-size: 12px;
+}
+.common_help_contentBlock .entity li{
+	margin-bottom: 30px;
+}
+.common_help_contentBlock .entity li img{
+	width: 17.3%;
+	float: left;
+}
+.common_help_contentBlock .entity li .descriptBlock{
+	margin-left: 17.3%;
+	min-height: 94px;
+}
+.common_help_contentBlock .entity li .descriptBlock p{
+	margin-left: 20px;
+	line-height: 18px;
+}
+.common_help_contentBlock .entity li .descriptBlock p b{
+	font-weight: normal;
+	color: #333;
+}
+
+.bottomSpace{
+	height: 120px;
+}
+
+@media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder,
+	.common_mainPanel .mobileBlock{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.mobileHide{
+		display: none;
+	}
+	 .common_help_rightPanel .common_help_contentBlock{
+	 	padding: 20px 10px;
+	 }
+	.common_help_rightPanel .common_help_contentBlock h3{
+		text-align: center;
+	}
+	.common_help_contentBlock .entity li img{
+		display: none;
+	}
+	.common_help_contentBlock .entity li .descriptBlock {
+		margin: 0;
+	}
+	.common_help_contentBlock .entity li .descriptBlock p{
+		margin: 0;
+	}
+	
+	
+	
+	
+	
+	.bottomSpace{
+		height: 40px;
+	}
+}

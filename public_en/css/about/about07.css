@@ -1,0 +1,61 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+.common_help_contentBlock {
+	overflow: hidden;
+}
+.common_help_contentBlock  .blockSpace{
+	clear: both;
+	height: 40px;
+}
+.common_help_contentBlock ul{
+	overflow: hidden;
+	margin-right: -7px;
+	margin-top: 10px;
+}
+.common_help_contentBlock ul li{
+	width: 25%;
+	float: left;
+	margin-bottom: 10px;
+}
+.common_help_contentBlock ul li a{
+	display: block;
+	margin-right: 7px;
+}
+.common_help_contentBlock ul li a img{
+	width: 100%;
+}
+
+
+.bottomSpace{
+	height: 120px;
+}
+@media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder,
+	.common_mainPanel .mobileBlock{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.common_help_rightPanel .common_help_contentBlock{
+		padding: 20px 0;
+	}
+	.common_help_rightPanel .common_help_contentBlock h3 {
+		text-align: center;
+	}
+	.bottomSpace{
+		height: 40px;
+	}
+}
+@media only screen and (max-width: 620px) {
+	.common_help_contentBlock ul li{
+		width: 33.33%;
+	}
+}
+

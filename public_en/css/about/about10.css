@@ -1,0 +1,88 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+.common_help_contentBlock img{
+	width: 100%;
+}
+.common_help_contentBlock .departmentBar{
+	border-bottom: 2px solid #ddd;
+	line-height: 32px;
+	margin-top: 50px;
+}
+.common_help_contentBlock .departmentBar a{
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	color: #666;
+}
+.common_help_contentBlock .departmentBar .current{
+	position:relative;
+	color: 	#333;
+	border-bottom: 2px solid #333;
+	margin-bottom: -2px;
+}
+
+.common_help_contentBlock ul{
+	margin-top: 20px;	
+}
+
+.common_help_contentBlock ul b{
+	color: #666;
+	font-size: 14px;
+}
+.common_help_contentBlock ul li{
+	display: none;
+}
+.common_help_contentBlock ul li:first-child{
+	display: block;
+}
+
+.bottomSpace{
+	height: 120px;
+}
+@media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder,
+	.common_mainPanel .mobileBlock{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.common_help_contentBlock img{
+		display: none;
+	}
+	.common_help_contentBlock .departmentBar{
+		border-bottom: none;
+		line-height: 36px;
+		margin-top: 0;
+		border-top:1px solid #999; 
+	}
+	.common_help_contentBlock .departmentBar a{
+		display: inline-block;
+		width: 25%;
+		text-align: center;
+		color: #fff;
+		height: 36px;
+		background-color: #333;
+	}
+	.common_help_contentBlock .departmentBar .current{
+		position:relative;
+		border-bottom:none;
+		background-color: #666;
+		color: #fff;
+	}
+	.common_help_contentBlock ul li{
+		padding: 0 10px;
+	}
+	
+	
+	.bottomSpace{
+		height: 40px;
+	}
+	
+}

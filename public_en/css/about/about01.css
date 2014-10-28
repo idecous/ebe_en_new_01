@@ -2,19 +2,38 @@ header .top_logoBlockHolder{
 	height: 40px;
 	display: none;
 }
-
-
-
+.common_help_rightPanel .common_help_contentBlock .mobileBlock img{
+	margin: 15px 0 20px 0;
+	width: 100%;
+}
+.common_help_rightPanel .common_help_contentBlock p b{
+	font-size: 14px;
+}
+.common_help_rightPanel .common_help_contentBlock .descriptBlock{
+	position:relative;
+	margin: 20px 0;
+}
+.common_help_rightPanel .common_help_contentBlock .descriptBlock .avatar{
+	width: 28.83%;
+	float: left;
+}
+.common_help_rightPanel .common_help_contentBlock .descriptBlock .content{
+	margin-left: 28.83%;
+	
+}
+.common_help_rightPanel .common_help_contentBlock .descriptBlock .content p{
+	margin-left:  20px;
+}
+.common_help_rightPanel .common_help_contentBlock .descriptBlock .content .signature{
+	text-align: right;
+	margin-top: 10px;
+}
 
 .bottomSpace{
 	height: 120px;
 }
 
-
 @media only screen and (max-width: 785px) {
-	.normolBlock{
-		display: none;
-	}	
 	header .top_logoBlockHolder,
 	.common_mainPanel .mobileBlock{
 		display: block;
@@ -26,6 +45,32 @@ header .top_logoBlockHolder{
 		width: 100%;
 		z-index: 100;
 	}
+	.mobileHide{
+		display: none;
+	}
+	.common_help_rightPanel .common_help_contentBlock {
+		padding: 20px 0;
+	}	
+	.common_help_rightPanel .common_help_contentBlock h3 {
+		display: block;
+		text-align: center;
+	}
+	.common_help_rightPanel .common_help_contentBlock p{
+		margin: 0 10px;
+	}
+	.common_help_rightPanel .common_help_contentBlock .descriptBlock{
+		text-align: center;
+	}
+	.common_help_rightPanel .common_help_contentBlock .descriptBlock .avatar{
+		float: none;
+		width: 100%;
+		max-width: 235px;
+	}
+	.common_help_rightPanel .common_help_contentBlock .descriptBlock .content{
+		margin: 20px 10px;
+		text-align: left;
+	}
 	
 	
 }
+

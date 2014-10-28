@@ -1,0 +1,87 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+.common_help_contentBlock ul{
+	overflow: hidden;
+}
+.common_help_contentBlock ul li{
+	padding-top: 20px;
+	clear: both;
+}
+
+.common_help_contentBlock ul li .imgBlock{
+	width: 34.11%;
+	border: 1px solid #ddd;
+	float: left;
+}
+.common_help_contentBlock ul li .imgBlock img{
+	width: 100%;
+}
+.common_help_contentBlock ul li .descriptBlock{
+	margin-left: 34.11%;
+}
+.common_help_contentBlock ul li .descriptBlock h2{
+	padding: 10px 20px 0 20px; 
+}
+.common_help_contentBlock ul li .descriptBlock p{
+	padding: 5px 20px 5px 20px; 
+}
+
+
+.bottomSpace{
+	height: 120px;
+}
+
+@media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder,
+	.common_mainPanel .mobileBlock{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.mobileHide{
+		display: none;
+	}
+	.common_help_contentBlock ul li .imgBlock{
+		float: none;
+		border: none;
+		width: auto;
+		text-align: center;
+	}
+	.common_help_contentBlock ul li .imgBlock img{
+	   max-width: 278px;
+	}
+	.common_help_contentBlock ul li .descriptBlock {
+		margin-left: 0;
+	}
+	.common_help_contentBlock ul li .descriptBlock h2{
+		padding: 0 10px;
+		text-align: center;
+	}
+	
+	.bottomSpace{
+		height: 40px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+
+.common_help_contentBlock ul{
+ 	margin-top: 20px;
+ 	margin-left: -20px;
+}
+.common_help_contentBlock ul li{
+	width: 25%;
+	float: left;
+	margin-bottom: 20px;	
+}
+.common_help_contentBlock ul li a{
+	display: block;
+	margin-left: 20px;
+	max-width: 259px;
+}
+.common_help_contentBlock ul li a .imgBlock{
+	border: 1px solid #ddd;
+	
+}
+.common_help_contentBlock ul li a img{
+	width: 100%;
+}
+.common_help_contentBlock ul li a .descriptBlock{
+	color: #666;
+	font-size: 12px;
+	margin: 10px 0;
+	text-align: left;
+}
+
+.bottomSpace{
+	height: 120px;
+}
+
+@media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder,
+	.common_mainPanel .mobileBlock{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.mobileHide{
+		display: none;
+	}
+	 .common_help_rightPanel .common_help_contentBlock{
+	 	padding: 20px 0;
+	 }
+	
+	.common_help_contentBlock ul {
+		margin: 0;
+	}
+	.common_help_contentBlock ul li{
+		float: none;
+		width: auto;
+		text-align: center;
+	}
+	.common_help_contentBlock ul li a{
+		display: inline-block;
+		margin-left: 0;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.bottomSpace{
+		height: 40px;
+	}
+}

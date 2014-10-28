@@ -1,0 +1,115 @@
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+.common_mainPanel .infoBlock{
+	float: left;
+	width: 37%;
+}
+.common_mainPanel .infoBlock h1{
+	font-size: 40px;
+	border-bottom: 1px solid #333;
+	display: inline-block;
+}
+.common_mainPanel .infoBlock h5{
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.common_mainPanel .infoBlock h2{
+	font-size: 32px;
+	text-transform: uppercase;
+}
+.common_mainPanel .infoBlock .separator{
+	width: 70px;
+	border-bottom: 1px solid #333;
+	padding-top: 24px;
+}
+.common_mainPanel .infoBlock h4{
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+
+.common_mainPanel  .videoBlock{
+	float: right;
+	width: 62%;
+}
+.common_mainPanel .videoBlock video{
+	width: 100%;
+}
+
+.common_mainPanel .bottomBlock{
+	margin-top: 40px;
+}
+.common_mainPanel .bottomBlock img{
+	width: 100%;
+}
+.bottomSpace{
+	height: 120px;
+}
+
+@media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder,
+	.common_mainPanel .mobileBlock{
+		display: block;
+	}
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.common_mainPanel .infoBlock{
+		float: none;
+		width: auto;
+		text-align: center;
+		padding-top: 40px;
+	}
+	
+	.common_mainPanel .infoBlock h1,
+	.common_mainPanel .infoBlock h5,
+	.common_mainPanel .infoBlock h2.enFontFamily{
+		display: none;
+	}
+	
+	.common_mainPanel .infoBlock h2{
+		font-size: 14px;
+	}
+	.common_mainPanel .infoBlock .separator{
+		display: inline-block;
+		padding: 0;
+		margin: 5px 0 5px 0;
+		width: 110px;
+	}
+	.common_mainPanel .infoBlock h4{
+		font-size: 12px;
+		line-height: 20px;
+	}
+	
+	.common_mainPanel .videoBlock{
+		display: none;	
+	}
+	
+	
+	.bottomSpace{
+		height: 40px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
