@@ -30,4 +30,19 @@ header .top_logoBlockHolder{
 	.common_mainPanel table{
 		display: none;
 	}	
+	.common_topNavigationBlock{
+		position: fixed;
+		left:auto;
+		background: #000;
+		top:0;
+		width: 100%;
+		z-index: 100;
+	}
+	.common_mainPanel .infoBlock{
+		line-height: 480px;
+		height: 480px;
+	}
+	.bottomSpace{
+		height: 40px;
+	}
 }
