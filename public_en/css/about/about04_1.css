@@ -5,6 +5,7 @@ header .top_logoBlockHolder{
 .common_mainPanel .infoBlock{
 	float: left;
 	width: 37%;
+	padding-top: 30px;
 }
 .common_mainPanel .infoBlock h1{
 	font-size: 40px;
