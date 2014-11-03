@@ -177,6 +177,9 @@ body,html{
 .common_mainPanel .rightGroup .loginPanel .protocolRow a{
 	color: #fff;
 }
+.common_mainPanel .rightGroup .loginPanel .protocolRow .warn{
+	color: #f00;
+}
 
 .common_mainPanel .rightGroup .loginPanel input[type="submit"]{
 	display:block;

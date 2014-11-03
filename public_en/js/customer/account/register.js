@@ -23,8 +23,6 @@ var EBE_Background = function(){
 	}
 };
 
-
-
 var EBE_LoginRow = function(labelEl,el,pattern){
 	var infoEl = el.children("span");
 	var inputEl = el.children("input").val(""); 
@@ -73,6 +71,9 @@ var EBE_Register = function(patternAccount,patternPassword){
 	var passwordRow = new EBE_LoginRow( labelEls.eq(1),rowEls.eq(1),patternPassword );
 	var repeatRow = new EBE_LoginRow( labelEls.eq(2),rowEls.eq(2),patternPassword );
 	
+	var protocolSelectorEl =$(".protocolRow input");
+	var protocolTextEls =$(".protocolRow span,.protocolRow a");
+
 	var formEl = $(".common_mainPanel .rightGroup .loginPanel .bg form");	
 
 	 formEl.submit(function(){
@@ -101,7 +102,15 @@ var EBE_Register = function(patternAccount,patternPassword){
 	 			topWarnEls.eq(2).show();
 	 		}	
 	 	}
-		return correct2 && correct2 && correct3;
+	 	var correct4 = true; ;
+	 	if( protocolSelectorEl.is(":visible") && !protocolSelectorEl.prop("checked") ){
+	 		correct4 = false;
+	 		protocolTextEls.addClass("warn");
+	 	}else{
+	 		protocolTextEls.removeClass("warn");
+	 	}
+	 	
+		return correct2 && correct2 && correct3 && correct4;
 	 });	
 };
 
