@@ -41,7 +41,7 @@ var EVE_Comment = function(emptyWarn){
 		}
 		inputEls.eq(0).val( $.trim( orderIDEls.eq(tIndex).text()) );
 		inputEls.eq(1).val( text );
-		formEl.submit();
+		formEls.submit();
 	});
 };
 $(function(){
