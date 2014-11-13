@@ -169,7 +169,7 @@ var EBE_ListItem = function(submitHandler,errorHandler,unit){
 		
 		$("<h1 class='enFontFamily'><i>"+ this.unit+"</i><b>"+
 		data.realPrice + "</b></h1><span>市场价：<i>"+ this.unit+"</i><b>"+
-		data.otherPrice + "</b><span></div>").appendTo( priceBlockEl );
+		data.otherPrice + "</b></span>").appendTo( priceBlockEl );
 		this.init();
 	};
 }).call(EBE_ListItem.prototype);
