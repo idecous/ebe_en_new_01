@@ -1,0 +1,221 @@
+header{
+	background-color: #fff;
+}
+header .top_logoBlockHolder{
+	height: 40px;
+	display: none;
+}
+header .common_centerBlock{
+	width: 1200px;
+}
+header .top_logoBlock{
+	height:150px;
+	text-align: center;
+	background:#7f7f7f;
+	line-height: 107px;
+}
+header .top_logoBlock img{
+	width: auto;
+	height: auto;
+}
+header .top_logoBlock h1{
+	display: none;
+	font-size: 18px;
+}
+header .mainNavBar{
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	height: 30px;
+	text-align: center;
+	background:#b2b2b2;
+}
+header .mainNavBar li{
+	display: inline-block;
+	width: 125px;
+}
+header .mainNavBar a{
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	line-height: 29px;
+	font-size: 15px;
+}
+header .mainNavBar li .checked{
+	border-bottom: 2px solid #fff;
+	cursor: default;
+}
+
+header .switchNavBg{
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height: 30px;
+	line-height:30px;
+	text-align: right;
+	background:rgba(0,0,0,0.5);
+}
+header .switchNavBg a{
+	color: #fff;
+	font-size: 12px;
+	margin-right: 10px;
+}
+header .switchNavBg a i{
+	width: 5px;
+	height: 7px;
+	display: inline-block;
+	background: url(../../img/show/icons.png) no-repeat 0 -226px;
+	margin-right: 4px;
+	vertical-align: 1px;
+}
+
+
+header .popBlock{
+	position: absolute;
+	top:182px;
+	left:0;
+	width:100%;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 10;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.25s ease-out 0s;
+}
+header .popBlock.show{
+	visibility: visible;
+	opacity: 1;
+}
+header .popBlock .contentBlock{
+	position:relative;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+header .popBlock .contentBlock .holder{
+	width: 100%;
+}
+header .popBlock .contentBlock .border{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+header .popBlock .contentBlock .border .more{
+	position:absolute;
+	font-size: 12px;
+	color: #fff;
+	right: 0;
+	bottom: 5px;
+}
+header .popBlock .contentBlock .border ul li{
+	width: 16.66%;
+	float: left;
+}	
+header .popBlock .contentBlock .border ul li a{
+	position:relative;
+	display: block;
+	margin-right: 10px;
+}
+header .popBlock .contentBlock .border ul li a img{
+	width: 100%;
+	max-width: 165px;
+}
+header .popBlock .contentBlock .border ul li a i{
+	position:absolute;
+	display: block;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	max-width: 165px;
+	background: #000;
+	opacity: 0.2;
+	transition: opacity 0.25s ease-out 0s;
+}
+header .popBlock .contentBlock .border ul li a:hover i{
+	opacity: 0;
+}
+
+.common_mainPanel {
+	text-align: center;
+}
+.common_mainPanel .subNavBar{
+	width: 100%;
+	max-width: 1200px;
+	color: #666;
+	margin: 0 auto;
+	text-align: left;
+	line-height: 50px;
+}
+.common_mainPanel .suitBlock{
+	width:100%;
+	max-width:980px;
+	display:inline-block;
+	margin-top: 50px;
+}
+.common_mainPanel .suitBlock img{
+	width: 100%;
+}
+.bottomSpace{
+	height: 120px;
+}
+
+@media only screen and (max-width: 1220px) {
+	header .common_centerBlock{
+		width: 100%;
+	}
+}
+@media only screen and (min-width: 784px) and (max-width: 1020px) {	
+	header .top_logoBlock{
+		height: 100px;
+		line-height: 78px;
+	}
+	header .top_logoBlock img {
+		width: 287px;
+		height: 45px;
+	}		
+	header .popBlock{
+		top: 132px;
+	}
+}
+@media only screen and (max-width: 785px) {
+	header .top_logoBlockHolder{
+		display: block;
+	}
+	header .top_logoBlock{
+		position: fixed;
+		left:auto;
+		background: #000;
+		top:0;
+		width: 100%;
+		height: 40px;
+		line-height:40px;
+		text-align: center;
+		border-bottom: 1px solid #999;
+		background-color: #000;
+		z-index: 150;
+	}
+	header .top_logoBlock img{
+		display: none;
+	}
+	header .top_logoBlock h1{
+		display: inline-block;
+		margin-left: 47px;
+	}
+	header .mainNavBar,
+	.common_mainPanel .subNavBar{
+		display: none;
+	}
+	header .mainNavBar li {
+		width: 20%;
+		font-size: 12px;
+		white-space: nowrap;
+	}
+	.common_mainPanel .suitBlock{
+		margin-top: 30px;
+	}
+	header .popBlock{
+		display: none;
+	}
+}
