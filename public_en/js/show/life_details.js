@@ -355,8 +355,8 @@ var EBE_GoodsPreview = function(levelCount){
 		if (window.captureEvents) {
             window.addEventListener(Event.MOUSEMOVE, null, true);
             window.addEventListener(Event.MOUSEUP, null, true);
-        } else if (this.mouseAreaEl[0].setCapture) {
-            this.mouseAreaEl[0].setCapture();;
+        } else if (mouseAreaEl[0].setCapture) {
+            mouseAreaEl[0].setCapture();;
         }
         pageStartX = e.pageX;
         pageStartY = e.pageY;
@@ -394,8 +394,8 @@ var EBE_GoodsPreview = function(levelCount){
         if (window.releaseEvents) {
             window.removeEventListener(Event.MOUSEMOVE, null, true);
             window.removeEventListener(Event.MOUSEUP, null, true);
-        } else if (this.mouseAreaEl[0].releaseCapture) {
-            this.mouseAreaEl[0].releaseCapture();
+        } else if (mouseAreaEl[0].releaseCapture) {
+            mouseAreaEl[0].releaseCapture();
         }	
         mainVewCenterEl.addClass("anime");
 	}
@@ -719,7 +719,7 @@ var EBE_ElementGroup = function(){
 		setIndex(viewIndex);
 	}
 
-	if( bgEl.attr("complete") ){
+	if( bgEl.prop("complete") ){
 		init();
 	}else{
 		bgEl[0].onload = init;

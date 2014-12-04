@@ -394,6 +394,7 @@ header .bg{
 	text-transform: uppercase;
 }
 .common_mainPanel .filterPanel .groupBar{
+	position:relative;
 	display:block;
 	color: #333;
 	height: 30px;
@@ -403,10 +404,17 @@ header .bg{
 }
 .common_mainPanel .filterPanel .groupBar span{
 	margin-left: 2px;
-}
-.common_mainPanel .filterPanel .groupBar i{s
 	display: block;
-	float:right;
+	margin-right: 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.common_mainPanel .filterPanel .groupBar i{
+	position:absolute;
+	right:0;
+	top:0;
+	display: block;
 	width: 30px;
 	height: 30px;
 	background: url(../../img/show/icons.png) no-repeat -60px -132px;
@@ -436,6 +444,11 @@ header .bg{
 }
 .common_mainPanel .filterPanel .byCategory ul li span{
 	margin-left: 2px;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-right: 30px;
 }
 .common_mainPanel .filterPanel .byCategory ul li .groupRow{
 	position:relative;
@@ -504,6 +517,11 @@ header .bg{
 .common_mainPanel .filterPanel .byBrand li a span{
 	line-height: 15px;
 	height: 30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-right: 30px;
+	display: block;
 }
 
 .common_mainPanel .filterPanel .bySeries{
@@ -536,6 +554,11 @@ header .bg{
 .common_mainPanel .filterPanel .bySeries li a span{
 	line-height: 15px;
 	height: 30px;
+	margin-right: 30px;
+	display: block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 
